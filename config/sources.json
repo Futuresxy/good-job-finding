@@ -6,56 +6,56 @@
       "company": "华为",
       "careersUrl": "https://career.huawei.com/",
       "priority": 10,
-      "enabled": false,
+      "enabled": true,
       "parser": "manual-review"
     },
     {
       "company": "字节跳动",
       "careersUrl": "https://jobs.bytedance.com/campus",
       "priority": 10,
-      "enabled": false,
+      "enabled": true,
       "parser": "manual-review"
     },
     {
       "company": "腾讯",
       "careersUrl": "https://join.qq.com/",
       "priority": 10,
-      "enabled": false,
+      "enabled": true,
       "parser": "manual-review"
     },
     {
       "company": "阿里巴巴",
       "careersUrl": "https://talent.alibaba.com/campus/home",
       "priority": 10,
-      "enabled": false,
+      "enabled": true,
       "parser": "manual-review"
     },
     {
       "company": "百度",
       "careersUrl": "https://talent.baidu.com/jobs/list",
       "priority": 9,
-      "enabled": false,
+      "enabled": true,
       "parser": "manual-review"
     },
     {
       "company": "英伟达",
       "careersUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
       "priority": 10,
-      "enabled": false,
+      "enabled": true,
       "parser": "manual-review"
     },
     {
       "company": "寒武纪",
       "careersUrl": "https://www.cambricon.com/",
       "priority": 9,
-      "enabled": false,
+      "enabled": true,
       "parser": "manual-review"
     },
     {
       "company": "地平线",
       "careersUrl": "https://www.horizon.cc/",
       "priority": 9,
-      "enabled": false,
+      "enabled": true,
       "parser": "manual-review"
     }
   ]

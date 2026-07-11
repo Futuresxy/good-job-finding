@@ -181,10 +181,68 @@ def main():
     if errors:
         raise SystemExit("\n".join(errors))
 
+    # Re-check official evidence without turning temporary access failures into closures.
+    page_cache = {}
+    for job in jobs_doc["jobs"]:
+        url = job.get("applyUrl") or job.get("announcementUrl") or job.get("sourceUrl")
+        if not url:
+            continue
+        if url not in page_cache:
+            try:
+                fetch(url)
+                page_cache[url] = {"reachable": True}
+            except Exception as error:
+                page_cache[url] = {"reachable": False, "error": str(error)[:180]}
+            time.sleep(1)
+        result = page_cache[url]
+        job["verification"] = {
+            "lastAttempt": now,
+            "reachable": result["reachable"],
+            "note": "官方页面可访问" if result["reachable"] else "本次未确认，保留上次状态",
+        }
+        if result["reachable"]:
+            job["lastChecked"] = now
+        else:
+            job["verification"]["error"] = result.get("error", "")
+
+    jobs_doc["generatedAt"] = now
+    jobs_doc.setdefault("collection", {})["lastAutomatedCheck"] = now
+    jobs_doc["collection"]["reachableEvidencePages"] = sum(item["reachable"] for item in page_cache.values())
+    jobs_doc["collection"]["unconfirmedEvidencePages"] = sum(not item["reachable"] for item in page_cache.values())
+
+    previous_company_doc = read_json(DATA / "company_status.json") if (DATA / "company_status.json").exists() else {"companies": []}
+    previous_company = {item["company"]: item for item in previous_company_doc.get("companies", [])}
+    early_batches = {"人才计划", "提前批", "专项计划"}
+    company_names = list(dict.fromkeys(profile.get("watchCompanies", []) + [
+        str(job["company"]).replace(" Seed", "") for job in jobs_doc["jobs"]
+    ]))
+    company_rows = []
+    company_events = []
+    for company in company_names:
+        company_jobs = [
+            job for job in jobs_doc["jobs"]
+            if job.get("batch") != "实习生" and str(job.get("company", "")).replace(" Seed", "") == company
+        ]
+        early_open = any(job.get("batch") in early_batches and job.get("status") == "已开启" for job in company_jobs)
+        formal_open = any(job.get("batch") == "正式批" and job.get("status") == "已开启" for job in company_jobs)
+        row = {
+            "company": company,
+            "early": {"status": "已开启" if early_open else "持续监测", "open": early_open},
+            "formal": {"status": "已开启" if formal_open else "持续监测", "open": formal_open},
+            "matchingJobs": len(company_jobs),
+            "lastAttempt": now,
+        }
+        company_rows.append(row)
+        old = previous_company.get(company)
+        if old and (old.get("early", {}).get("open") != early_open or old.get("formal", {}).get("open") != formal_open):
+            company_events.append({"type": "company-batch-change", "company": company, "before": old, "after": row})
+
+    write_json(DATA / "jobs.json", jobs_doc)
     write_json(DATA / "signals.json", {"generatedAt": now, "signals": list(unique.values()), "failures": failures})
+    write_json(DATA / "company_status.json", {"generatedAt": now, "companies": company_rows})
     notifications = {
         "generatedAt": now,
-        "events": [{"type": "new-signal", **item} for item in new_signals],
+        "events": [{"type": "new-signal", **item} for item in new_signals] + company_events,
         "delivery": {
             "slack": "configured" if os.getenv("SLACK_WEBHOOK_URL") else "not-configured",
             "openclawWechat": "scan-connected-on-openclaw-device",
@@ -194,16 +252,19 @@ def main():
     write_json(DATA / "status.json", {
         "generatedAt": now,
         "sourcesChecked": checked,
-        "verifiedOpenings": sum(job.get("status") == "已开启" for job in jobs_doc["jobs"]),
+        "verifiedOpenings": sum(job.get("status") == "已开启" and job.get("batch") != "实习生" for job in jobs_doc["jobs"]),
         "pendingReview": len(unique) + sum(job.get("status") == "待核验" for job in jobs_doc["jobs"]),
+        "focusCompanies": len(company_rows),
+        "evidencePagesChecked": len(page_cache),
         "failures": failures,
-        "lastRun": "每日官方来源监测完成",
+        "lastRun": "每日重点公司提前批与正式批监测完成",
     })
-    if new_signals and os.getenv("SLACK_WEBHOOK_URL"):
+    events = notifications["events"]
+    if events and os.getenv("SLACK_WEBHOOK_URL"):
         send_webhook(os.environ["SLACK_WEBHOOK_URL"], "", {
-            "text": f"2027 秋招雷达发现 {len(new_signals)} 条新的官方页面线索，请进入网站核验。"
+            "text": f"2027 秋招雷达发现 {len(events)} 条新增或批次变化，请进入网站核验。"
         })
-    print(f"checked={checked} signals={len(unique)} new={len(new_signals)} failures={len(failures)}")
+    print(f"checked={checked} signals={len(unique)} new={len(new_signals)} company_changes={len(company_events)} failures={len(failures)}")
     return 0
 
 

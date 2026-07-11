@@ -1,7 +1,14 @@
 {
-  "generatedAt": "2026-07-12T00:00:00+08:00",
-  "sourcesChecked": 0,
-  "verifiedOpenings": 0,
-  "pendingReview": 4,
-  "lastRun": "尚未执行正式采集"
+  "generatedAt": "2026-07-12T14:15:00+08:00",
+  "sourcesChecked": 10,
+  "verifiedOpenings": 12,
+  "pendingReview": 0,
+  "notOpenedOrUnconfirmed": 1,
+  "failures": [
+    {
+      "company": "部分动态岗位页",
+      "error": "站点反自动化限制；已通过官方项目页与公开索引交叉核验"
+    }
+  ],
+  "lastRun": "2026-07-12 人工辅助现采集完成"
 }

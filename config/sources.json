@@ -3,60 +3,103 @@
   "notice": "只配置官方公开来源。接入前检查站点条款与 robots.txt，禁止绕过登录、验证码或访问控制。",
   "sources": [
     {
-      "company": "华为",
-      "careersUrl": "https://career.huawei.com/",
-      "priority": 10,
-      "enabled": true,
-      "parser": "manual-review"
-    },
-    {
       "company": "字节跳动",
-      "careersUrl": "https://jobs.bytedance.com/campus",
+      "careersUrl": "https://jobs.bytedance.com/campus/page-6272Gc",
       "priority": 10,
       "enabled": true,
-      "parser": "manual-review"
+      "parser": "official-page-monitor"
     },
     {
-      "company": "腾讯",
-      "careersUrl": "https://join.qq.com/",
+      "company": "字节跳动 Seed",
+      "careersUrl": "https://seed.bytedance.com/zh/seedearlycareer",
       "priority": 10,
       "enabled": true,
-      "parser": "manual-review"
+      "parser": "official-page-monitor"
+    },
+    {
+      "company": "华为",
+      "careersUrl": "https://career.huawei.com/cn/campus-recruitment",
+      "priority": 10,
+      "enabled": true,
+      "parser": "official-page-monitor"
     },
     {
       "company": "阿里巴巴",
-      "careersUrl": "https://talent.alibaba.com/campus/home",
+      "careersUrl": "https://campus-talent.alibaba.com/",
       "priority": 10,
       "enabled": true,
-      "parser": "manual-review"
+      "parser": "official-page-monitor"
+    },
+    {
+      "company": "腾讯",
+      "careersUrl": "https://careers.tencent.com/campusrecruit.html",
+      "priority": 10,
+      "enabled": true,
+      "parser": "official-page-monitor"
+    },
+    {
+      "company": "长江存储",
+      "careersUrl": "https://ymtc-campus.zhiye.com",
+      "priority": 10,
+      "enabled": true,
+      "parser": "official-page-monitor"
+    },
+    {
+      "company": "大疆",
+      "careersUrl": "https://careers.dji.com/zh-CN/campus",
+      "priority": 9,
+      "enabled": true,
+      "parser": "official-page-monitor"
+    },
+    {
+      "company": "拼多多",
+      "careersUrl": "https://careers.pddglobalhr.com/",
+      "priority": 8,
+      "enabled": true,
+      "parser": "official-page-monitor"
+    },
+    {
+      "company": "米哈游",
+      "careersUrl": "https://campus.mihoyo.com/",
+      "priority": 8,
+      "enabled": true,
+      "parser": "official-page-monitor"
     },
     {
       "company": "百度",
       "careersUrl": "https://talent.baidu.com/jobs/list",
       "priority": 9,
       "enabled": true,
-      "parser": "manual-review"
+      "parser": "official-page-monitor"
     },
     {
       "company": "英伟达",
       "careersUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "priority": 10,
+      "priority": 9,
       "enabled": true,
-      "parser": "manual-review"
+      "parser": "official-page-monitor"
     },
     {
       "company": "寒武纪",
       "careersUrl": "https://www.cambricon.com/",
       "priority": 9,
       "enabled": true,
-      "parser": "manual-review"
+      "parser": "official-page-monitor"
     },
     {
       "company": "地平线",
       "careersUrl": "https://www.horizon.cc/",
       "priority": 9,
       "enabled": true,
-      "parser": "manual-review"
+      "parser": "official-page-monitor"
+    },
+    {
+      "company": "Arm",
+      "careersUrl": "https://careers.arm.com/en/graduates",
+      "priority": 8,
+      "enabled": true,
+      "parser": "official-page-monitor"
     }
-  ]
+  ],
+  "updatedAt": "2026-07-12T14:30:00+08:00"
 }

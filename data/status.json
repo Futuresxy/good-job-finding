@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-12T14:15:00+08:00",
+  "generatedAt": "2026-07-12T16:00:00+08:00",
   "sourcesChecked": 10,
-  "verifiedOpenings": 12,
+  "verifiedOpenings": 11,
   "pendingReview": 0,
   "notOpenedOrUnconfirmed": 1,
   "failures": [
@@ -10,5 +10,6 @@
       "error": "站点反自动化限制；已通过官方项目页与公开索引交叉核验"
     }
   ],
-  "lastRun": "2026-07-12 人工辅助现采集完成"
+  "lastRun": "新增百度正式批与阶跃星辰顶尖人才计划，招聘源已校正",
+  "focusCompanies": 17
 }

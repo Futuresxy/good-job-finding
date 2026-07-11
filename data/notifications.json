@@ -3,6 +3,6 @@
   "events": [],
   "delivery": {
     "slack": "not-configured",
-    "openclawWechat": "awaiting-qr-setup"
+    "openclawWechat": "scan-required-on-openclaw-device"
   }
 }

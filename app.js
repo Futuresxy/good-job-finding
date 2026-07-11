@@ -1,11 +1,11 @@
-const state={jobs:[],profile:null,watch:new Set(JSON.parse(localStorage.getItem("gjf-watch")||"null")||[]),favorites:new Set(JSON.parse(localStorage.getItem("gjf-favorites")||"[]")),resumeText:localStorage.getItem("gjf-resume-text")||"",selectedDirections:new Set(),selectedCompany:null,showFavorites:false,companyPage:1,pageSize:6};
+const state={jobs:[],profile:null,sources:[],sourceOverrides:JSON.parse(localStorage.getItem("gjf-source-overrides")||"{}"),watch:new Set(JSON.parse(localStorage.getItem("gjf-watch")||"null")||[]),favorites:new Set(JSON.parse(localStorage.getItem("gjf-favorites")||"[]")),resumeText:localStorage.getItem("gjf-resume-text")||"",selectedDirections:new Set(),selectedCompany:null,showFavorites:false,companyPage:1,pageSize:6};
 const $=(id)=>document.getElementById(id);
 const esc=(v)=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));
 const norm=(v)=>String(v??"").toLowerCase().replace(/\s+/g,"");
 async function init(){
   try{
-    const [jobs,profile,status]=await Promise.all(["data/jobs.json","config/profile.json","data/status.json"].map(p=>fetch(p+"?v="+Date.now()).then(r=>{if(!r.ok)throw new Error(p);return r.json()})));
-    state.jobs=jobs.jobs||[];state.profile=profile;
+    const [jobs,profile,status,sources]=await Promise.all(["data/jobs.json","config/profile.json","data/status.json","config/sources.json"].map(p=>fetch(p+"?v="+Date.now()).then(r=>{if(!r.ok)throw new Error(p);return r.json()})));
+    state.jobs=jobs.jobs||[];state.profile=profile;state.sources=sources.sources||[];
     if(!state.watch.size) profile.watchCompanies.forEach(x=>state.watch.add(x));
     renderDirections();renderCities();bind();renderCompanies();renderJobs();renderStatus(status,jobs);
     if(state.resumeText) analyzeResume(state.resumeText,"上次分析的简历");
@@ -15,7 +15,7 @@ async function init(){
 function bind(){
   ["searchInput","batchFilter","cityFilter","watchOnly","verifiedOnly","sortBy"].forEach(id=>$(id).addEventListener(id==="searchInput"?"input":"change",()=>{state.companyPage=1;renderJobs()}));
   $("resetFilters").onclick=()=>{["searchInput","batchFilter","cityFilter"].forEach(id=>$(id).value="");$("watchOnly").checked=false;$("verifiedOnly").checked=false;state.selectedDirections.clear();state.selectedCompany=null;state.showFavorites=false;state.companyPage=1;document.querySelectorAll("[data-direction]").forEach(x=>x.checked=false);renderJobs()};$("backCompanies").onclick=()=>{state.selectedCompany=null;state.showFavorites=false;state.companyPage=1;renderJobs();location.hash="radar"};const openFavorites=()=>{state.selectedCompany=null;state.showFavorites=true;renderJobs();location.hash="radar"};$("favoritesNav").onclick=openFavorites;$("favoritesToolbar").onclick=openFavorites;
-  $("addCompanyForm").onsubmit=e=>{e.preventDefault();const name=$("companyInput").value.trim();if(name){state.watch.add(name);saveWatch();$("companyInput").value="";renderCompanies();renderJobs()}};
+  $("addCompanyForm").onsubmit=e=>{e.preventDefault();const name=$("companyInput").value.trim(),url=$("sourceInput").value.trim();if(name&&isValidSourceUrl(url)){state.watch.add(name);state.sourceOverrides[name]=url;saveSourceOverrides();saveWatch();$("companyInput").value="";$("sourceInput").value="";renderCompanies();renderJobs()}};
   $("resumeFile").onchange=readResume;
   $("closeJob").onclick=()=>$("jobDialog").close();
   $("openClawSetup").onclick=()=>{$("openClawDialog").showModal();window.lucide?.createIcons()};
@@ -145,10 +145,33 @@ function openJob(id){
   $("jobDetail").innerHTML='<div class="detail-grid"><section class="detail-block"><h3>岗位要求</h3><ul>'+j.requirements.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ul></section><section class="detail-block"><h3>笔试面试流程</h3><ol>'+j.process.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ol></section><section class="detail-block"><h3>技能关键词</h3><div class="tag-cloud">'+j.skills.map(x=>'<span>'+esc(x)+'</span>').join("")+'</div></section><section class="detail-block"><h3>时间与证据</h3><p>发布时间：'+esc(j.postedAt||"待确认")+'<br>截止时间：'+esc(j.deadline||"待确认")+'<br>最近检查：'+new Date(j.lastChecked).toLocaleString("zh-CN")+'<br>可信度：'+Math.round((j.confidence||0)*100)+'%</p></section></div><section class="detail-block"><h3>核验依据</h3><p>'+esc(j.evidence||"以官方招聘页实时信息为准")+'</p><p><strong>本次变化：</strong>'+esc(j.change||"首次记录")+'</p></section><div class="detail-actions">'+(j.status==="已开启"&&j.applyUrl?'<a href="'+esc(j.applyUrl)+'" target="_blank" rel="noreferrer">立即投递</a>':'')+'<a class="source-link" href="'+esc(j.announcementUrl||j.sourceUrl)+'" target="_blank" rel="noreferrer">查看官方依据</a></div>';
   $("jobDialog").showModal();
 }
+function isValidSourceUrl(value){try{const url=new URL(value);return ["http:","https:"].includes(url.protocol)}catch{return false}}
+function defaultSourceFor(company){return state.sources.find(item=>item.company===company)?.careersUrl||""}
+function sourceFor(company){return state.sourceOverrides[company]||defaultSourceFor(company)}
+function saveSourceOverrides(){localStorage.setItem("gjf-source-overrides",JSON.stringify(state.sourceOverrides))}
 function renderCompanies(){
-  $("companyList").innerHTML=[...state.watch].sort((a,b)=>a.localeCompare(b)).map(c=>'<span class="company-item">'+esc(c)+'<button data-remove="'+esc(c)+'" title="取消关注" aria-label="取消关注 '+esc(c)+'"><i data-lucide="x"></i></button></span>').join("");
-  document.querySelectorAll("[data-remove]").forEach(b=>b.onclick=()=>{state.watch.delete(b.dataset.remove);saveWatch();renderCompanies();renderJobs()});
-  $("metricCompanies").textContent=state.watch.size;window.lucide?.createIcons();
+  const names=[...new Set([...(state.profile.watchCompanies||[]),...state.watch,...state.sources.map(item=>item.company)])].sort((a,b)=>a.localeCompare(b));
+  $("companyList").innerHTML=names.map(company=>{
+    const defaultUrl=defaultSourceFor(company),current=sourceFor(company),custom=Boolean(state.sourceOverrides[company]);
+    return '<article class="source-row"><div class="source-company"><span class="source-state '+(current?"is-ready":"is-missing")+'"></span><span><strong>'+esc(company)+'</strong><small>'+(custom?"本地修改来源":defaultUrl?"仓库默认来源":"缺少招聘网址")+'</small></span></div><label class="source-url"><span>招聘网址</span><input type="url" data-source-url="'+esc(company)+'" value="'+esc(current)+'" placeholder="https://..."></label><div class="source-actions"><button type="button" data-save-source="'+esc(company)+'" title="保存修改" aria-label="保存 '+esc(company)+' 招聘网址"><i data-lucide="save"></i></button>'+(current?'<a href="'+esc(current)+'" target="_blank" rel="noreferrer" title="打开招聘网站" aria-label="打开 '+esc(company)+' 招聘网站"><i data-lucide="external-link"></i></a>':'')+'<button class="sync-source" type="button" data-sync-source="'+esc(company)+'"><i data-lucide="cloud-upload"></i><span>同步每日监测</span></button></div></article>'
+  }).join("");
+  document.querySelectorAll("[data-save-source]").forEach(button=>button.onclick=()=>saveCompanySource(button.dataset.saveSource));
+  document.querySelectorAll("[data-sync-source]").forEach(button=>button.onclick=()=>syncCompanySource(button.dataset.syncSource));
+  $("metricCompanies").textContent=names.length;window.lucide?.createIcons();
+}
+function saveCompanySource(company){
+  const input=document.querySelector('[data-source-url="'+CSS.escape(company)+'"]'),url=input?.value.trim()||"";
+  if(!isValidSourceUrl(url)){input?.setCustomValidity("请输入有效的 http(s) 招聘网址");input?.reportValidity();return}
+  input.setCustomValidity("");state.sourceOverrides[company]=url;state.watch.add(company);saveSourceOverrides();saveWatch();renderCompanies();renderJobs();
+}
+function syncCompanySource(company){
+  const input=document.querySelector('[data-source-url="'+CSS.escape(company)+'"]'),url=input?.value.trim()||sourceFor(company);
+  if(!isValidSourceUrl(url)){input?.setCustomValidity("请先填写有效招聘网址");input?.reportValidity();return}
+  state.sourceOverrides[company]=url;state.watch.add(company);saveSourceOverrides();saveWatch();
+  const title="[招聘源] "+company;
+  const body=["company="+company,"url="+url,"action=upsert","","由 Good Job Finding 招聘源设置页面提交。"].join("\n");
+  window.open("https://github.com/Futuresxy/good-job-finding/issues/new?title="+encodeURIComponent(title)+"&body="+encodeURIComponent(body),"_blank","noopener");
+  renderCompanies();
 }
 function saveWatch(){localStorage.setItem("gjf-watch",JSON.stringify([...state.watch]))}
 async function readResume(e){

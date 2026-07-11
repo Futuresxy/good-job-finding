@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-12T16:00:00+08:00",
+  "generatedAt": "2026-07-12T18:30:00+08:00",
   "mode": "live",
   "disclaimer": "本页已于 2026-07-12 完成一次人工辅助现采集。已开启结论优先依据公司官方招聘页；具体岗位状态可能随时变化，投递前请再次打开官方入口确认。",
   "collection": {
     "checkedCompanies": 12,
     "officialSources": 11,
     "externalEvidenceSources": 1,
-    "verifiedOpenings": 11,
+    "verifiedOpenings": 16,
     "notOpenedOrUnconfirmed": 1
   },
   "jobs": [
@@ -553,50 +553,272 @@
       "evidence": "腾讯中文官方校招页当前列出的应届生项目仍为2026校园招聘；不将实习生项目误判为2027正式秋招。"
     },
     {
-      "id": "baidu-campus-2027",
       "company": "百度",
-      "title": "百度2027届校园招聘（正式批）",
+      "batch": "正式批",
+      "status": "已开启",
+      "graduateYear": 2027,
+      "deadline": null,
+      "process": [
+        "官网选择具体岗位",
+        "简历筛选",
+        "笔试/测评（以岗位通知为准）",
+        "技术面试",
+        "综合面试",
+        "Offer"
+      ],
+      "announcementUrl": "https://talent.baidu.com/jobs/campus",
+      "sourceType": "百度官方校园招聘网站",
+      "lastChecked": "2026-07-12T18:30:00+08:00",
+      "id": "baidu-ai-infra-shanghai-j100732",
+      "title": "上海-AI Infra工程师（J100732）",
+      "directionIds": [
+        "ai-infra",
+        "architecture"
+      ],
+      "city": "上海",
+      "postedAt": "2026-07-08",
+      "requirements": [
+        "负责大模型训练与推理基础设施的设计和优化，包括分布式训练框架、推理引擎与模型压缩部署",
+        "深入优化计算效率，探索混合精度、INT8/FP16量化和KV Cache等工程实践",
+        "校招技术岗位，招聘人数5人；学历、专业等条件以官网岗位详情为准"
+      ],
+      "skills": [
+        "分布式训练",
+        "推理引擎",
+        "模型压缩",
+        "INT8/FP16",
+        "KV Cache"
+      ],
+      "sourceUrl": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "applyUrl": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "confidence": 0.96,
+      "change": "新增具体岗位：由百度招聘项目记录拆分",
+      "evidence": "百度官方校园招聘职位列表显示上海-AI Infra工程师（J100732），发布日期为2026-07-08。"
+    },
+    {
+      "company": "百度",
+      "batch": "正式批",
+      "status": "已开启",
+      "graduateYear": 2027,
+      "deadline": null,
+      "process": [
+        "官网选择具体岗位",
+        "简历筛选",
+        "笔试/测评（以岗位通知为准）",
+        "技术面试",
+        "综合面试",
+        "Offer"
+      ],
+      "announcementUrl": "https://talent.baidu.com/jobs/campus",
+      "sourceType": "百度官方校园招聘网站",
+      "lastChecked": "2026-07-12T18:30:00+08:00",
+      "id": "baidu-ai-infra-beijing-j100730",
+      "title": "北京-AI Infra工程师（J100730）",
+      "directionIds": [
+        "ai-infra",
+        "architecture"
+      ],
+      "city": "北京",
+      "postedAt": "2026-07-08",
+      "requirements": [
+        "负责大模型训练与推理基础设施的设计和优化，包括分布式训练框架、推理引擎与模型压缩部署",
+        "深入优化计算效率，探索混合精度、INT8/FP16量化和KV Cache等工程实践",
+        "校招技术岗位，招聘人数35人；学历、专业等条件以官网岗位详情为准"
+      ],
+      "skills": [
+        "分布式训练",
+        "推理引擎",
+        "模型压缩",
+        "混合精度",
+        "KV Cache"
+      ],
+      "sourceUrl": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "applyUrl": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "confidence": 0.96,
+      "change": "新增具体岗位：由百度招聘项目记录拆分",
+      "evidence": "百度官方校园招聘职位列表显示北京-AI Infra工程师（J100730），发布日期为2026-07-08。"
+    },
+    {
+      "company": "百度",
+      "batch": "正式批",
+      "status": "已开启",
+      "graduateYear": 2027,
+      "deadline": null,
+      "process": [
+        "官网选择具体岗位",
+        "简历筛选",
+        "笔试/测评（以岗位通知为准）",
+        "技术面试",
+        "综合面试",
+        "Offer"
+      ],
+      "announcementUrl": "https://talent.baidu.com/jobs/campus",
+      "sourceType": "百度官方校园招聘网站",
+      "lastChecked": "2026-07-12T18:30:00+08:00",
+      "id": "baidu-llm-training-infra-j101258",
+      "title": "北京-大模型训练Infra研发工程师（基座研发方向）（J101258）",
       "directionIds": [
         "ai-infra",
         "architecture",
         "compiler"
       ],
-      "batch": "正式批",
-      "status": "已开启",
-      "city": "北京/上海/深圳等",
-      "graduateYear": 2027,
-      "postedAt": "2026-07-12",
-      "deadline": null,
+      "city": "北京",
+      "postedAt": "2026-07-08",
       "requirements": [
-        "面向全球2027届毕业生",
-        "毕业时间为2026年9月1日至2027年8月31日",
-        "具体学历、专业和城市要求以岗位详情为准"
+        "参与文心大模型训练优化、飞桨分布式训练功能和架构开发，以及训练工程效率系统研发",
+        "探索超大规模分布式训练架构及算法与工程协同优化",
+        "负责高性能计算平台、计算库和通信库开发优化，并建设CI/CE工程设施"
       ],
       "skills": [
         "大模型训练",
+        "飞桨",
         "分布式训练",
-        "vLLM",
-        "SGLang",
-        "KV Cache",
-        "K8s",
-        "Ray"
+        "高性能计算",
+        "通信库",
+        "CI/CE"
       ],
+      "sourceUrl": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "applyUrl": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "confidence": 0.99,
+      "change": "新增具体岗位：百度官网2026-07-08发布",
+      "evidence": "百度官方校园招聘职位列表明确展示岗位J101258及大模型训练、飞桨分布式训练、高性能计算等职责。"
+    },
+    {
+      "company": "百度",
+      "batch": "正式批",
+      "status": "已开启",
+      "graduateYear": 2027,
+      "deadline": null,
       "process": [
-        "官网选岗投递",
+        "官网选择具体岗位",
         "简历筛选",
-        "笔试/测评",
+        "笔试/测评（以岗位通知为准）",
         "技术面试",
         "综合面试",
         "Offer"
       ],
-      "sourceUrl": "https://talent.baidu.com/jobs/list?recommendCode=I",
-      "announcementUrl": "https://talent.baidu.com/jobs/",
-      "applyUrl": "https://talent.baidu.com/jobs/list?recommendCode=I",
+      "announcementUrl": "https://talent.baidu.com/jobs/campus",
       "sourceType": "百度官方校园招聘网站",
-      "lastChecked": "2026-07-12T16:00:00+08:00",
+      "lastChecked": "2026-07-12T18:30:00+08:00",
+      "id": "baidu-ai-infra-rl-j101230",
+      "title": "深圳-AI Infra强化学习工程师（基座研发方向）（J101230）",
+      "directionIds": [
+        "ai-infra",
+        "architecture"
+      ],
+      "city": "深圳",
+      "postedAt": "2026-07-08",
+      "requirements": [
+        "研发训练、推理、环境和奖励解耦的高可扩展强化学习训练框架",
+        "优化全异步RL训练、推理调度、动态批处理与KV Cache复用，并对接vLLM、SGLang",
+        "基于K8s、Ray和分布式KV Cache构建超大规模后训练平台及可观测体系"
+      ],
+      "skills": [
+        "强化学习系统",
+        "vLLM",
+        "SGLang",
+        "KV Cache",
+        "K8s",
+        "Ray",
+        "Mooncake"
+      ],
+      "sourceUrl": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "applyUrl": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
       "confidence": 0.99,
-      "change": "新增：百度2027届正式校园招聘已开启",
-      "evidence": "百度官方职位页明确写明校园招聘面向全球2027届毕业生，并已展示大模型训练、分布式系统与AI基础设施相关岗位。"
+      "change": "新增具体岗位：百度官网2026-07-08发布",
+      "evidence": "百度官方校园招聘职位列表明确展示岗位J101230、5人，并列出异步RL训练、推理调度、KV Cache、K8s和Ray等职责。"
+    },
+    {
+      "company": "百度",
+      "batch": "正式批",
+      "status": "已开启",
+      "graduateYear": 2027,
+      "deadline": null,
+      "process": [
+        "官网选择具体岗位",
+        "简历筛选",
+        "笔试/测评（以岗位通知为准）",
+        "技术面试",
+        "综合面试",
+        "Offer"
+      ],
+      "announcementUrl": "https://talent.baidu.com/jobs/campus",
+      "sourceType": "百度官方校园招聘网站",
+      "lastChecked": "2026-07-12T18:30:00+08:00",
+      "id": "baidu-aidu-heterogeneous-compute-j99964",
+      "title": "2027AIDU-AI异构计算研发工程师（J99964）",
+      "directionIds": [
+        "ai-infra",
+        "architecture",
+        "compiler",
+        "chip-design"
+      ],
+      "city": "北京/上海",
+      "postedAt": "2026-06-22",
+      "requirements": [
+        "负责大规模AI推理引擎框架、底层算子、通信库及通信算法开发优化",
+        "面向CPU、GPU、FPGA、ASIC等架构进行编译系统开发、编译优化和算法加速",
+        "设计研发异构高性能计算平台并优化高性能计算库和通信库"
+      ],
+      "skills": [
+        "异构计算",
+        "Inference Engine",
+        "底层算子",
+        "通信库",
+        "编译优化",
+        "FPGA",
+        "ASIC"
+      ],
+      "sourceUrl": "https://talent.baidu.com/jobs/list?projectType=3&recruitType=GRADUATE",
+      "applyUrl": "https://talent.baidu.com/jobs/list?projectType=3&recruitType=GRADUATE",
+      "confidence": 0.99,
+      "change": "新增具体岗位：百度AIDU项目岗位",
+      "evidence": "百度官方AIDU校园招聘列表展示岗位J99964，工作地点北京、上海，方向覆盖推理引擎、算子、通信和异构编译。"
+    },
+    {
+      "company": "百度",
+      "batch": "正式批",
+      "status": "已开启",
+      "graduateYear": 2027,
+      "deadline": null,
+      "process": [
+        "官网选择具体岗位",
+        "简历筛选",
+        "笔试/测评（以岗位通知为准）",
+        "技术面试",
+        "综合面试",
+        "Offer"
+      ],
+      "announcementUrl": "https://talent.baidu.com/jobs/campus",
+      "sourceType": "百度官方校园招聘网站",
+      "lastChecked": "2026-07-12T18:30:00+08:00",
+      "id": "baidu-aidu-llm-infra-j99967",
+      "title": "2027AIDU-大模型Infra工程师（J99967）",
+      "directionIds": [
+        "ai-infra",
+        "architecture",
+        "compiler"
+      ],
+      "city": "北京",
+      "postedAt": "2026-05-12",
+      "requirements": [
+        "构建AI异构计算加速引擎，负责底层算子、通信库和编译系统开发优化",
+        "面向CPU、GPU、FPGA、ASIC等架构进行性能调优",
+        "设计自适应分布式系统，优化大模型训练与推理效率及成本"
+      ],
+      "skills": [
+        "大模型Infra",
+        "异构计算",
+        "底层算子",
+        "通信库",
+        "编译系统",
+        "分布式系统"
+      ],
+      "sourceUrl": "https://talent.baidu.com/jobs/list?projectType=3&recruitType=GRADUATE",
+      "applyUrl": "https://talent.baidu.com/jobs/list?projectType=3&recruitType=GRADUATE",
+      "confidence": 0.99,
+      "change": "新增具体岗位：百度AIDU项目岗位",
+      "evidence": "百度官方AIDU校园招聘列表展示岗位J99967，职责包括异构计算加速、算子、通信库、编译系统及分布式系统。"
     },
     {
       "id": "stepstar-top-talent-2027",

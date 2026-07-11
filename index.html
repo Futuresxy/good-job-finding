@@ -19,6 +19,7 @@
       <a href="#radar">岗位雷达</a>
       <a href="#resume">简历匹配</a>
       <a href="#watchlist">重点公司</a>
+      <button class="nav-favorite" id="favoritesNav" type="button"><i data-lucide="bookmark"></i><span>岗位收藏</span><strong id="favoriteCount">0</strong></button>
       <a href="#delivery">推送设置</a>
     </nav>
     <a class="icon-link" href="https://github.com/Futuresxy/good-job-finding" target="_blank" rel="noreferrer" title="打开 GitHub 仓库" aria-label="打开 GitHub 仓库">
@@ -57,11 +58,9 @@
         <label>
           <span>招聘批次</span>
           <select id="batchFilter">
-            <option value="">全部批次</option>
-            <option>人才计划</option>
-            <option>提前批</option>
-            <option>正式批</option>
-            <option>专项计划</option>
+            <option value="">重点批次</option>
+            <option value="early">提前批（顶尖人才）</option>
+            <option value="formal">正式批</option>
           </select>
         </label>
 
@@ -90,6 +89,7 @@
         </div>
         <div class="notice" id="dataNotice" hidden></div>
         <div class="job-list" id="jobList" aria-live="polite"></div>
+        <nav class="pagination" id="companyPagination" aria-label="公司分页" hidden></nav>
       </div>
     </section>
 

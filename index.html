@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="2027 秋招招聘动态雷达：按专业方向匹配岗位、分析简历并追踪重点公司。">
+  <title>Good Job Finding | 2027 秋招雷达</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.min.mjs" type="module"></script>
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="#radar" aria-label="秋招雷达首页">
+      <span class="brand-mark">GJ</span>
+      <span><strong>Good Job Finding</strong><small>2027 秋招雷达</small></span>
+    </a>
+    <nav aria-label="主导航">
+      <a href="#radar">岗位雷达</a>
+      <a href="#resume">简历匹配</a>
+      <a href="#watchlist">重点公司</a>
+      <a href="#delivery">推送设置</a>
+    </nav>
+    <a class="icon-link" href="https://github.com/Futuresxy/good-job-finding" target="_blank" rel="noreferrer" title="打开 GitHub 仓库" aria-label="打开 GitHub 仓库">
+      <i data-lucide="github"></i>
+    </a>
+  </header>
+
+  <main>
+    <section class="status-band" aria-label="数据状态">
+      <div><span class="status-dot pending"></span><strong id="runState">正在读取数据</strong><small id="runTime">--</small></div>
+      <dl>
+        <div><dt>匹配岗位</dt><dd id="metricMatched">0</dd></div>
+        <div><dt>已确认开启</dt><dd id="metricOpen">0</dd></div>
+        <div><dt>待核验</dt><dd id="metricPending">0</dd></div>
+        <div><dt>重点公司</dt><dd id="metricCompanies">0</dd></div>
+      </dl>
+    </section>
+
+    <section class="workspace" id="radar">
+      <aside class="filters" aria-label="岗位筛选">
+        <div class="panel-title">
+          <div><p>筛选条件</p><h2>定向岗位搜索</h2></div>
+          <button class="icon-button" id="resetFilters" title="重置筛选" aria-label="重置筛选"><i data-lucide="rotate-ccw"></i></button>
+        </div>
+
+        <label class="search-field">
+          <span>搜索</span>
+          <div><i data-lucide="search"></i><input id="searchInput" type="search" placeholder="岗位、公司、技能"></div>
+        </label>
+
+        <fieldset>
+          <legend>专业方向</legend>
+          <div id="directionFilters" class="check-list"></div>
+        </fieldset>
+
+        <label>
+          <span>招聘批次</span>
+          <select id="batchFilter">
+            <option value="">全部批次</option>
+            <option>人才计划</option>
+            <option>提前批</option>
+            <option>正式批</option>
+            <option>专项计划</option>
+          </select>
+        </label>
+
+        <label>
+          <span>城市</span>
+          <select id="cityFilter"><option value="">全部城市</option></select>
+        </label>
+
+        <label class="toggle-row">
+          <span><strong>只看重点公司</strong><small>使用你的关注清单</small></span>
+          <input id="watchOnly" type="checkbox" role="switch">
+        </label>
+
+        <label class="toggle-row">
+          <span><strong>只看已核验</strong><small>隐藏示例和待核验岗位</small></span>
+          <input id="verifiedOnly" type="checkbox" role="switch">
+        </label>
+      </aside>
+
+      <div class="results">
+        <div class="results-head">
+          <div><p class="eyebrow">JOB RADAR</p><h1>适配你的岗位动态</h1><p id="resultsSummary">按方向、简历与关注公司计算匹配度。</p></div>
+          <div class="view-actions">
+            <label><span>排序</span><select id="sortBy"><option value="match">匹配度</option><option value="company">公司</option><option value="checked">最近确认</option></select></label>
+          </div>
+        </div>
+        <div class="notice" id="dataNotice" hidden></div>
+        <div class="job-list" id="jobList" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="content-section resume-section" id="resume">
+      <div class="section-head">
+        <div><p class="eyebrow">LOCAL RESUME ANALYSIS</p><h2>简历匹配与面试准备</h2><p>文件只在当前浏览器处理，不上传、不写入仓库。</p></div>
+        <label class="upload-button">
+          <i data-lucide="file-up"></i><span>选择简历</span>
+          <input id="resumeFile" type="file" accept=".pdf,.txt,.md,text/plain,application/pdf">
+        </label>
+      </div>
+      <div class="privacy-note"><i data-lucide="shield-check"></i><span>支持文本型 PDF、TXT、Markdown。扫描版 PDF 请先 OCR；分析结果仅保存在本机浏览器。</span></div>
+      <div class="resume-grid">
+        <div class="resume-overview">
+          <div class="empty-resume" id="resumeEmpty">
+            <i data-lucide="scan-search"></i>
+            <h3>上传后生成专属画像</h3>
+            <p>自动识别技能、研究方向和项目关键词，并重排岗位、定位简历缺口、生成面试问题。</p>
+          </div>
+          <div id="resumeReport" hidden>
+            <div class="score-row">
+              <div class="score-ring"><strong id="resumeScore">0</strong><span>方向覆盖</span></div>
+              <div><h3 id="resumeName">简历分析</h3><p id="resumeSummary"></p></div>
+            </div>
+            <div class="analysis-block"><h3>已识别能力</h3><div class="tag-cloud" id="resumeSkills"></div></div>
+            <div class="analysis-block"><h3>建议补强</h3><ul id="resumeGaps"></ul></div>
+          </div>
+        </div>
+        <div class="interview-prep">
+          <div class="panel-title"><div><p>岗位联动</p><h3>面试准备清单</h3></div><i data-lucide="messages-square"></i></div>
+          <div id="interviewQuestions" class="question-list">
+            <p class="muted">上传简历后，将结合最高匹配岗位生成项目追问、系统设计题和基础知识复习项。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="watchlist">
+      <div class="section-head">
+        <div><p class="eyebrow">WATCHLIST</p><h2>重点公司清单</h2><p>新增公司会立即参与筛选和定点推送。</p></div>
+        <form id="addCompanyForm" class="inline-form">
+          <input id="companyInput" type="text" placeholder="输入公司名称" required>
+          <button type="submit" class="command-button"><i data-lucide="plus"></i><span>添加</span></button>
+        </form>
+      </div>
+      <div class="company-list" id="companyList"></div>
+    </section>
+
+    <section class="content-section delivery-section" id="delivery">
+      <div class="section-head">
+        <div><p class="eyebrow">DELIVERY</p><h2>定点推送</h2><p>只推送与你方向、简历和重点公司相关的变化。</p></div>
+        <span class="connection-state"><span></span>配置待完成</span>
+      </div>
+      <div class="delivery-grid">
+        <article>
+          <div class="channel-icon"><i data-lucide="message-circle"></i></div>
+          <div><h3>OpenClaw + 微信</h3><p>使用 OpenClaw 连接微信，在微信允许的 24 小时回复窗口内发送岗位动态。首次连接时需要你扫码。</p></div>
+          <button class="secondary-button" id="openClawSetup"><i data-lucide="qr-code"></i><span>查看连接步骤</span></button>
+        </article>
+        <article>
+          <div class="channel-icon slack"><i data-lucide="hash"></i></div>
+          <div><h3>Slack</h3><p>适合接收每日摘要、重点公司开启和截止日期提醒。</p></div>
+          <span class="tag neutral">接口已预留</span>
+        </article>
+        <article>
+          <div class="channel-icon mail"><i data-lucide="clock-3"></i></div>
+          <div><h3>推送节奏</h3><p>重点批次立即提醒；每日 08:00 汇总；截止前 7 天和 3 天再次提醒。</p></div>
+          <span class="tag">默认规则</span>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="jobDialog">
+    <div class="dialog-head"><div><p id="dialogCompany"></p><h2 id="dialogTitle"></h2></div><button class="icon-button" id="closeJob" aria-label="关闭"><i data-lucide="x"></i></button></div>
+    <div id="jobDetail"></div>
+  </dialog>
+
+  <dialog id="openClawDialog">
+    <div class="dialog-head"><div><p>微信推送</p><h2>OpenClaw 连接步骤</h2></div><button class="icon-button" id="closeOpenClaw" aria-label="关闭"><i data-lucide="x"></i></button></div>
+    <ol class="setup-steps">
+      <li><strong>部署或打开 OpenClaw</strong><span>确认可访问它的连接器与消息入口。</span></li>
+      <li><strong>发起微信连接</strong><span>由 OpenClaw 生成登录二维码；此时再由你扫码授权。</span></li>
+      <li><strong>配置安全凭证</strong><span>Webhook 地址和令牌写入 GitHub Actions Secrets，不进入公开仓库。</span></li>
+      <li><strong>发送测试提醒</strong><span>验证新增岗位、重点公司和截止提醒均能在 24 小时窗口内到达。</span></li>
+    </ol>
+    <div class="privacy-note"><i data-lucide="lock-keyhole"></i><span>仓库不保存二维码、微信 Cookie、会话内容或个人令牌。</span></div>
+  </dialog>
+
+  <footer><span>Good Job Finding · 数据结论以公司官方招聘页面为准</span><a href="https://github.com/Futuresxy/good-job-finding" target="_blank" rel="noreferrer">查看源码</a></footer>
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-12T15:00:00+08:00",
+  "generatedAt": "2026-07-12T16:00:00+08:00",
   "companies": [
     {
       "company": "华为",
@@ -60,10 +60,10 @@
         "open": false
       },
       "formal": {
-        "status": "持续监测",
-        "open": false
+        "status": "已开启",
+        "open": true
       },
-      "matchingJobs": 0,
+      "matchingJobs": 1,
       "lastAttempt": "2026-07-12T15:00:00+08:00"
     },
     {
@@ -221,6 +221,19 @@
       },
       "matchingJobs": 1,
       "lastAttempt": "2026-07-12T15:00:00+08:00"
+    },
+    {
+      "company": "阶跃星辰",
+      "early": {
+        "status": "已开启",
+        "open": true
+      },
+      "formal": {
+        "status": "持续监测",
+        "open": false
+      },
+      "matchingJobs": 1,
+      "lastAttempt": "2026-07-12T16:00:00+08:00"
     }
   ]
 }

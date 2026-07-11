@@ -67,8 +67,8 @@
     },
     {
       "company": "百度",
-      "careersUrl": "https://talent.baidu.com/jobs/list",
-      "priority": 9,
+      "careersUrl": "https://talent.baidu.com/",
+      "priority": 10,
       "enabled": true,
       "parser": "official-page-monitor"
     },
@@ -99,7 +99,14 @@
       "priority": 8,
       "enabled": true,
       "parser": "official-page-monitor"
+    },
+    {
+      "company": "阶跃星辰",
+      "careersUrl": "https://app.mokahr.com/campus-recruitment/step/94905#/",
+      "priority": 10,
+      "enabled": true,
+      "parser": "official-page-monitor"
     }
   ],
-  "updatedAt": "2026-07-12T14:30:00+08:00"
+  "updatedAt": "2026-07-12T16:00:00+08:00"
 }

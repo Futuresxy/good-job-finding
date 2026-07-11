@@ -130,13 +130,15 @@
 
     <section class="content-section" id="watchlist">
       <div class="section-head">
-        <div><p class="eyebrow">WATCHLIST</p><h2>重点公司清单</h2><p>新增公司会立即参与筛选和定点推送。</p></div>
-        <form id="addCompanyForm" class="inline-form">
-          <input id="companyInput" type="text" placeholder="输入公司名称" required>
-          <button type="submit" class="command-button"><i data-lucide="plus"></i><span>添加</span></button>
-        </form>
+        <div><p class="eyebrow">SOURCE REVIEW</p><h2>重点公司与招聘源</h2><p>检查默认招聘网址，修正错误来源，或添加新的重点公司。</p></div>
       </div>
-      <div class="company-list" id="companyList"></div>
+      <form id="addCompanyForm" class="source-add-form">
+        <label><span>公司名称</span><input id="companyInput" type="text" placeholder="例如：阶跃星辰" required></label>
+        <label><span>官方招聘网址</span><input id="sourceInput" type="url" placeholder="https://..." required></label>
+        <button type="submit" class="command-button"><i data-lucide="plus"></i><span>添加公司</span></button>
+      </form>
+      <div class="source-help"><i data-lucide="info"></i><span>修改先保存在当前浏览器，便于立即 review；点击“同步每日监测”并在 GitHub 确认提交后，自动任务会永久使用新网址。</span></div>
+      <div class="source-review-list" id="companyList"></div>
     </section>
 
     <section class="content-section delivery-section" id="delivery">

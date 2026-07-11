@@ -187,7 +187,7 @@ def main():
         "events": [{"type": "new-signal", **item} for item in new_signals],
         "delivery": {
             "slack": "configured" if os.getenv("SLACK_WEBHOOK_URL") else "not-configured",
-            "openclawWechat": "configured" if os.getenv("OPENCLAW_WEBHOOK_URL") else "awaiting-qr-setup",
+            "openclawWechat": "scan-connected-on-openclaw-device",
         },
     }
     write_json(DATA / "notifications.json", notifications)
@@ -199,13 +199,6 @@ def main():
         "failures": failures,
         "lastRun": "每日官方来源监测完成",
     })
-    if new_signals and os.getenv("OPENCLAW_WEBHOOK_URL"):
-        send_webhook(os.environ["OPENCLAW_WEBHOOK_URL"], os.getenv("OPENCLAW_WEBHOOK_TOKEN", ""), {
-            "title": "2027 秋招雷达：发现新的待核验线索",
-            "count": len(new_signals),
-            "items": new_signals[:10],
-            "replyWindowHours": 24,
-        })
     if new_signals and os.getenv("SLACK_WEBHOOK_URL"):
         send_webhook(os.environ["SLACK_WEBHOOK_URL"], "", {
             "text": f"2027 秋招雷达发现 {len(new_signals)} 条新的官方页面线索，请进入网站核验。"

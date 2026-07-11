@@ -39,7 +39,9 @@
       "sourceType": "官方招聘网站",
       "lastChecked": "2026-07-12T08:00:00+08:00",
       "confidence": 0.2,
-      "change": "示例数据"
+      "change": "示例数据",
+      "applyUrl": null,
+      "announcementUrl": "https://career.huawei.com/"
     },
     {
       "id": "demo-nvidia-001",
@@ -75,7 +77,9 @@
       "sourceType": "官方招聘网站",
       "lastChecked": "2026-07-12T08:00:00+08:00",
       "confidence": 0.2,
-      "change": "示例数据"
+      "change": "示例数据",
+      "applyUrl": null,
+      "announcementUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/"
     },
     {
       "id": "demo-cambricon-001",
@@ -112,7 +116,9 @@
       "sourceType": "公司官网",
       "lastChecked": "2026-07-12T08:00:00+08:00",
       "confidence": 0.2,
-      "change": "示例数据"
+      "change": "示例数据",
+      "applyUrl": null,
+      "announcementUrl": "https://www.cambricon.com/"
     },
     {
       "id": "demo-byte-001",
@@ -149,7 +155,9 @@
       "sourceType": "官方招聘网站",
       "lastChecked": "2026-07-12T08:00:00+08:00",
       "confidence": 0.2,
-      "change": "示例数据"
+      "change": "示例数据",
+      "applyUrl": null,
+      "announcementUrl": "https://jobs.bytedance.com/campus"
     }
   ]
 }

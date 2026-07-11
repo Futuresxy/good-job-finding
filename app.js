@@ -59,7 +59,7 @@ function renderJobs(){
   if(!state.profile)return;
   const jobs=filteredJobs();$("metricMatched").textContent=jobs.length;$("resultsSummary").textContent="找到 "+jobs.length+" 个岗位，匹配度已结合方向、简历关键词和重点公司。";
   $("jobList").innerHTML=jobs.length?jobs.map(j=>'<article class="job-card '+(j.status==="待核验"?"pending":"")+'" data-job="'+esc(j.id)+'" tabindex="0"><div><div class="job-title"><h3>'+esc(j.title)+'</h3><span class="tag '+(j.status==="待核验"?"neutral":"")+'">'+esc(j.status)+'</span></div><p><strong>'+esc(j.company)+'</strong> · '+esc(j.batch)+' · '+esc((j.requirements||[]).slice(0,2).join("；"))+'</p><div class="job-meta"><span><i data-lucide="map-pin"></i>'+esc(j.city)+'</span><span><i data-lucide="calendar-clock"></i>'+(j.deadline?esc(j.deadline)+" 截止":"截止时间待确认")+'</span><span><i data-lucide="refresh-cw"></i>'+new Date(j.lastChecked).toLocaleDateString("zh-CN")+'</span></div></div><div class="job-skills">'+(j.skills||[]).slice(0,5).map(s=>'<span class="tag">'+esc(s)+'</span>').join("")+'</div><div class="match-score"><strong>'+j.match+'%</strong><span>匹配</span></div></article>').join(""):'<div class="empty-state"><strong>没有符合当前条件的岗位</strong><p>调整方向、城市或核验状态后再试。</p></div>';
-  document.querySelectorAll("[data-job]").forEach(el=>{el.onclick=()=>openJob(el.dataset.job);el.onkeydown=e=>{if(e.key==="Enter")openJob(el.dataset.job)}});
+  document.querySelectorAll("[data-job]").forEach(el=>{el.onclick=e=>{if(!e.target.closest("a"))openJob(el.dataset.job)};el.onkeydown=e=>{if(e.key==="Enter")openJob(el.dataset.job)}});document.querySelectorAll("[data-detail]").forEach(b=>b.onclick=e=>{e.stopPropagation();openJob(b.dataset.detail)});
   window.lucide?.createIcons();
 }
 function openJob(id){

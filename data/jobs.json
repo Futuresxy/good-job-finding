@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-12T14:15:00+08:00",
+  "generatedAt": "2026-07-12T16:00:00+08:00",
   "mode": "live",
   "disclaimer": "本页已于 2026-07-12 完成一次人工辅助现采集。已开启结论优先依据公司官方招聘页；具体岗位状态可能随时变化，投递前请再次打开官方入口确认。",
   "collection": {
-    "checkedCompanies": 10,
+    "checkedCompanies": 12,
     "officialSources": 11,
     "externalEvidenceSources": 1,
-    "verifiedOpenings": 12,
+    "verifiedOpenings": 11,
     "notOpenedOrUnconfirmed": 1
   },
   "jobs": [
@@ -551,6 +551,94 @@
       "confidence": 0.94,
       "change": "首次现采集：未发现2027正式秋招已开启的官方公告",
       "evidence": "腾讯中文官方校招页当前列出的应届生项目仍为2026校园招聘；不将实习生项目误判为2027正式秋招。"
+    },
+    {
+      "id": "baidu-campus-2027",
+      "company": "百度",
+      "title": "百度2027届校园招聘（正式批）",
+      "directionIds": [
+        "ai-infra",
+        "architecture",
+        "compiler"
+      ],
+      "batch": "正式批",
+      "status": "已开启",
+      "city": "北京/上海/深圳等",
+      "graduateYear": 2027,
+      "postedAt": "2026-07-12",
+      "deadline": null,
+      "requirements": [
+        "面向全球2027届毕业生",
+        "毕业时间为2026年9月1日至2027年8月31日",
+        "具体学历、专业和城市要求以岗位详情为准"
+      ],
+      "skills": [
+        "大模型训练",
+        "分布式训练",
+        "vLLM",
+        "SGLang",
+        "KV Cache",
+        "K8s",
+        "Ray"
+      ],
+      "process": [
+        "官网选岗投递",
+        "简历筛选",
+        "笔试/测评",
+        "技术面试",
+        "综合面试",
+        "Offer"
+      ],
+      "sourceUrl": "https://talent.baidu.com/jobs/list?recommendCode=I",
+      "announcementUrl": "https://talent.baidu.com/jobs/",
+      "applyUrl": "https://talent.baidu.com/jobs/list?recommendCode=I",
+      "sourceType": "百度官方校园招聘网站",
+      "lastChecked": "2026-07-12T16:00:00+08:00",
+      "confidence": 0.99,
+      "change": "新增：百度2027届正式校园招聘已开启",
+      "evidence": "百度官方职位页明确写明校园招聘面向全球2027届毕业生，并已展示大模型训练、分布式系统与AI基础设施相关岗位。"
+    },
+    {
+      "id": "stepstar-top-talent-2027",
+      "company": "阶跃星辰",
+      "title": "阶跃 StepStar 顶尖人才计划",
+      "directionIds": [
+        "ai-infra",
+        "architecture"
+      ],
+      "batch": "人才计划",
+      "status": "已开启",
+      "city": "北京/上海等",
+      "graduateYear": 2027,
+      "postedAt": "2026-07-07",
+      "deadline": "2026-10-30",
+      "requirements": [
+        "面向全球顶尖校园人才",
+        "重点关注基础大模型、机器学习系统及相关前沿方向",
+        "具体毕业范围与岗位要求以官方Moka页面为准"
+      ],
+      "skills": [
+        "基础大模型",
+        "机器学习系统",
+        "大模型推理",
+        "训练系统",
+        "AI Infra"
+      ],
+      "process": [
+        "官方Moka投递",
+        "简历评估",
+        "专业面试",
+        "综合评估",
+        "Offer"
+      ],
+      "sourceUrl": "https://app.mokahr.com/campus-recruitment/step/94905#/",
+      "announcementUrl": "https://career.cuhk.edu.cn/en/job/view/id/468730",
+      "applyUrl": "https://app.mokahr.com/campus-recruitment/step/94905#/",
+      "sourceType": "阶跃星辰官方Moka校招入口 + 高校就业网交叉证据",
+      "lastChecked": "2026-07-12T16:00:00+08:00",
+      "confidence": 0.96,
+      "change": "新增：StepStar顶尖人才计划已开启",
+      "evidence": "官方Moka校招入口已开放；高校就业网同步发布计划，发布时间2026年7月7日、截止时间2026年10月30日。"
     }
   ]
 }

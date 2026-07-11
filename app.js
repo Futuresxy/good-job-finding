@@ -107,7 +107,7 @@ function updateFavoriteCount(){$("favoriteCount").textContent=state.favorites.si
 function renderCompanyOverview(matchingJobs){
   const q=norm($("searchInput").value);
   const knownGroups=new Set(state.jobs.filter(j=>j.batch!=="实习生").map(companyGroup));
-  const names=[...new Set([...state.watch,...knownGroups])].filter(name=>!q||norm(name).includes(q)||matchingJobs.some(j=>companyGroup(j)===name));
+  const names=[...new Set([...(state.profile.watchCompanies||[]),...state.watch,...knownGroups])].filter(name=>!q||norm(name).includes(q)||matchingJobs.some(j=>companyGroup(j)===name));
   const companies=names.map(name=>{
     const statusJobs=state.jobs.filter(j=>j.batch!=="实习生"&&companyGroup(j)===name);
     const matches=matchingJobs.filter(j=>companyGroup(j)===name);

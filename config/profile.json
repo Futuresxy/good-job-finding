@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "graduationYear": 2027,
+  "majors": [
+    "计算机科学与技术",
+    "人工智能",
+    "电子信息",
+    "集成电路",
+    "微电子"
+  ],
+  "directions": [
+    {
+      "id": "ai-infra",
+      "label": "AI Infra / 推理系统",
+      "keywords": [
+        "AI Infra",
+        "推理",
+        "训练系统",
+        "Serving",
+        "vLLM",
+        "KV Cache",
+        "PagedAttention",
+        "CUDA",
+        "算子",
+        "分布式训练",
+        "性能优化"
+      ],
+      "weight": 10
+    },
+    {
+      "id": "architecture",
+      "label": "计算机体系结构",
+      "keywords": [
+        "体系结构",
+        "微架构",
+        "CPU",
+        "GPU",
+        "NPU",
+        "加速器",
+        "NoC",
+        "互连",
+        "性能建模",
+        "存储系统"
+      ],
+      "weight": 10
+    },
+    {
+      "id": "chip-design",
+      "label": "芯片设计",
+      "keywords": [
+        "数字IC",
+        "RTL",
+        "SoC",
+        "ASIC",
+        "FPGA",
+        "逻辑设计",
+        "低功耗",
+        "Verilog",
+        "SystemVerilog"
+      ],
+      "weight": 9
+    },
+    {
+      "id": "compiler",
+      "label": "编译器与异构计算",
+      "keywords": [
+        "编译器",
+        "LLVM",
+        "MLIR",
+        "异构计算",
+        "运行时",
+        "Kernel",
+        "Triton"
+      ],
+      "weight": 8
+    },
+    {
+      "id": "verification",
+      "label": "芯片验证与实现",
+      "keywords": [
+        "UVM",
+        "功能验证",
+        "形式验证",
+        "DFT",
+        "综合",
+        "时序",
+        "物理设计",
+        "后端"
+      ],
+      "weight": 7
+    }
+  ],
+  "preferredCities": [
+    "北京",
+    "上海",
+    "深圳",
+    "杭州",
+    "南京",
+    "成都",
+    "西安",
+    "武汉"
+  ],
+  "watchCompanies": [
+    "华为",
+    "字节跳动",
+    "阿里巴巴",
+    "腾讯",
+    "百度",
+    "英伟达",
+    "AMD",
+    "Intel",
+    "寒武纪",
+    "地平线",
+    "海思",
+    "Arm",
+    "高通",
+    "联发科",
+    "长江存储",
+    "长鑫存储"
+  ]
+}

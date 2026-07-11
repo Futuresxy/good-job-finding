@@ -22,8 +22,6 @@ jobs:
           python-version: "3.12"
       - name: Monitor official sources
         env:
-          OPENCLAW_WEBHOOK_URL: \${{ secrets.OPENCLAW_WEBHOOK_URL }}
-          OPENCLAW_WEBHOOK_TOKEN: \${{ secrets.OPENCLAW_WEBHOOK_TOKEN }}
           SLACK_WEBHOOK_URL: \${{ secrets.SLACK_WEBHOOK_URL }}
         run: python scripts/update_jobs.py
       - name: Commit data changes

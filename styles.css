@@ -195,7 +195,7 @@ main{min-height:70vh}
 .empty-resume h3{margin:0;font-size:16px}
 .empty-resume p{margin:6px 0 0;max-width:440px;color:var(--muted);font-size:12px}
 .score-row{display:flex;align-items:center;gap:20px;padding-bottom:20px;border-bottom:1px solid var(--line)}
-.score-ring{width:84px;height:84px;border:7px solid #dcedе8;border-top-color:var(--green);border-radius:50%;display:grid;place-items:center;align-content:center;flex:0 0 84px}
+.score-ring{width:84px;height:84px;border:7px solid #dcede8;border-top-color:var(--green);border-radius:50%;display:grid;place-items:center;align-content:center;flex:0 0 84px}
 .score-ring strong{font-size:20px;line-height:1.1}
 .score-ring span{font-size:9px;color:var(--muted)}
 .score-row h3{margin:0;font-size:16px}

@@ -35,12 +35,17 @@ python scripts/update_jobs.py
 
 ## 微信推送
 
-推荐使用 OpenClaw 与微信连接。系统生成的 \`data/notifications.json\` 可作为 OpenClaw 的输入，由 OpenClaw 在微信允许的 24 小时回复窗口内推送。首次连接或授权失效时需要用户扫码，不在仓库中保存二维码、Cookie 或个人凭证。
+微信通道使用腾讯微信 ClawBot 与 OpenClaw 的扫码连接，不需要 URL、Webhook 或 Token。
 
-建议在 GitHub Actions Secrets 中配置：
+在运行 OpenClaw 的设备执行：
 
-- \`OPENCLAW_WEBHOOK_URL\`
-- \`OPENCLAW_WEBHOOK_TOKEN\`
+```bash
+npx -y @tencent-weixin/openclaw-weixin-cli@latest install
+```
+
+随后使用微信扫描终端展示的二维码，启用微信 ClawBot 插件。微信 ClawBot 仅接收 OpenClaw 在 24 小时窗口内的回复，因此每日任务应由 OpenClaw 按固定时间读取 `data/notifications.json` 并在有效窗口内回复。仓库不保存二维码、微信 Cookie、会话凭证或聊天内容。
+
+详细步骤见 `docs/openclaw-weixin.md`。
 
 ## GitHub Pages
 

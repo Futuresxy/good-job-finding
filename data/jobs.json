@@ -1,0 +1,155 @@
+{
+  "generatedAt": "2026-07-12T00:00:00+08:00",
+  "mode": "demo",
+  "disclaimer": "以下是用于验证匹配、筛选与提醒流程的待核验示例，不代表公司当前已开启 2027 秋招。",
+  "jobs": [
+    {
+      "id": "demo-huawei-001",
+      "company": "华为",
+      "title": "AI 推理系统工程师（示例）",
+      "directionIds": [
+        "ai-infra",
+        "architecture"
+      ],
+      "batch": "人才计划",
+      "status": "待核验",
+      "city": "深圳",
+      "graduateYear": 2027,
+      "postedAt": null,
+      "deadline": null,
+      "requirements": [
+        "计算机或相关专业",
+        "熟悉 Linux、Python/C++",
+        "了解分布式系统或模型推理"
+      ],
+      "skills": [
+        "Linux",
+        "Python",
+        "C++",
+        "vLLM",
+        "分布式系统"
+      ],
+      "process": [
+        "网申",
+        "测评/笔试",
+        "技术面试",
+        "综合面试"
+      ],
+      "sourceUrl": "https://career.huawei.com/",
+      "sourceType": "官方招聘网站",
+      "lastChecked": "2026-07-12T08:00:00+08:00",
+      "confidence": 0.2,
+      "change": "示例数据"
+    },
+    {
+      "id": "demo-nvidia-001",
+      "company": "英伟达",
+      "title": "GPU Software Engineer, New Grad（示例）",
+      "directionIds": [
+        "ai-infra",
+        "compiler"
+      ],
+      "batch": "正式批",
+      "status": "待核验",
+      "city": "上海",
+      "graduateYear": 2027,
+      "postedAt": null,
+      "deadline": null,
+      "requirements": [
+        "计算机、电子工程或相关专业",
+        "熟悉 C/C++",
+        "理解 CUDA 或并行计算"
+      ],
+      "skills": [
+        "C++",
+        "CUDA",
+        "并行计算",
+        "性能优化"
+      ],
+      "process": [
+        "网申",
+        "技术面试",
+        "团队面试"
+      ],
+      "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+      "sourceType": "官方招聘网站",
+      "lastChecked": "2026-07-12T08:00:00+08:00",
+      "confidence": 0.2,
+      "change": "示例数据"
+    },
+    {
+      "id": "demo-cambricon-001",
+      "company": "寒武纪",
+      "title": "芯片微架构工程师（示例）",
+      "directionIds": [
+        "architecture",
+        "chip-design"
+      ],
+      "batch": "提前批",
+      "status": "待核验",
+      "city": "北京",
+      "graduateYear": 2027,
+      "postedAt": null,
+      "deadline": null,
+      "requirements": [
+        "微电子、计算机或相关专业",
+        "掌握计算机体系结构",
+        "熟悉 Verilog/SystemVerilog"
+      ],
+      "skills": [
+        "体系结构",
+        "RTL",
+        "SystemVerilog",
+        "性能建模"
+      ],
+      "process": [
+        "网申",
+        "笔试",
+        "专业面试",
+        "HR 面试"
+      ],
+      "sourceUrl": "https://www.cambricon.com/",
+      "sourceType": "公司官网",
+      "lastChecked": "2026-07-12T08:00:00+08:00",
+      "confidence": 0.2,
+      "change": "示例数据"
+    },
+    {
+      "id": "demo-byte-001",
+      "company": "字节跳动",
+      "title": "机器学习系统工程师（示例）",
+      "directionIds": [
+        "ai-infra"
+      ],
+      "batch": "正式批",
+      "status": "待核验",
+      "city": "北京",
+      "graduateYear": 2027,
+      "postedAt": null,
+      "deadline": null,
+      "requirements": [
+        "计算机相关专业",
+        "熟悉深度学习框架",
+        "具备系统性能分析能力"
+      ],
+      "skills": [
+        "PyTorch",
+        "分布式训练",
+        "推理优化",
+        "Python",
+        "C++"
+      ],
+      "process": [
+        "网申",
+        "在线笔试",
+        "技术面试",
+        "HR 面试"
+      ],
+      "sourceUrl": "https://jobs.bytedance.com/campus",
+      "sourceType": "官方招聘网站",
+      "lastChecked": "2026-07-12T08:00:00+08:00",
+      "confidence": 0.2,
+      "change": "示例数据"
+    }
+  ]
+}

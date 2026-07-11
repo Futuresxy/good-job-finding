@@ -1,0 +1,226 @@
+{
+  "generatedAt": "2026-07-12T15:00:00+08:00",
+  "companies": [
+    {
+      "company": "华为",
+      "early": {
+        "status": "已开启",
+        "open": true
+      },
+      "formal": {
+        "status": "持续监测",
+        "open": false
+      },
+      "matchingJobs": 1,
+      "lastAttempt": "2026-07-12T15:00:00+08:00"
+    },
+    {
+      "company": "字节跳动",
+      "early": {
+        "status": "已开启",
+        "open": true
+      },
+      "formal": {
+        "status": "持续监测",
+        "open": false
+      },
+      "matchingJobs": 5,
+      "lastAttempt": "2026-07-12T15:00:00+08:00"
+    },
+    {
+      "company": "阿里巴巴",
+      "early": {
+        "status": "已开启",
+        "open": true
+      },
+      "formal": {
+        "status": "持续监测",
+        "open": false
+      },
+      "matchingJobs": 1,
+      "lastAttempt": "2026-07-12T15:00:00+08:00"
+    },
+    {
+      "company": "腾讯",
+      "early": {
+        "status": "持续监测",
+        "open": false
+      },
+      "formal": {
+        "status": "持续监测",
+        "open": false
+      },
+      "matchingJobs": 1,
+      "lastAttempt": "2026-07-12T15:00:00+08:00"
+    },
+    {
+      "company": "百度",
+      "early": {
+        "status": "持续监测",
+        "open": false
+      },
+      "formal": {
+        "status": "持续监测",
+        "open": false
+      },
+      "matchingJobs": 0,
+      "lastAttempt": "2026-07-12T15:00:00+08:00"
+    },
+    {
+      "company": "英伟达",
+      "early": {
+        "status": "持续监测",
+        "open": false
+      },
+      "formal": {
+        "status": "持续监测",
+        "open": false
+      },
+      "matchingJobs": 0,
+      "lastAttempt": "2026-07-12T15:00:00+08:00"
+    },
+    {
+      "company": "AMD",
+      "early": {
+        "status": "持续监测",
+        "open": false
+      },
+      "formal": {
+        "status": "持续监测",
+        "open": false
+      },
+      "matchingJobs": 0,
+      "lastAttempt": "2026-07-12T15:00:00+08:00"
+    },
+    {
+      "company": "Intel",
+      "early": {
+        "status": "持续监测",
+        "open": false
+      },
+      "formal": {
+        "status": "持续监测",
+        "open": false
+      },
+      "matchingJobs": 0,
+      "lastAttempt": "2026-07-12T15:00:00+08:00"
+    },
+    {
+      "company": "寒武纪",
+      "early": {
+        "status": "持续监测",
+        "open": false
+      },
+      "formal": {
+        "status": "持续监测",
+        "open": false
+      },
+      "matchingJobs": 0,
+      "lastAttempt": "2026-07-12T15:00:00+08:00"
+    },
+    {
+      "company": "地平线",
+      "early": {
+        "status": "持续监测",
+        "open": false
+      },
+      "formal": {
+        "status": "持续监测",
+        "open": false
+      },
+      "matchingJobs": 0,
+      "lastAttempt": "2026-07-12T15:00:00+08:00"
+    },
+    {
+      "company": "海思",
+      "early": {
+        "status": "持续监测",
+        "open": false
+      },
+      "formal": {
+        "status": "持续监测",
+        "open": false
+      },
+      "matchingJobs": 0,
+      "lastAttempt": "2026-07-12T15:00:00+08:00"
+    },
+    {
+      "company": "Arm",
+      "early": {
+        "status": "持续监测",
+        "open": false
+      },
+      "formal": {
+        "status": "持续监测",
+        "open": false
+      },
+      "matchingJobs": 0,
+      "lastAttempt": "2026-07-12T15:00:00+08:00"
+    },
+    {
+      "company": "高通",
+      "early": {
+        "status": "持续监测",
+        "open": false
+      },
+      "formal": {
+        "status": "持续监测",
+        "open": false
+      },
+      "matchingJobs": 0,
+      "lastAttempt": "2026-07-12T15:00:00+08:00"
+    },
+    {
+      "company": "联发科",
+      "early": {
+        "status": "持续监测",
+        "open": false
+      },
+      "formal": {
+        "status": "持续监测",
+        "open": false
+      },
+      "matchingJobs": 0,
+      "lastAttempt": "2026-07-12T15:00:00+08:00"
+    },
+    {
+      "company": "长江存储",
+      "early": {
+        "status": "已开启",
+        "open": true
+      },
+      "formal": {
+        "status": "持续监测",
+        "open": false
+      },
+      "matchingJobs": 1,
+      "lastAttempt": "2026-07-12T15:00:00+08:00"
+    },
+    {
+      "company": "长鑫存储",
+      "early": {
+        "status": "持续监测",
+        "open": false
+      },
+      "formal": {
+        "status": "持续监测",
+        "open": false
+      },
+      "matchingJobs": 0,
+      "lastAttempt": "2026-07-12T15:00:00+08:00"
+    },
+    {
+      "company": "大疆",
+      "early": {
+        "status": "持续监测",
+        "open": false
+      },
+      "formal": {
+        "status": "已开启",
+        "open": true
+      },
+      "matchingJobs": 1,
+      "lastAttempt": "2026-07-12T15:00:00+08:00"
+    }
+  ]
+}

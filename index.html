@@ -146,7 +146,7 @@
       <div class="delivery-grid">
         <article>
           <div class="channel-icon"><i data-lucide="message-circle"></i></div>
-          <div><h3>OpenClaw + 微信</h3><p>使用 OpenClaw 连接微信，在微信允许的 24 小时回复窗口内发送岗位动态。首次连接时需要你扫码。</p></div>
+          <div><h3>OpenClaw + 微信</h3><p>使用腾讯微信 ClawBot 与 OpenClaw 连接，只需在运行 OpenClaw 的设备安装插件并扫码，不配置 URL 或令牌。</p></div>
           <button class="secondary-button" id="openClawSetup"><i data-lucide="qr-code"></i><span>查看连接步骤</span></button>
         </article>
         <article>
@@ -171,12 +171,12 @@
   <dialog id="openClawDialog">
     <div class="dialog-head"><div><p>微信推送</p><h2>OpenClaw 连接步骤</h2></div><button class="icon-button" id="closeOpenClaw" aria-label="关闭"><i data-lucide="x"></i></button></div>
     <ol class="setup-steps">
-      <li><strong>部署或打开 OpenClaw</strong><span>确认可访问它的连接器与消息入口。</span></li>
-      <li><strong>发起微信连接</strong><span>由 OpenClaw 生成登录二维码；此时再由你扫码授权。</span></li>
-      <li><strong>配置安全凭证</strong><span>Webhook 地址和令牌写入 GitHub Actions Secrets，不进入公开仓库。</span></li>
-      <li><strong>发送测试提醒</strong><span>验证新增岗位、重点公司和截止提醒均能在 24 小时窗口内到达。</span></li>
+      <li><strong>在 OpenClaw 设备安装插件</strong><span><code>npx -y @tencent-weixin/openclaw-weixin-cli@latest install</code></span></li>
+      <li><strong>微信扫码连接</strong><span>扫描安装过程展示的二维码，启用微信 ClawBot 插件。</span></li>
+      <li><strong>设置每日招聘任务</strong><span>让 OpenClaw 定时读取招聘雷达的通知数据，按方向和简历匹配结果生成回复。</span></li>
+      <li><strong>验证 24 小时窗口</strong><span>发送测试消息，确认新增岗位、重点公司和截止提醒能在有效回复窗口内到达。</span></li>
     </ol>
-    <div class="privacy-note"><i data-lucide="lock-keyhole"></i><span>仓库不保存二维码、微信 Cookie、会话内容或个人令牌。</span></div>
+    <div class="privacy-note"><i data-lucide="lock-keyhole"></i><span>该连接没有 URL 或 Token 配置。仓库不保存二维码、微信 Cookie、会话凭证或聊天内容。</span></div>
   </dialog>
 
   <footer><span>Good Job Finding · 数据结论以公司官方招聘页面为准</span><a href="https://github.com/Futuresxy/good-job-finding" target="_blank" rel="noreferrer">查看源码</a></footer>

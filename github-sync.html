@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https://api.github.com; style-src 'self'; script-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>写入招聘源 | Good Job Finding</title>
+  <link rel="stylesheet" href="./github-sync.css?v=20260712-1">
+</head>
+<body>
+  <main>
+    <header><span class="mark">GJ</span><div><p>REPOSITORY SYNC</p><h1>写入每日监测配置</h1></div></header>
+    <section class="task">
+      <span>本次更新</span>
+      <strong id="company">等待公司信息</strong>
+      <code id="url">--</code>
+    </section>
+    <section class="auth" id="authPanel">
+      <label for="token">GitHub fine-grained token</label>
+      <input id="token" type="password" autocomplete="off" placeholder="github_pat_..." spellcheck="false">
+      <p>仅授予 <strong>Futuresxy/good-job-finding</strong> 的 Contents 读写权限。令牌只保存在本窗口内存，不写入网页、仓库或浏览器存储。</p>
+      <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noreferrer">创建仓库专用 Token</a>
+    </section>
+    <button id="sync" type="button">授权并写入仓库</button>
+    <p class="status" id="status" role="status">首次授权后保持此窗口开启，后续在主站点击“写入仓库”即可直接同步。</p>
+  </main>
+  <script src="./github-sync.js?v=20260712-1"></script>
+</body>
+</html>

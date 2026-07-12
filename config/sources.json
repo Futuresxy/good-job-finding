@@ -53,10 +53,21 @@
     },
     {
       "company": "拼多多",
-      "careersUrl": "https://careers.pddglobalhr.com/",
-      "priority": 8,
+      "careersUrl": "https://careers.pddglobalhr.com/campus/grad",
+      "priority": 10,
       "enabled": true,
-      "parser": "official-page-monitor"
+      "parser": "official-page-monitor",
+      "campaigns": [
+        {
+          "graduateYear": 2027,
+          "batch": "正式批",
+          "status": "已开启",
+          "firstVerifiedAt": "2026-07-12",
+          "deadline": null,
+          "url": "https://careers.pddglobalhr.com/campus/grad",
+          "evidence": "拼多多官方页面明确展示2027届校园招聘及应届生招聘"
+        }
+      ]
     },
     {
       "company": "米哈游",
@@ -109,17 +120,57 @@
     },
     {
       "company": "美团",
-      "careersUrl": "https://zhaopin.meituan.com/",
+      "careersUrl": "https://zhaopin.meituan.com/web/position?hiringType=4_1",
       "priority": 10,
       "enabled": true,
-      "parser": "official-page-monitor"
+      "parser": "official-page-monitor",
+      "campaigns": [
+        {
+          "graduateYear": 2027,
+          "batch": "正式批",
+          "status": "已开启",
+          "firstVerifiedAt": "2026-07-12",
+          "deadline": null,
+          "url": "https://zhaopin.meituan.com/web/position?hiringType=4_1",
+          "evidence": "美团官方2027届校园招聘正式批职位入口"
+        }
+      ]
     },
     {
       "company": "Minimax",
-      "careersUrl": "https://vrfi1sk8a0.jobs.feishu.cn/379481/",
+      "careersUrl": "https://vrfi1sk8a0.jobs.feishu.cn/379481/?keywords=&category=&location=&project=7495675705720965415&type=&job_hot_flag=&current=1&limit=10&functionCategory=&tag=",
       "priority": 10,
       "enabled": true,
-      "parser": "official-page-monitor"
+      "parser": "official-page-monitor",
+      "campaigns": [
+        {
+          "graduateYear": 2027,
+          "batch": "正式批",
+          "status": "已开启",
+          "firstVerifiedAt": "2026-07-12",
+          "deadline": null,
+          "url": "https://vrfi1sk8a0.jobs.feishu.cn/379481/?keywords=&category=&location=&project=7495675705720965415&type=&job_hot_flag=&current=1&limit=10&functionCategory=&tag=",
+          "evidence": "MiniMax官方飞书招聘2027届校园招聘项目入口"
+        }
+      ]
+    },
+    {
+      "company": "长鑫存储",
+      "priority": 10,
+      "enabled": true,
+      "parser": "official-page-monitor",
+      "careersUrl": "https://cxmt.zhiye.com/campus/jobs",
+      "campaigns": [
+        {
+          "graduateYear": 2027,
+          "batch": "正式批",
+          "status": "已开启",
+          "firstVerifiedAt": "2026-07-12",
+          "deadline": null,
+          "url": "https://cxmt.zhiye.com/campus/jobs",
+          "evidence": "长鑫存储官方校园招聘职位入口"
+        }
+      ]
     }
   ],
   "updatedAt": "2026-07-12T16:00:00+08:00"

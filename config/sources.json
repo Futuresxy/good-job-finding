@@ -67,10 +67,10 @@
     },
     {
       "company": "百度",
-      "careersUrl": "https://talent.baidu.com/",
+      "careersUrl": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
       "priority": 10,
       "enabled": true,
-      "parser": "official-page-monitor"
+      "parser": "baidu-campus-monitor"
     },
     {
       "company": "英伟达",

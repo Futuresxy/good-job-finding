@@ -388,3 +388,6 @@ footer a{color:var(--green);font-weight:700;text-decoration:none}
   .company-card-foot{display:grid}
   .company-card-actions{justify-content:flex-start}
 }
+
+.source-actions .remove-source{color:var(--muted)}
+.source-actions .remove-source:hover{border-color:#d6a29c;color:var(--red);background:var(--red-soft)}

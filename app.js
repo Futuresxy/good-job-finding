@@ -69,7 +69,7 @@ function filteredJobs(){
   const q=norm($("searchInput").value),batch=$("batchFilter").value,city=$("cityFilter").value;
   const detailKeywords=[...state.selectedSubdomains].flatMap(id=>subdomainFor(id)?.keywords||[]);
   return state.jobs.filter(j=>{
-    if(j.batch==="实习生"||!isCompanyActive(companyGroup(j)))return false;
+    if(j.batch==="实习生"||j.recordType==="campaign"||!isCompanyActive(companyGroup(j)))return false;
     const hay=norm([j.company,j.title,j.city,...(j.skills||[]),...(j.requirements||[])].join(" "));
     return(!q||hay.includes(q))&&matchesBatch(j,batch)&&(!city||j.city===city)&&(!$("watchOnly").checked||state.watch.has(companyGroup(j)))&&(!$("verifiedOnly").checked||j.status==="已开启")&&(!state.selectedDirections.size||(j.directionIds||[]).some(id=>state.selectedDirections.has(id)))&&(!detailKeywords.length||detailKeywords.some(keyword=>hay.includes(norm(keyword))));
   }).map(j=>({...j,match:calculateMatch(j)})).sort((a,b)=>$("sortBy").value==="company"?a.company.localeCompare(b.company):$("sortBy").value==="checked"?new Date(b.lastChecked)-new Date(a.lastChecked):b.match-a.match);
@@ -150,9 +150,10 @@ function renderCompanyOverview(matchingJobs){
 function batchWindow(jobs,kind){
   const opened=jobs.filter(j=>batchKind(j)===kind&&isOpen(j));
   const starts=opened.map(j=>j.recruitmentStart||j.postedAt).filter(Boolean).sort();
+  const startLabels=opened.map(j=>j.recruitmentStartLabel).filter(Boolean);
   const deadlines=opened.map(j=>j.recruitmentDeadline||j.deadline).filter(Boolean).sort();
-  const start=starts[0]||"待确认",deadline=deadlines[0]||"待公布";
-  return {start,deadline,text:"开始 "+start+" · 截止 "+deadline};
+  const start=starts[0]||"待确认",startText=startLabels[0]||start,deadline=deadlines[0]||"待公布";
+  return {start,deadline,text:"开放 "+startText+" · 截止 "+deadline};
 }
 function batchBadge(kind,jobs){
   const open=batchState(jobs,kind),period=batchWindow(jobs,kind);

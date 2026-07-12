@@ -1,6 +1,7 @@
-const state={jobs:[],profile:null,sources:[],customSources:[],sourceOverrides:JSON.parse(localStorage.getItem("gjf-source-overrides")||"{}"),hiddenCompanies:new Set(JSON.parse(localStorage.getItem("gjf-hidden-companies")||"[]")),watch:new Set(JSON.parse(localStorage.getItem("gjf-watch")||"null")||[]),favorites:new Set(JSON.parse(localStorage.getItem("gjf-favorites")||"[]")),resumeText:localStorage.getItem("gjf-resume-text")||"",selectedDirections:new Set(),selectedSubdomains:new Set(),selectedCompany:null,showFavorites:false,companyPage:1,pageSize:6};
+const state={jobs:[],profile:null,sources:[],customSources:[],sourceOverrides:JSON.parse(localStorage.getItem("gjf-source-overrides")||"{}"),hiddenCompanies:new Set(JSON.parse(localStorage.getItem("gjf-hidden-companies")||"[]")),dirtySources:new Set(JSON.parse(localStorage.getItem("gjf-dirty-sources")||"[]")),watch:new Set(JSON.parse(localStorage.getItem("gjf-watch")||"null")||[]),favorites:new Set(JSON.parse(localStorage.getItem("gjf-favorites")||"[]")),resumeText:localStorage.getItem("gjf-resume-text")||"",selectedDirections:new Set(),selectedSubdomains:new Set(),selectedCompany:null,showFavorites:false,companyPage:1,pageSize:6};
 let sourceSyncWindow=null;
 const sourceSyncChannel="BroadcastChannel" in window?new BroadcastChannel("gjf-repository-sync"):null;
+sourceSyncChannel?.addEventListener("message",event=>{if(event.data?.type==="synced"&&event.data?.action==="batch"){state.dirtySources.clear();localStorage.removeItem("gjf-dirty-sources");localStorage.removeItem("gjf-pending-source-batch");updateSourceCommitState()}});
 const $=(id)=>document.getElementById(id);
 const esc=(v)=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));
 const norm=(v)=>String(v??"").toLowerCase().replace(/\s+/g,"");
@@ -15,7 +16,7 @@ async function init(){
     if(!state.watch.size) profile.watchCompanies.filter(isCompanyActive).forEach(x=>state.watch.add(x));
     state.customSources.filter(item=>isCompanyActive(item.company)).forEach(item=>state.watch.add(item.company));
     [...state.hiddenCompanies].forEach(name=>state.watch.delete(name));
-    renderDirections();renderCities();bind();renderCompanies();renderJobs();renderStatus(status,jobs);
+    renderDirections();renderCities();bind();renderCompanies();renderJobs();renderStatus(status,jobs);updateSourceCommitState();
     if(state.resumeText) analyzeResume(state.resumeText,"上次分析的简历");
   }catch(error){$("runState").textContent="数据读取失败";$("jobList").innerHTML='<div class="empty-state">暂时无法读取岗位数据，请稍后刷新。</div>'}
   window.lucide?.createIcons();
@@ -23,7 +24,8 @@ async function init(){
 function bind(){
   ["searchInput","batchFilter","cityFilter","watchOnly","verifiedOnly","sortBy"].forEach(id=>$(id).addEventListener(id==="searchInput"?"input":"change",()=>{state.companyPage=1;renderJobs()}));
   $("resetFilters").onclick=()=>{["searchInput","batchFilter","cityFilter"].forEach(id=>$(id).value="");$("watchOnly").checked=false;$("verifiedOnly").checked=false;state.selectedDirections.clear();state.selectedSubdomains.clear();state.selectedCompany=null;state.showFavorites=false;state.companyPage=1;document.querySelectorAll("[data-direction],[data-subdomain]").forEach(x=>x.checked=false);renderJobs()};$("backCompanies").onclick=()=>{state.selectedCompany=null;state.showFavorites=false;state.companyPage=1;renderJobs();location.hash="radar"};const openFavorites=()=>{state.selectedCompany=null;state.showFavorites=true;renderJobs();location.hash="radar"};$("favoritesNav").onclick=openFavorites;$("favoritesToolbar").onclick=openFavorites;
-  $("addCompanyForm").onsubmit=e=>{e.preventDefault();const name=$("companyInput").value.trim(),url=$("sourceInput").value.trim();if(name&&isValidSourceUrl(url)){state.hiddenCompanies.delete(name);saveHiddenCompanies();state.watch.add(name);state.sourceOverrides[name]=url;saveSourceOverrides();saveWatch();$("companyInput").value="";$("sourceInput").value="";renderCompanies();renderJobs();syncCompanySource(name)}};
+  $("addCompanyForm").onsubmit=e=>{e.preventDefault();const name=$("companyInput").value.trim(),url=$("sourceInput").value.trim();if(name&&isValidSourceUrl(url)){state.hiddenCompanies.delete(name);saveHiddenCompanies();state.watch.add(name);state.sourceOverrides[name]=url;saveSourceOverrides();saveWatch();$("companyInput").value="";$("sourceInput").value="";markSourceDirty(name);renderCompanies();renderJobs()}};
+  $("commitSources").onclick=commitSourceChanges;
   $("resumeFile").onchange=readResume;
   $("closeJob").onclick=()=>$("jobDialog").close();
   $("openClawSetup").onclick=()=>{$("openClawDialog").showModal();window.lucide?.createIcons()};
@@ -178,32 +180,43 @@ function renderCompanies(){
   const names=[...new Set([...(state.profile.watchCompanies||[]),...state.watch,...state.sources.map(item=>item.company)])].filter(isCompanyActive).sort((a,b)=>a.localeCompare(b));
   $("companyList").innerHTML=names.map(company=>{
     const defaultUrl=defaultSourceFor(company),current=sourceFor(company),custom=Boolean(state.sourceOverrides[company]),inRepo=state.customSources.some(item=>item.company===company);
-    return '<article class="source-row"><div class="source-company"><span class="source-state '+(current?"is-ready":"is-missing")+'"></span><span><strong>'+esc(company)+'</strong><small>'+(inRepo?"个人仓库配置":custom?"本地修改待写入":defaultUrl?"仓库默认来源":"缺少招聘网址")+'</small></span></div><label class="source-url"><span>招聘网址</span><input type="url" data-source-url="'+esc(company)+'" value="'+esc(current)+'" placeholder="https://..."></label><div class="source-actions"><button type="button" data-save-source="'+esc(company)+'" title="保存到当前浏览器" aria-label="保存 '+esc(company)+' 招聘网址"><i data-lucide="save"></i></button>'+(current?'<a href="'+esc(current)+'" target="_blank" rel="noreferrer" title="打开招聘网站" aria-label="打开 '+esc(company)+' 招聘网站"><i data-lucide="external-link"></i></a>':'')+'<button class="sync-source" type="button" data-sync-source="'+esc(company)+'"><i data-lucide="cloud-upload"></i><span>写入仓库</span></button><button class="remove-source" type="button" data-remove-company="'+esc(company)+'" title="移除重点公司" aria-label="移除 '+esc(company)+'"><i data-lucide="trash-2"></i></button></div></article>'
+    return '<article class="source-row"><div class="source-company"><span class="source-state '+(current?"is-ready":"is-missing")+'"></span><span><strong>'+esc(company)+'</strong><small>'+(inRepo?"个人仓库配置":custom?"本地修改待写入":defaultUrl?"仓库默认来源":"缺少招聘网址")+'</small></span></div><label class="source-url"><span>招聘网址</span><input type="url" data-source-url="'+esc(company)+'" value="'+esc(current)+'" placeholder="https://..."></label><div class="source-actions"><button type="button" data-save-source="'+esc(company)+'" title="保存到当前浏览器" aria-label="保存 '+esc(company)+' 招聘网址"><i data-lucide="save"></i></button>'+(current?'<a href="'+esc(current)+'" target="_blank" rel="noreferrer" title="打开招聘网站" aria-label="打开 '+esc(company)+' 招聘网站"><i data-lucide="external-link"></i></a>':'')+'<button class="remove-source" type="button" data-remove-company="'+esc(company)+'" title="移除重点公司" aria-label="移除 '+esc(company)+'"><i data-lucide="trash-2"></i></button></div></article>'
   }).join("");
   document.querySelectorAll("[data-save-source]").forEach(button=>button.onclick=()=>saveCompanySource(button.dataset.saveSource));
-  document.querySelectorAll("[data-sync-source]").forEach(button=>button.onclick=()=>syncCompanySource(button.dataset.syncSource));
   document.querySelectorAll("[data-remove-company]").forEach(button=>button.onclick=()=>removeCompany(button.dataset.removeCompany));
   $("metricCompanies").textContent=names.length;window.lucide?.createIcons();
 }
 function saveCompanySource(company){
   const input=document.querySelector('[data-source-url="'+CSS.escape(company)+'"]'),url=input?.value.trim()||"";
   if(!isValidSourceUrl(url)){input?.setCustomValidity("请输入有效的 http(s) 招聘网址");input?.reportValidity();return}
-  input.setCustomValidity("");state.sourceOverrides[company]=url;state.watch.add(company);saveSourceOverrides();saveWatch();renderCompanies();renderJobs();
+  input.setCustomValidity("");state.sourceOverrides[company]=url;state.watch.add(company);saveSourceOverrides();saveWatch();markSourceDirty(company);renderCompanies();renderJobs();
+}
+function markSourceDirty(company){
+  state.dirtySources.add(company);localStorage.setItem("gjf-dirty-sources",JSON.stringify([...state.dirtySources]));updateSourceCommitState();
+}
+function updateSourceCommitState(){
+  const button=$("commitSources");if(!button)return;
+  const count=state.dirtySources.size;button.disabled=!count;
+  button.innerHTML='<i data-lucide="cloud-upload"></i><span>'+(count?"保存全部到仓库（"+count+"）":"暂无待提交修改")+'</span>';
+  window.lucide?.createIcons();
 }
 function openRepositorySync(task){
   if(sourceSyncWindow&&!sourceSyncWindow.closed){sourceSyncChannel?.postMessage({type:"sync-source",...task});sourceSyncWindow.focus()}
   else{const params=new URLSearchParams(task);sourceSyncWindow=window.open("github-sync.html?"+params.toString(),"gjfRepositorySync","width=620,height=760")}
 }
-function syncCompanySource(company){
-  const input=document.querySelector('[data-source-url="'+CSS.escape(company)+'"]'),url=input?.value.trim()||sourceFor(company);
-  if(!isValidSourceUrl(url)){input?.setCustomValidity("请先填写有效招聘网址");input?.reportValidity();return}
-  state.hiddenCompanies.delete(company);saveHiddenCompanies();state.sourceOverrides[company]=url;state.watch.add(company);saveSourceOverrides();saveWatch();
-  openRepositorySync({company,url,action:"upsert"});renderCompanies();
+function commitSourceChanges(){
+  if(!state.dirtySources.size)return;
+  const map=new Map(state.customSources.map(item=>[item.company,item]));
+  Object.entries(state.sourceOverrides).forEach(([company,url])=>{if(!state.hiddenCompanies.has(company))map.set(company,{company,careersUrl:url,priority:10,enabled:true,parser:company==="百度"?"baidu-campus-monitor":"official-page-monitor"})});
+  state.hiddenCompanies.forEach(company=>map.delete(company));
+  const payload={version:1,updatedAt:new Date().toISOString(),sources:[...map.values()],removedCompanies:[...state.hiddenCompanies]};
+  localStorage.setItem("gjf-pending-source-batch",JSON.stringify(payload));
+  openRepositorySync({action:"batch"});
 }
 function removeCompany(company){
-  if(!window.confirm("确认从重点关注中移除“"+company+"”？写入仓库后，每日任务也会停止监测该公司。"))return;
-  state.hiddenCompanies.add(company);state.watch.delete(company);delete state.sourceOverrides[company];saveHiddenCompanies();saveSourceOverrides();saveWatch();
-  renderCompanies();renderJobs();openRepositorySync({company,action:"remove"});
+  if(!window.confirm("确认从重点关注中移除“"+company+"”？保存全部修改后，每日任务也会停止监测该公司。"))return;
+  state.hiddenCompanies.add(company);state.watch.delete(company);delete state.sourceOverrides[company];saveHiddenCompanies();saveSourceOverrides();saveWatch();markSourceDirty(company);
+  renderCompanies();renderJobs();
 }
 function saveWatch(){localStorage.setItem("gjf-watch",JSON.stringify([...state.watch]))}
 async function readResume(e){

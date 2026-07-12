@@ -108,7 +108,7 @@ def discover(source, directions):
             for keyword in subdomain.get("keywords", [])
         ]
     ))
-    page_has_opening = any(term.lower() in page_text.lower() for term in OPENING_TERMS)
+    page_has_opening = any(term.lower() in page_text.lower() for term in ("2027届", "2027 届", "2027校园招聘", "2027 校园招聘"))
     candidates = []
     for link in parser.links:
         text = html.unescape(link["text"]).strip()

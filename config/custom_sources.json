@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-12T11:04:40.822Z",
+  "updatedAt": "2026-07-12T11:23:56.891Z",
   "sources": [
     {
       "company": "寒武纪",
@@ -8,10 +8,76 @@
       "priority": 10,
       "enabled": true,
       "parser": "official-page-monitor"
+    },
+    {
+      "company": "美团",
+      "careersUrl": "https://zhaopin.meituan.com/",
+      "priority": 10,
+      "enabled": true,
+      "parser": "official-page-monitor"
+    },
+    {
+      "company": "长鑫存储",
+      "careersUrl": "https://cxmt.zhiye.com/campus/jobs",
+      "priority": 10,
+      "enabled": true,
+      "parser": "official-page-monitor"
+    },
+    {
+      "company": "智谱华章",
+      "careersUrl": "https://app.mokahr.com/campus-recruitment/zphz/148984#/home",
+      "priority": 10,
+      "enabled": true,
+      "parser": "official-page-monitor"
+    },
+    {
+      "company": "moonshot",
+      "careersUrl": "https://app.mokahr.com/apply/moonshot/148506#/jobs",
+      "priority": 10,
+      "enabled": true,
+      "parser": "official-page-monitor"
+    },
+    {
+      "company": "Intel",
+      "careersUrl": "https://jobs.intel.cn/intel/home/index/#/campus/index",
+      "priority": 10,
+      "enabled": true,
+      "parser": "official-page-monitor"
+    },
+    {
+      "company": "AMD",
+      "careersUrl": "https://careers.amd.com/careers-home/jobs",
+      "priority": 10,
+      "enabled": true,
+      "parser": "official-page-monitor"
+    },
+    {
+      "company": "拼多多",
+      "careersUrl": "https://careers.pddglobalhr.com/campus/grad",
+      "priority": 10,
+      "enabled": true,
+      "parser": "official-page-monitor"
+    },
+    {
+      "company": "Minimax",
+      "careersUrl": "https://vrfi1sk8a0.jobs.feishu.cn/379481/",
+      "priority": 10,
+      "enabled": true,
+      "parser": "official-page-monitor"
+    },
+    {
+      "company": "阶跃星辰",
+      "careersUrl": "https://app.mokahr.com/campus-recruitment/step/141903#/jobs",
+      "priority": 10,
+      "enabled": true,
+      "parser": "official-page-monitor"
     }
   ],
   "removedCompanies": [
+    "海思",
+    "联发科",
     "高通",
-    "海思"
+    "地平线",
+    "米哈游"
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-12T18:30:00+08:00",
+  "generatedAt": "2026-07-12T02:54:11.298704+00:00",
   "mode": "live",
   "disclaimer": "本页已于 2026-07-12 完成一次人工辅助现采集。已开启结论优先依据公司官方招聘页；具体岗位状态可能随时变化，投递前请再次打开官方入口确认。",
   "collection": {
@@ -7,7 +7,10 @@
     "officialSources": 11,
     "externalEvidenceSources": 1,
     "verifiedOpenings": 16,
-    "notOpenedOrUnconfirmed": 1
+    "notOpenedOrUnconfirmed": 1,
+    "lastAutomatedCheck": "2026-07-12T02:54:11.298704+00:00",
+    "reachableEvidencePages": 14,
+    "unconfirmedEvidencePages": 1
   },
   "jobs": [
     {
@@ -49,10 +52,15 @@
       "announcementUrl": "https://jobs.bytedance.com/campus/page-6272Gc",
       "applyUrl": "https://jobs.bytedance.com/campus/",
       "sourceType": "官方校园招聘项目页",
-      "lastChecked": "2026-07-12T14:15:00+08:00",
+      "lastChecked": "2026-07-12T02:54:11.298704+00:00",
       "confidence": 0.96,
       "change": "首次现采集：确认面向2027届及以后，项目已开放",
-      "evidence": "官方项目页明确说明面向2027届及以后，并要求在校招官网勾选“正式”查看在招岗位。"
+      "evidence": "官方项目页明确说明面向2027届及以后，并要求在校招官网勾选“正式”查看在招岗位。",
+      "verification": {
+        "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
+        "reachable": true,
+        "note": "官方页面可访问"
+      }
     },
     {
       "id": "bytedance-seed-2027",
@@ -92,10 +100,15 @@
       "announcementUrl": "https://seed.bytedance.com/zh/blog/bytedance-seed-2027-foundation-model-campus-recruitment-is-now-open-internships-included",
       "applyUrl": "https://seed.bytedance.com/zh/seedearlycareer",
       "sourceType": "官方团队招聘项目页",
-      "lastChecked": "2026-07-12T14:15:00+08:00",
+      "lastChecked": "2026-07-12T02:54:11.298704+00:00",
       "confidence": 0.98,
       "change": "首次现采集：官方明确2027届大模型人才校招已开启",
-      "evidence": "Seed 官方页面列出2027届应届生与实习生范围，并包含机器学习系统和新硬件体系结构下的编译优化。"
+      "evidence": "Seed 官方页面列出2027届应届生与实习生范围，并包含机器学习系统和新硬件体系结构下的编译优化。",
+      "verification": {
+        "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
+        "reachable": true,
+        "note": "官方页面可访问"
+      }
     },
     {
       "id": "bytedance-ai-infra-7532444773435083026",
@@ -131,10 +144,15 @@
       "announcementUrl": "https://jobs.bytedance.com/campus/page-6272Gc",
       "applyUrl": "https://jobs.bytedance.com/campus/position/7532444773435083026/detail",
       "sourceType": "官方具体岗位页",
-      "lastChecked": "2026-07-12T14:15:00+08:00",
+      "lastChecked": "2026-07-12T02:54:11.298704+00:00",
       "confidence": 0.82,
       "change": "首次现采集：发现官方具体岗位页",
-      "evidence": "字节校园招聘官方域名存在该岗位详情页；投递前需在页面再次确认岗位仍接受申请。"
+      "evidence": "字节校园招聘官方域名存在该岗位详情页；投递前需在页面再次确认岗位仍接受申请。",
+      "verification": {
+        "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
+        "reachable": true,
+        "note": "官方页面可访问"
+      }
     },
     {
       "id": "bytedance-ml-system-7508668603978647816",
@@ -171,10 +189,15 @@
       "announcementUrl": "https://jobs.bytedance.com/campus/page-6272Gc",
       "applyUrl": "https://jobs.bytedance.com/campus/position/7508668603978647816/detail",
       "sourceType": "官方具体岗位页",
-      "lastChecked": "2026-07-12T14:15:00+08:00",
+      "lastChecked": "2026-07-12T02:54:11.298704+00:00",
       "confidence": 0.82,
       "change": "首次现采集：发现官方具体岗位页",
-      "evidence": "官方岗位标题明确为机器学习系统研发工程师，属于当前重点方向。"
+      "evidence": "官方岗位标题明确为机器学习系统研发工程师，属于当前重点方向。",
+      "verification": {
+        "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
+        "reachable": true,
+        "note": "官方页面可访问"
+      }
     },
     {
       "id": "bytedance-seed-ai-search-7621894037364836613",
@@ -211,10 +234,15 @@
       "announcementUrl": "https://seed.bytedance.com/zh/seedearlycareer",
       "applyUrl": "https://jobs.bytedance.com/campus/position/7621894037364836613/detail",
       "sourceType": "官方具体岗位页",
-      "lastChecked": "2026-07-12T14:15:00+08:00",
+      "lastChecked": "2026-07-12T02:54:11.298704+00:00",
       "confidence": 0.86,
       "change": "首次现采集：发现Seed大模型人才校招具体岗位",
-      "evidence": "官方岗位页标题为豆包AI搜索架构工程师，项目页确认2027届招聘已开启。"
+      "evidence": "官方岗位页标题为豆包AI搜索架构工程师，项目页确认2027届招聘已开启。",
+      "verification": {
+        "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
+        "reachable": true,
+        "note": "官方页面可访问"
+      }
     },
     {
       "id": "bytedance-chip-intern-7470483398726977810",
@@ -251,10 +279,15 @@
       "announcementUrl": "https://jobs.bytedance.com/campus/page-6272Gc",
       "applyUrl": "https://jobs.bytedance.com/campus/position/7470483398726977810/detail",
       "sourceType": "官方具体岗位页",
-      "lastChecked": "2026-07-12T14:15:00+08:00",
+      "lastChecked": "2026-07-12T02:54:11.298704+00:00",
       "confidence": 0.78,
       "change": "首次现采集：发现芯片研发实习岗位",
-      "evidence": "官方校园招聘域名存在芯片研发实习岗位页。"
+      "evidence": "官方校园招聘域名存在芯片研发实习岗位页。",
+      "verification": {
+        "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
+        "reachable": true,
+        "note": "官方页面可访问"
+      }
     },
     {
       "id": "huawei-top-ai-2027",
@@ -292,10 +325,15 @@
       "announcementUrl": "https://career.huawei.com/cn/campus-recruitment",
       "applyUrl": "https://career.huawei.com/cn/campus-recruitment",
       "sourceType": "官方校园招聘页",
-      "lastChecked": "2026-07-12T14:15:00+08:00",
+      "lastChecked": "2026-07-12T02:54:11.298704+00:00",
       "confidence": 0.97,
       "change": "首次现采集：2027届顶尖AI专项正在进行",
-      "evidence": "华为官方校招页在最新活动中列出2027届顶尖AI人才招聘专项行动，日期为2026年5月19日。"
+      "evidence": "华为官方校招页在最新活动中列出2027届顶尖AI人才招聘专项行动，日期为2026年5月19日。",
+      "verification": {
+        "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
+        "reachable": true,
+        "note": "官方页面可访问"
+      }
     },
     {
       "id": "huawei-intern-2027",
@@ -335,10 +373,15 @@
       "announcementUrl": "https://career.huawei.com/reccampportal/",
       "applyUrl": "https://career.huawei.com/cn/campus-recruitment",
       "sourceType": "官方校园招聘页",
-      "lastChecked": "2026-07-12T14:15:00+08:00",
+      "lastChecked": "2026-07-12T02:54:11.298704+00:00",
       "confidence": 0.99,
       "change": "首次现采集：2027届实习招聘已于3月15日启动",
-      "evidence": "华为官方页明确列出2027届实习生招聘正式启动及面向人群。"
+      "evidence": "华为官方页明确列出2027届实习生招聘正式启动及面向人群。",
+      "verification": {
+        "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
+        "reachable": true,
+        "note": "官方页面可访问"
+      }
     },
     {
       "id": "alibaba-intern-2027",
@@ -378,10 +421,15 @@
       "announcementUrl": "https://campus-talent.alibaba.com/campus/trends?activeTab=faq",
       "applyUrl": "https://campus-talent.alibaba.com/",
       "sourceType": "官方校园招聘页",
-      "lastChecked": "2026-07-12T14:15:00+08:00",
+      "lastChecked": "2026-07-12T02:54:11.298704+00:00",
       "confidence": 0.99,
       "change": "首次现采集：2027届实习生招聘已开启",
-      "evidence": "阿里官方校招页明确显示2027届实习生、毕业范围和硬件与芯片等职类。"
+      "evidence": "阿里官方校招页明确显示2027届实习生、毕业范围和硬件与芯片等职类。",
+      "verification": {
+        "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
+        "reachable": true,
+        "note": "官方页面可访问"
+      }
     },
     {
       "id": "alibaba-alistar-2027",
@@ -422,10 +470,15 @@
       "announcementUrl": "https://campus-talent.alibaba.com/campus/alistar",
       "applyUrl": "https://campus-talent.alibaba.com/campus/alistar",
       "sourceType": "官方人才计划页",
-      "lastChecked": "2026-07-12T14:15:00+08:00",
+      "lastChecked": "2026-07-12T02:54:11.298704+00:00",
       "confidence": 0.97,
       "change": "首次现采集：阿里星2027届应届生批次可投递",
-      "evidence": "官方阿里星页面说明2027届应届生批次及投递方式。"
+      "evidence": "官方阿里星页面说明2027届应届生批次及投递方式。",
+      "verification": {
+        "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
+        "reachable": true,
+        "note": "官方页面可访问"
+      }
     },
     {
       "id": "ymtc-early-2027",
@@ -466,10 +519,15 @@
       "announcementUrl": "https://career.nankai.edu.cn/correcruit/content/id/116188.html",
       "applyUrl": "https://ymtc-campus.zhiye.com",
       "sourceType": "官方投递站 + 高校就业网公告",
-      "lastChecked": "2026-07-12T14:15:00+08:00",
+      "lastChecked": "2026-07-12T02:54:11.298704+00:00",
       "confidence": 0.95,
       "change": "首次现采集：2027提前批已于6月29日启动，外部公告显示7月29日截止",
-      "evidence": "多所高校就业网同步发布招聘简章，投递统一指向长江存储官方校招站。"
+      "evidence": "多所高校就业网同步发布招聘简章，投递统一指向长江存储官方校招站。",
+      "verification": {
+        "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
+        "reachable": true,
+        "note": "官方页面可访问"
+      }
     },
     {
       "id": "dji-campus-2027",
@@ -510,10 +568,15 @@
       "announcementUrl": "https://careers.dji.com/zh-CN/campus",
       "applyUrl": "https://careers.dji.com/zh-CN/campus",
       "sourceType": "官方校园招聘页",
-      "lastChecked": "2026-07-12T14:15:00+08:00",
+      "lastChecked": "2026-07-12T02:54:11.298704+00:00",
       "confidence": 0.99,
       "change": "首次现采集：2027正式校招已于6月25日开启",
-      "evidence": "大疆官方校园招聘页明确给出2027届对象、开启日期与招满即止。"
+      "evidence": "大疆官方校园招聘页明确给出2027届对象、开启日期与招满即止。",
+      "verification": {
+        "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
+        "reachable": true,
+        "note": "官方页面可访问"
+      }
     },
     {
       "id": "tencent-campus-2027-watch",
@@ -547,10 +610,15 @@
       "announcementUrl": "https://careers.tencent.com/campusrecruit.html",
       "applyUrl": null,
       "sourceType": "官方校园招聘页",
-      "lastChecked": "2026-07-12T14:15:00+08:00",
+      "lastChecked": "2026-07-12T02:54:11.298704+00:00",
       "confidence": 0.94,
       "change": "首次现采集：未发现2027正式秋招已开启的官方公告",
-      "evidence": "腾讯中文官方校招页当前列出的应届生项目仍为2026校园招聘；不将实习生项目误判为2027正式秋招。"
+      "evidence": "腾讯中文官方校招页当前列出的应届生项目仍为2026校园招聘；不将实习生项目误判为2027正式秋招。",
+      "verification": {
+        "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
+        "reachable": true,
+        "note": "官方页面可访问"
+      }
     },
     {
       "company": "百度",
@@ -568,7 +636,7 @@
       ],
       "announcementUrl": "https://talent.baidu.com/jobs/campus",
       "sourceType": "百度官方校园招聘网站",
-      "lastChecked": "2026-07-12T18:30:00+08:00",
+      "lastChecked": "2026-07-12T02:54:11.298704+00:00",
       "id": "baidu-ai-infra-shanghai-j100732",
       "title": "上海-AI Infra工程师（J100732）",
       "directionIds": [
@@ -593,7 +661,12 @@
       "applyUrl": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
       "confidence": 0.96,
       "change": "新增具体岗位：由百度招聘项目记录拆分",
-      "evidence": "百度官方校园招聘职位列表显示上海-AI Infra工程师（J100732），发布日期为2026-07-08。"
+      "evidence": "百度官方校园招聘职位列表显示上海-AI Infra工程师（J100732），发布日期为2026-07-08。",
+      "verification": {
+        "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
+        "reachable": true,
+        "note": "官方页面可访问"
+      }
     },
     {
       "company": "百度",
@@ -611,7 +684,7 @@
       ],
       "announcementUrl": "https://talent.baidu.com/jobs/campus",
       "sourceType": "百度官方校园招聘网站",
-      "lastChecked": "2026-07-12T18:30:00+08:00",
+      "lastChecked": "2026-07-12T02:54:11.298704+00:00",
       "id": "baidu-ai-infra-beijing-j100730",
       "title": "北京-AI Infra工程师（J100730）",
       "directionIds": [
@@ -636,7 +709,12 @@
       "applyUrl": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
       "confidence": 0.96,
       "change": "新增具体岗位：由百度招聘项目记录拆分",
-      "evidence": "百度官方校园招聘职位列表显示北京-AI Infra工程师（J100730），发布日期为2026-07-08。"
+      "evidence": "百度官方校园招聘职位列表显示北京-AI Infra工程师（J100730），发布日期为2026-07-08。",
+      "verification": {
+        "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
+        "reachable": true,
+        "note": "官方页面可访问"
+      }
     },
     {
       "company": "百度",
@@ -654,7 +732,7 @@
       ],
       "announcementUrl": "https://talent.baidu.com/jobs/campus",
       "sourceType": "百度官方校园招聘网站",
-      "lastChecked": "2026-07-12T18:30:00+08:00",
+      "lastChecked": "2026-07-12T02:54:11.298704+00:00",
       "id": "baidu-llm-training-infra-j101258",
       "title": "北京-大模型训练Infra研发工程师（基座研发方向）（J101258）",
       "directionIds": [
@@ -681,7 +759,12 @@
       "applyUrl": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
       "confidence": 0.99,
       "change": "新增具体岗位：百度官网2026-07-08发布",
-      "evidence": "百度官方校园招聘职位列表明确展示岗位J101258及大模型训练、飞桨分布式训练、高性能计算等职责。"
+      "evidence": "百度官方校园招聘职位列表明确展示岗位J101258及大模型训练、飞桨分布式训练、高性能计算等职责。",
+      "verification": {
+        "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
+        "reachable": true,
+        "note": "官方页面可访问"
+      }
     },
     {
       "company": "百度",
@@ -699,7 +782,7 @@
       ],
       "announcementUrl": "https://talent.baidu.com/jobs/campus",
       "sourceType": "百度官方校园招聘网站",
-      "lastChecked": "2026-07-12T18:30:00+08:00",
+      "lastChecked": "2026-07-12T02:54:11.298704+00:00",
       "id": "baidu-ai-infra-rl-j101230",
       "title": "深圳-AI Infra强化学习工程师（基座研发方向）（J101230）",
       "directionIds": [
@@ -726,7 +809,12 @@
       "applyUrl": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
       "confidence": 0.99,
       "change": "新增具体岗位：百度官网2026-07-08发布",
-      "evidence": "百度官方校园招聘职位列表明确展示岗位J101230、5人，并列出异步RL训练、推理调度、KV Cache、K8s和Ray等职责。"
+      "evidence": "百度官方校园招聘职位列表明确展示岗位J101230、5人，并列出异步RL训练、推理调度、KV Cache、K8s和Ray等职责。",
+      "verification": {
+        "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
+        "reachable": true,
+        "note": "官方页面可访问"
+      }
     },
     {
       "company": "百度",
@@ -744,7 +832,7 @@
       ],
       "announcementUrl": "https://talent.baidu.com/jobs/campus",
       "sourceType": "百度官方校园招聘网站",
-      "lastChecked": "2026-07-12T18:30:00+08:00",
+      "lastChecked": "2026-07-12T02:54:11.298704+00:00",
       "id": "baidu-aidu-heterogeneous-compute-j99964",
       "title": "2027AIDU-AI异构计算研发工程师（J99964）",
       "directionIds": [
@@ -773,7 +861,12 @@
       "applyUrl": "https://talent.baidu.com/jobs/list?projectType=3&recruitType=GRADUATE",
       "confidence": 0.99,
       "change": "新增具体岗位：百度AIDU项目岗位",
-      "evidence": "百度官方AIDU校园招聘列表展示岗位J99964，工作地点北京、上海，方向覆盖推理引擎、算子、通信和异构编译。"
+      "evidence": "百度官方AIDU校园招聘列表展示岗位J99964，工作地点北京、上海，方向覆盖推理引擎、算子、通信和异构编译。",
+      "verification": {
+        "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
+        "reachable": true,
+        "note": "官方页面可访问"
+      }
     },
     {
       "company": "百度",
@@ -791,7 +884,7 @@
       ],
       "announcementUrl": "https://talent.baidu.com/jobs/campus",
       "sourceType": "百度官方校园招聘网站",
-      "lastChecked": "2026-07-12T18:30:00+08:00",
+      "lastChecked": "2026-07-12T02:54:11.298704+00:00",
       "id": "baidu-aidu-llm-infra-j99967",
       "title": "2027AIDU-大模型Infra工程师（J99967）",
       "directionIds": [
@@ -818,7 +911,12 @@
       "applyUrl": "https://talent.baidu.com/jobs/list?projectType=3&recruitType=GRADUATE",
       "confidence": 0.99,
       "change": "新增具体岗位：百度AIDU项目岗位",
-      "evidence": "百度官方AIDU校园招聘列表展示岗位J99967，职责包括异构计算加速、算子、通信库、编译系统及分布式系统。"
+      "evidence": "百度官方AIDU校园招聘列表展示岗位J99967，职责包括异构计算加速、算子、通信库、编译系统及分布式系统。",
+      "verification": {
+        "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
+        "reachable": true,
+        "note": "官方页面可访问"
+      }
     },
     {
       "id": "stepstar-top-talent-2027",
@@ -860,7 +958,13 @@
       "lastChecked": "2026-07-12T16:00:00+08:00",
       "confidence": 0.96,
       "change": "新增：StepStar顶尖人才计划已开启",
-      "evidence": "官方Moka校招入口已开放；高校就业网同步发布计划，发布时间2026年7月7日、截止时间2026年10月30日。"
+      "evidence": "官方Moka校招入口已开放；高校就业网同步发布计划，发布时间2026年7月7日、截止时间2026年10月30日。",
+      "verification": {
+        "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
+        "reachable": false,
+        "note": "本次未确认，保留上次状态",
+        "error": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      }
     }
   ]
 }

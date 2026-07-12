@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-12T18:30:00+08:00",
+  "generatedAt": "2026-07-12T02:54:11.298704+00:00",
   "companies": [
     {
       "company": "华为",
@@ -12,7 +12,7 @@
         "open": false
       },
       "matchingJobs": 1,
-      "lastAttempt": "2026-07-12T15:00:00+08:00"
+      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
     },
     {
       "company": "字节跳动",
@@ -25,7 +25,7 @@
         "open": false
       },
       "matchingJobs": 5,
-      "lastAttempt": "2026-07-12T15:00:00+08:00"
+      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
     },
     {
       "company": "阿里巴巴",
@@ -38,7 +38,7 @@
         "open": false
       },
       "matchingJobs": 1,
-      "lastAttempt": "2026-07-12T15:00:00+08:00"
+      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
     },
     {
       "company": "腾讯",
@@ -51,7 +51,7 @@
         "open": false
       },
       "matchingJobs": 1,
-      "lastAttempt": "2026-07-12T15:00:00+08:00"
+      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
     },
     {
       "company": "百度",
@@ -64,7 +64,7 @@
         "open": true
       },
       "matchingJobs": 6,
-      "lastAttempt": "2026-07-12T18:30:00+08:00"
+      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
     },
     {
       "company": "英伟达",
@@ -77,7 +77,7 @@
         "open": false
       },
       "matchingJobs": 0,
-      "lastAttempt": "2026-07-12T15:00:00+08:00"
+      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
     },
     {
       "company": "AMD",
@@ -90,7 +90,7 @@
         "open": false
       },
       "matchingJobs": 0,
-      "lastAttempt": "2026-07-12T15:00:00+08:00"
+      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
     },
     {
       "company": "Intel",
@@ -103,7 +103,7 @@
         "open": false
       },
       "matchingJobs": 0,
-      "lastAttempt": "2026-07-12T15:00:00+08:00"
+      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
     },
     {
       "company": "寒武纪",
@@ -116,7 +116,7 @@
         "open": false
       },
       "matchingJobs": 0,
-      "lastAttempt": "2026-07-12T15:00:00+08:00"
+      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
     },
     {
       "company": "地平线",
@@ -129,7 +129,7 @@
         "open": false
       },
       "matchingJobs": 0,
-      "lastAttempt": "2026-07-12T15:00:00+08:00"
+      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
     },
     {
       "company": "海思",
@@ -142,7 +142,7 @@
         "open": false
       },
       "matchingJobs": 0,
-      "lastAttempt": "2026-07-12T15:00:00+08:00"
+      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
     },
     {
       "company": "Arm",
@@ -155,7 +155,7 @@
         "open": false
       },
       "matchingJobs": 0,
-      "lastAttempt": "2026-07-12T15:00:00+08:00"
+      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
     },
     {
       "company": "高通",
@@ -168,7 +168,7 @@
         "open": false
       },
       "matchingJobs": 0,
-      "lastAttempt": "2026-07-12T15:00:00+08:00"
+      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
     },
     {
       "company": "联发科",
@@ -181,7 +181,7 @@
         "open": false
       },
       "matchingJobs": 0,
-      "lastAttempt": "2026-07-12T15:00:00+08:00"
+      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
     },
     {
       "company": "长江存储",
@@ -194,7 +194,7 @@
         "open": false
       },
       "matchingJobs": 1,
-      "lastAttempt": "2026-07-12T15:00:00+08:00"
+      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
     },
     {
       "company": "长鑫存储",
@@ -207,20 +207,7 @@
         "open": false
       },
       "matchingJobs": 0,
-      "lastAttempt": "2026-07-12T15:00:00+08:00"
-    },
-    {
-      "company": "大疆",
-      "early": {
-        "status": "持续监测",
-        "open": false
-      },
-      "formal": {
-        "status": "已开启",
-        "open": true
-      },
-      "matchingJobs": 1,
-      "lastAttempt": "2026-07-12T15:00:00+08:00"
+      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
     },
     {
       "company": "阶跃星辰",
@@ -233,7 +220,46 @@
         "open": false
       },
       "matchingJobs": 1,
-      "lastAttempt": "2026-07-12T16:00:00+08:00"
+      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
+    },
+    {
+      "company": "美团",
+      "early": {
+        "status": "持续监测",
+        "open": false
+      },
+      "formal": {
+        "status": "持续监测",
+        "open": false
+      },
+      "matchingJobs": 0,
+      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
+    },
+    {
+      "company": "Minimax",
+      "early": {
+        "status": "持续监测",
+        "open": false
+      },
+      "formal": {
+        "status": "持续监测",
+        "open": false
+      },
+      "matchingJobs": 0,
+      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
+    },
+    {
+      "company": "大疆",
+      "early": {
+        "status": "持续监测",
+        "open": false
+      },
+      "formal": {
+        "status": "已开启",
+        "open": true
+      },
+      "matchingJobs": 1,
+      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
     }
   ]
 }

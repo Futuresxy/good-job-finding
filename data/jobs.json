@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-12T20:00:00+08:00",
+  "generatedAt": "2026-07-12T21:00:00+08:00",
   "mode": "live",
   "disclaimer": "本页已于 2026-07-12 完成一次人工辅助现采集。已开启结论优先依据公司官方招聘页；具体岗位状态可能随时变化，投递前请再次打开官方入口确认。",
   "collection": {
     "checkedCompanies": 12,
     "officialSources": 11,
     "externalEvidenceSources": 1,
-    "verifiedOpenings": 21,
+    "verifiedOpenings": 25,
     "notOpenedOrUnconfirmed": 1,
     "lastAutomatedCheck": "2026-07-12T02:54:11.298704+00:00",
     "reachableEvidencePages": 14,
@@ -1248,6 +1248,138 @@
       ],
       "sourceUrl": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
       "applyUrl": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE"
+    },
+    {
+      "id": "campaign-a28596488792",
+      "recordType": "campaign",
+      "company": "美团",
+      "title": "美团2027届校园招聘（正式批）",
+      "directionIds": [],
+      "batch": "正式批",
+      "status": "已开启",
+      "city": "以岗位页为准",
+      "graduateYear": 2027,
+      "postedAt": null,
+      "deadline": null,
+      "recruitmentStart": null,
+      "recruitmentStartLabel": "已于 2026-07-12 核验开放",
+      "recruitmentDeadline": null,
+      "requirements": [
+        "这是2027届正式批状态记录，具体方向匹配岗位由每日岗位采集器单独生成。"
+      ],
+      "skills": [],
+      "process": [
+        "进入官方校园招聘页",
+        "选择2027届岗位",
+        "按官网流程投递"
+      ],
+      "sourceUrl": "https://zhaopin.meituan.com/web/position?hiringType=4_1",
+      "announcementUrl": "https://zhaopin.meituan.com/web/position?hiringType=4_1",
+      "applyUrl": "https://zhaopin.meituan.com/web/position?hiringType=4_1",
+      "sourceType": "官方2027届校园招聘批次入口",
+      "lastChecked": "2026-07-12T21:00:00+08:00",
+      "confidence": 0.99,
+      "change": "修正：2027届正式批已开放",
+      "evidence": "美团官方2027届校园招聘正式批职位入口已开放。"
+    },
+    {
+      "id": "campaign-028ccd2701d8",
+      "recordType": "campaign",
+      "company": "拼多多",
+      "title": "拼多多2027届校园招聘（正式批）",
+      "directionIds": [],
+      "batch": "正式批",
+      "status": "已开启",
+      "city": "以岗位页为准",
+      "graduateYear": 2027,
+      "postedAt": null,
+      "deadline": null,
+      "recruitmentStart": null,
+      "recruitmentStartLabel": "已于 2026-07-12 核验开放",
+      "recruitmentDeadline": null,
+      "requirements": [
+        "这是2027届正式批状态记录，具体方向匹配岗位由每日岗位采集器单独生成。"
+      ],
+      "skills": [],
+      "process": [
+        "进入官方校园招聘页",
+        "选择2027届岗位",
+        "按官网流程投递"
+      ],
+      "sourceUrl": "https://careers.pddglobalhr.com/campus/grad",
+      "announcementUrl": "https://careers.pddglobalhr.com/campus/grad",
+      "applyUrl": "https://careers.pddglobalhr.com/campus/grad",
+      "sourceType": "官方2027届校园招聘批次入口",
+      "lastChecked": "2026-07-12T21:00:00+08:00",
+      "confidence": 0.99,
+      "change": "修正：2027届正式批已开放",
+      "evidence": "拼多多官方校园招聘首页明确展示2027届校园招聘，应届生招聘入口已开放。"
+    },
+    {
+      "id": "campaign-e4ccf716ab96",
+      "recordType": "campaign",
+      "company": "长鑫存储",
+      "title": "长鑫存储2027届校园招聘（正式批）",
+      "directionIds": [],
+      "batch": "正式批",
+      "status": "已开启",
+      "city": "以岗位页为准",
+      "graduateYear": 2027,
+      "postedAt": null,
+      "deadline": null,
+      "recruitmentStart": null,
+      "recruitmentStartLabel": "已于 2026-07-12 核验开放",
+      "recruitmentDeadline": null,
+      "requirements": [
+        "这是2027届正式批状态记录，具体方向匹配岗位由每日岗位采集器单独生成。"
+      ],
+      "skills": [],
+      "process": [
+        "进入官方校园招聘页",
+        "选择2027届岗位",
+        "按官网流程投递"
+      ],
+      "sourceUrl": "https://cxmt.zhiye.com/campus/jobs",
+      "announcementUrl": "https://cxmt.zhiye.com/campus/jobs",
+      "applyUrl": "https://cxmt.zhiye.com/campus/jobs",
+      "sourceType": "官方2027届校园招聘批次入口",
+      "lastChecked": "2026-07-12T21:00:00+08:00",
+      "confidence": 0.99,
+      "change": "修正：2027届正式批已开放",
+      "evidence": "长鑫存储官方校园招聘职位入口已开放2027届正式批。"
+    },
+    {
+      "id": "campaign-326095114d8a",
+      "recordType": "campaign",
+      "company": "Minimax",
+      "title": "Minimax2027届校园招聘（正式批）",
+      "directionIds": [],
+      "batch": "正式批",
+      "status": "已开启",
+      "city": "以岗位页为准",
+      "graduateYear": 2027,
+      "postedAt": null,
+      "deadline": null,
+      "recruitmentStart": null,
+      "recruitmentStartLabel": "已于 2026-07-12 核验开放",
+      "recruitmentDeadline": null,
+      "requirements": [
+        "这是2027届正式批状态记录，具体方向匹配岗位由每日岗位采集器单独生成。"
+      ],
+      "skills": [],
+      "process": [
+        "进入官方校园招聘页",
+        "选择2027届岗位",
+        "按官网流程投递"
+      ],
+      "sourceUrl": "https://vrfi1sk8a0.jobs.feishu.cn/379481/?keywords=&category=&location=&project=7495675705720965415&type=&job_hot_flag=&current=1&limit=10&functionCategory=&tag=",
+      "announcementUrl": "https://vrfi1sk8a0.jobs.feishu.cn/379481/?keywords=&category=&location=&project=7495675705720965415&type=&job_hot_flag=&current=1&limit=10&functionCategory=&tag=",
+      "applyUrl": "https://vrfi1sk8a0.jobs.feishu.cn/379481/?keywords=&category=&location=&project=7495675705720965415&type=&job_hot_flag=&current=1&limit=10&functionCategory=&tag=",
+      "sourceType": "官方2027届校园招聘批次入口",
+      "lastChecked": "2026-07-12T21:00:00+08:00",
+      "confidence": 0.99,
+      "change": "修正：2027届正式批已开放",
+      "evidence": "MiniMax官方飞书招聘2027届校园招聘项目入口已开放。"
     }
   ]
 }

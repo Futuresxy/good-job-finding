@@ -1,17 +1,37 @@
 {
-  "generatedAt": "2026-07-12T02:54:11.298704+00:00",
+  "generatedAt": "2026-07-12T13:22:48.784272+00:00",
   "sourcesChecked": 15,
-  "verifiedOpenings": 16,
-  "pendingReview": 26,
-  "focusCompanies": 20,
-  "evidencePagesChecked": 15,
+  "verifiedOpenings": 37,
+  "pendingReview": 60,
+  "focusCompanies": 22,
+  "evidencePagesChecked": 19,
   "failures": [
     {
       "company": "拼多多",
       "error": "robots.txt disallows access"
     },
     {
+      "company": "寒武纪",
+      "error": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+    },
+    {
       "company": "阶跃星辰",
+      "error": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+    },
+    {
+      "company": "智谱华章",
+      "error": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+    },
+    {
+      "company": "moonshot",
+      "error": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+    },
+    {
+      "company": "Intel",
+      "error": "robots.txt disallows access"
+    },
+    {
+      "company": "中兴微电子",
       "error": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
     }
   ],

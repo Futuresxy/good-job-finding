@@ -61,10 +61,12 @@ def write_json(path, value) -> None:
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def merge_sources(base_sources, custom_sources):
-    merged = {item["company"]: item for item in base_sources}
+def merge_sources(base_sources, custom_sources, removed_companies=()):
+    removed = set(removed_companies)
+    merged = {item["company"]: item for item in base_sources if item["company"] not in removed}
     for item in custom_sources:
-        merged[item["company"]] = {**merged.get(item["company"], {}), **item}
+        if item["company"] not in removed:
+            merged[item["company"]] = {**merged.get(item["company"], {}), **item}
     return list(merged.values())
 
 
@@ -96,7 +98,15 @@ def discover(source, directions):
     parser = LinkParser()
     parser.feed(raw)
     page_text = html.unescape(" ".join(parser.text_parts))
-    keywords = [term for direction in directions for term in direction["keywords"]]
+    keywords = list(dict.fromkeys(
+        term
+        for direction in directions
+        for term in direction.get("keywords", []) + [
+            keyword
+            for subdomain in direction.get("subdomains", [])
+            for keyword in subdomain.get("keywords", [])
+        ]
+    ))
     page_has_opening = any(term.lower() in page_text.lower() for term in OPENING_TERMS)
     candidates = []
     for link in parser.links:
@@ -110,6 +120,21 @@ def discover(source, directions):
         url = urllib.parse.urljoin(final_url, link["href"])
         if urllib.parse.urlsplit(url).scheme not in ("http", "https"):
             continue
+        job_like = bool(
+            re.search(r"(job|position|recruit|campus|career|apply|detail)", url, re.I)
+            or re.search(r"(工程师|架构师|研究员|研发|芯片|算法|设计|验证)", text)
+        )
+        direction_ids = [
+            direction["id"] for direction in directions
+            if any(
+                term.lower() in text.lower()
+                for term in direction.get("keywords", []) + [
+                    keyword
+                    for subdomain in direction.get("subdomains", [])
+                    for keyword in subdomain.get("keywords", [])
+                ]
+            )
+        ]
         identity = hashlib.sha256(f'{source["company"]}|{url}|{text}'.encode()).hexdigest()[:16]
         candidates.append({
             "id": identity,
@@ -118,9 +143,13 @@ def discover(source, directions):
             "url": url,
             "openingTerms": matched_opening,
             "directionTerms": matched_direction[:12],
-            "status": "待核验",
+            "adapter": "official-job-link" if page_has_opening and matched_direction and job_like else "generic-signal",
+            "status": "已开启" if page_has_opening and matched_direction and job_like else "待核验",
+            "directionIds": direction_ids,
+            "batch": "人才计划" if any(term in page_text for term in ("提前批", "人才计划")) else "正式批",
+            "sourceUrl": final_url,
             "discoveredAt": datetime.now(timezone.utc).isoformat(),
-            "note": "通用监测器发现的官方页面线索；核对具体岗位、届别和投递状态后才能标为已开启。",
+            "note": "官方2027招聘页中发现的方向匹配岗位链接。" if page_has_opening and matched_direction and job_like else "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。",
         })
     if page_has_opening and not candidates:
         identity = hashlib.sha256(f'{source["company"]}|{final_url}|page'.encode()).hexdigest()[:16]
@@ -253,6 +282,52 @@ def upsert_verified_jobs(jobs, signals, now):
             jobs.append({"id": signal["id"], **payload})
 
 
+
+def upsert_official_job_links(jobs, signals, now):
+    for signal in signals:
+        if signal.get("adapter") != "official-job-link" or signal.get("status") != "已开启":
+            continue
+        existing = next(
+            (
+                job for job in jobs
+                if job.get("company") == signal["company"]
+                and (
+                    job.get("detailUrl") == signal["url"]
+                    or job.get("applyUrl") == signal["url"]
+                    or job.get("title") == signal["title"]
+                )
+            ),
+            None,
+        )
+        payload = {
+            "company": signal["company"],
+            "title": signal["title"],
+            "directionIds": signal.get("directionIds", []),
+            "batch": signal.get("batch", "正式批"),
+            "status": "已开启",
+            "city": "以岗位页为准",
+            "graduateYear": 2027,
+            "postedAt": None,
+            "deadline": None,
+            "requirements": ["请打开官方岗位详情页查看完整职责、学历、专业及项目要求。"],
+            "skills": signal.get("directionTerms", []),
+            "process": ["官方岗位页投递", "简历筛选", "笔试/测评（以通知为准）", "专业面试", "综合面试", "Offer"],
+            "sourceUrl": signal.get("sourceUrl") or signal["url"],
+            "announcementUrl": signal.get("sourceUrl") or signal["url"],
+            "applyUrl": signal["url"],
+            "detailUrl": signal["url"],
+            "sourceType": "公司官方招聘页方向匹配链接自动识别",
+            "lastChecked": now,
+            "confidence": 0.9,
+            "change": "每日任务按细分方向关键词自动更新",
+            "evidence": "公司官方2027招聘页面同时出现届别信号和方向匹配岗位链接。",
+        }
+        if existing:
+            existing.update(payload)
+        else:
+            jobs.append({"id": f'official-{signal["id"]}', **payload})
+
+
 def validate_jobs(jobs):
     errors = []
     for job in jobs:
@@ -284,8 +359,10 @@ def main():
     profile = read_json(CONFIG / "profile.json")
     base_sources = read_json(CONFIG / "sources.json")["sources"]
     custom_path = CONFIG / "custom_sources.json"
-    custom_sources = read_json(custom_path).get("sources", []) if custom_path.exists() else []
-    sources = merge_sources(base_sources, custom_sources)
+    custom_doc = read_json(custom_path) if custom_path.exists() else {}
+    custom_sources = custom_doc.get("sources", [])
+    removed_companies = set(custom_doc.get("removedCompanies", []))
+    sources = merge_sources(base_sources, custom_sources, removed_companies)
     jobs_doc = read_json(DATA / "jobs.json")
     old_doc = read_json(DATA / "signals.json") if (DATA / "signals.json").exists() else {"signals": []}
     previous = {item["id"]: item for item in old_doc.get("signals", [])}
@@ -307,6 +384,7 @@ def main():
     unique = {item["id"]: item for item in signals}
     new_signals = [item for key, item in unique.items() if key not in previous]
     upsert_verified_jobs(jobs_doc["jobs"], signals, now)
+    upsert_official_job_links(jobs_doc["jobs"], signals, now)
     errors = validate_jobs(jobs_doc["jobs"])
     if errors:
         raise SystemExit("\n".join(errors))
@@ -343,11 +421,14 @@ def main():
     previous_company_doc = read_json(DATA / "company_status.json") if (DATA / "company_status.json").exists() else {"companies": []}
     previous_company = {item["company"]: item for item in previous_company_doc.get("companies", [])}
     early_batches = {"人才计划", "提前批", "专项计划"}
-    company_names = list(dict.fromkeys(
-        profile.get("watchCompanies", [])
-        + [source["company"] for source in sources]
-        + [str(job["company"]).replace(" Seed", "") for job in jobs_doc["jobs"]]
-    ))
+    company_names = [
+        company for company in dict.fromkeys(
+            profile.get("watchCompanies", [])
+            + [source["company"] for source in sources]
+            + [str(job["company"]).replace(" Seed", "") for job in jobs_doc["jobs"]]
+        )
+        if company not in removed_companies
+    ]
     company_rows = []
     company_events = []
     for company in company_names:

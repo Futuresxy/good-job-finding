@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-12T11:23:56.891Z",
+  "updatedAt": "2026-07-12T12:44:00.691Z",
   "sources": [
     {
       "company": "寒武纪",
@@ -68,6 +68,13 @@
     {
       "company": "阶跃星辰",
       "careersUrl": "https://app.mokahr.com/campus-recruitment/step/141903#/jobs",
+      "priority": 10,
+      "enabled": true,
+      "parser": "official-page-monitor"
+    },
+    {
+      "company": "momenta",
+      "careersUrl": "https://momenta.jobs.feishu.cn/campus",
       "priority": 10,
       "enabled": true,
       "parser": "official-page-monitor"

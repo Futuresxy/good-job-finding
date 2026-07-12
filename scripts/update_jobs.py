@@ -24,6 +24,7 @@ DATA = ROOT / "data"
 CONFIG = ROOT / "config"
 USER_AGENT = "GoodJobFinding/1.0 (+https://github.com/Futuresxy/good-job-finding)"
 OPENING_TERMS = ("2027届", "2027 届", "2027校园招聘", "2027 校园招聘", "秋季校园招聘", "秋招", "提前批", "人才计划")
+NON_CAMPUS_TERMS = ("社会招聘", "社招", "social", "experienced", "experienced hire")
 
 
 class LinkParser(HTMLParser):
@@ -119,6 +120,8 @@ def discover(source, directions):
             continue
         url = urllib.parse.urljoin(final_url, link["href"])
         if urllib.parse.urlsplit(url).scheme not in ("http", "https"):
+            continue
+        if any(term.lower() in f"{text} {url}".lower() for term in NON_CAMPUS_TERMS):
             continue
         job_like = bool(
             re.search(r"(job|position|recruit|campus|career|apply|detail)", url, re.I)
@@ -328,6 +331,50 @@ def upsert_official_job_links(jobs, signals, now):
             jobs.append({"id": f'official-{signal["id"]}', **payload})
 
 
+
+def sync_configured_campaigns(jobs, sources, now):
+    for source in sources:
+        for campaign in source.get("campaigns", []):
+            if campaign.get("graduateYear") != 2027:
+                continue
+            batch = campaign.get("batch", "正式批")
+            identity = hashlib.sha256(f'{source["company"]}|2027|{batch}'.encode()).hexdigest()[:12]
+            job_id = f"campaign-{identity}"
+            existing = next((job for job in jobs if job.get("id") == job_id), None)
+            first_verified = campaign.get("firstVerifiedAt")
+            url = campaign.get("url") or source["careersUrl"]
+            payload = {
+                "recordType": "campaign",
+                "company": source["company"],
+                "title": f'{source["company"]}2027届校园招聘（{batch}）',
+                "directionIds": [],
+                "batch": batch,
+                "status": campaign.get("status", "持续监测"),
+                "city": "以岗位页为准",
+                "graduateYear": 2027,
+                "postedAt": None,
+                "deadline": campaign.get("deadline"),
+                "recruitmentStart": None,
+                "recruitmentStartLabel": f"已于 {first_verified} 核验开放" if first_verified else "开放日期待确认",
+                "recruitmentDeadline": campaign.get("deadline"),
+                "requirements": ["这是招聘批次状态记录，具体方向匹配岗位由每日岗位采集器单独生成。"],
+                "skills": [],
+                "process": ["进入官方校园招聘页", "选择2027届岗位", "按官网流程投递"],
+                "sourceUrl": url,
+                "announcementUrl": url,
+                "applyUrl": url,
+                "sourceType": "官方2027届校园招聘批次入口",
+                "lastChecked": now,
+                "confidence": 0.99,
+                "change": "由已核验官方校园招聘入口维护批次状态",
+                "evidence": campaign.get("evidence", "官方2027届校园招聘入口已开放。"),
+            }
+            if existing:
+                existing.update(payload)
+            else:
+                jobs.append({"id": job_id, **payload})
+
+
 def validate_jobs(jobs):
     errors = []
     for job in jobs:
@@ -364,6 +411,7 @@ def main():
     removed_companies = set(custom_doc.get("removedCompanies", []))
     sources = merge_sources(base_sources, custom_sources, removed_companies)
     jobs_doc = read_json(DATA / "jobs.json")
+    sync_configured_campaigns(jobs_doc["jobs"], sources, now)
     old_doc = read_json(DATA / "signals.json") if (DATA / "signals.json").exists() else {"signals": []}
     previous = {item["id"]: item for item in old_doc.get("signals", [])}
     signals, failures = [], []
@@ -442,7 +490,7 @@ def main():
             "company": company,
             "early": {"status": "已开启" if early_open else "持续监测", "open": early_open},
             "formal": {"status": "已开启" if formal_open else "持续监测", "open": formal_open},
-            "matchingJobs": len(company_jobs),
+            "matchingJobs": sum(job.get("recordType") != "campaign" for job in company_jobs),
             "lastAttempt": now,
         }
         company_rows.append(row)

@@ -44,7 +44,7 @@ function renderStatus(status,data){
   $("runTime").textContent="最近更新 "+new Date(data.generatedAt).toLocaleString("zh-CN");
   $("metricOpen").textContent=state.jobs.filter(j=>j.status==="已开启").length;
   $("metricPending").textContent=state.jobs.filter(j=>j.status==="待核验").length;
-  $("metricCompanies").textContent=state.watch.size;
+  $("metricCompanies").textContent=new Set([...(state.profile.watchCompanies||[]),...state.watch,...state.sources.map(item=>item.company)].filter(isCompanyActive)).size;
   const notice=$("dataNotice");notice.hidden=data.mode!=="demo";notice.textContent=data.disclaimer||"";
 }
 function calculateMatch(job){

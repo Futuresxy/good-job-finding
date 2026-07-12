@@ -10,6 +10,7 @@ import hashlib
 import html
 import json
 import os
+import re
 import time
 import urllib.parse
 import urllib.request
@@ -58,6 +59,13 @@ def read_json(path):
 
 def write_json(path, value) -> None:
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def merge_sources(base_sources, custom_sources):
+    merged = {item["company"]: item for item in base_sources}
+    for item in custom_sources:
+        merged[item["company"]] = {**merged.get(item["company"], {}), **item}
+    return list(merged.values())
 
 
 def allowed_by_robots(url) -> bool:
@@ -130,6 +138,121 @@ def discover(source, directions):
     return candidates[:80]
 
 
+
+def discover_baidu(source, directions):
+    raw, final_url = fetch(source["careersUrl"])
+    parser = LinkParser()
+    parser.feed(raw)
+    parts = parser.text_parts
+    page_text = " ".join(parts)
+    if "2027届" not in page_text and "2027 届" not in page_text:
+        return []
+
+    link_by_code = {}
+    for link in parser.links:
+        match = re.search(r"J(\d{4,7})", link["text"])
+        if match:
+            link_by_code[match.group(1)] = urllib.parse.urljoin(final_url, link["href"])
+
+    discovered = {}
+    for index, part in enumerate(parts):
+        match = re.search(r"([^。；]{2,150}\(J(\d{4,7})\))", part)
+        if not match:
+            continue
+        title = " ".join(match.group(1).split())[-160:]
+        code = match.group(2)
+        context = " ".join(parts[index:index + 18])
+        direction_ids = []
+        matched_terms = []
+        for direction in directions:
+            terms = [
+                term for term in direction.get("keywords", [])
+                if term.lower() in context.lower()
+            ]
+            for subdomain in direction.get("subdomains", []):
+                terms.extend(
+                    term for term in subdomain.get("keywords", [])
+                    if term.lower() in context.lower()
+                )
+            if terms:
+                direction_ids.append(direction["id"])
+                matched_terms.extend(terms)
+        if not direction_ids:
+            continue
+
+        city_match = re.search(r"(北京市|上海市|深圳市|杭州市|广州市|成都市|武汉市|南京市|西安市)", context)
+        date_match = re.search(r"20\d{2}-\d{2}-\d{2}", context)
+        detail_url = link_by_code.get(code)
+        chunks = [
+            " ".join(item.split())[:260]
+            for item in re.split(r"(?=\d+\.)|(?=-)", context.replace(title, "", 1))
+            if len(" ".join(item.split())) >= 16
+        ][:4]
+        discovered[code] = {
+            "id": f"baidu-auto-{code.lower()}",
+            "adapter": "baidu-campus",
+            "company": "百度",
+            "title": title,
+            "jobCode": f"J{code}",
+            "url": detail_url or final_url,
+            "detailUrl": detail_url,
+            "status": "已开启",
+            "directionIds": direction_ids,
+            "directionTerms": list(dict.fromkeys(matched_terms))[:12],
+            "requirements": chunks or ["岗位职责与任职要求请在百度官方职位页使用岗位编号检索。"],
+            "city": city_match.group(1).removesuffix("市") if city_match else "以岗位页为准",
+            "postedAt": date_match.group(0) if date_match else None,
+            "discoveredAt": datetime.now(timezone.utc).isoformat(),
+            "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。",
+        }
+    return list(discovered.values())[:120]
+
+
+def upsert_verified_jobs(jobs, signals, now):
+    for signal in signals:
+        if signal.get("adapter") != "baidu-campus" or signal.get("status") != "已开启":
+            continue
+        code = signal["jobCode"]
+        existing = next(
+            (job for job in jobs if job.get("jobCode") == code or code in job.get("title", "")),
+            None,
+        )
+        detail_url = signal.get("detailUrl")
+        payload = {
+            "company": "百度",
+            "title": signal["title"],
+            "jobCode": code,
+            "directionIds": signal["directionIds"],
+            "batch": "正式批",
+            "status": "已开启",
+            "city": signal["city"],
+            "graduateYear": 2027,
+            "postedAt": signal.get("postedAt"),
+            "deadline": None,
+            "requirements": signal["requirements"],
+            "skills": signal["directionTerms"],
+            "process": ["官网使用岗位编号检索", "简历筛选", "笔试/测评（以岗位通知为准）", "技术面试", "综合面试", "Offer"],
+            "sourceUrl": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+            "announcementUrl": "https://talent.baidu.com/jobs/campus",
+            "applyUrl": detail_url or "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+            "detailUrl": detail_url,
+            "searchMode": None if detail_url else "keyword",
+            "searchKeyword": code,
+            "sourceType": "百度官方2027届校园招聘列表自动识别",
+            "lastChecked": now,
+            "confidence": 0.98 if detail_url else 0.94,
+            "change": "每日任务按岗位编号自动更新",
+            "evidence": f"百度官方2027届校园招聘列表展示岗位 {code}；无详情链接时请在官网搜索该编号。",
+        }
+        if existing:
+            preserved_requirements = existing.get("requirements", [])
+            existing.update(payload)
+            if len(preserved_requirements) > len(payload["requirements"]):
+                existing["requirements"] = preserved_requirements
+        else:
+            jobs.append({"id": signal["id"], **payload})
+
+
 def validate_jobs(jobs):
     errors = []
     for job in jobs:
@@ -159,7 +282,10 @@ def send_webhook(url, token, payload) -> None:
 def main():
     now = datetime.now(timezone.utc).isoformat()
     profile = read_json(CONFIG / "profile.json")
-    sources = read_json(CONFIG / "sources.json")["sources"]
+    base_sources = read_json(CONFIG / "sources.json")["sources"]
+    custom_path = CONFIG / "custom_sources.json"
+    custom_sources = read_json(custom_path).get("sources", []) if custom_path.exists() else []
+    sources = merge_sources(base_sources, custom_sources)
     jobs_doc = read_json(DATA / "jobs.json")
     old_doc = read_json(DATA / "signals.json") if (DATA / "signals.json").exists() else {"signals": []}
     previous = {item["id"]: item for item in old_doc.get("signals", [])}
@@ -169,7 +295,10 @@ def main():
         if not source.get("enabled"):
             continue
         try:
-            signals.extend(discover(source, profile["directions"]))
+            if source.get("parser") == "baidu-campus-monitor":
+                signals.extend(discover_baidu(source, profile["directions"]))
+            else:
+                signals.extend(discover(source, profile["directions"]))
             checked += 1
         except Exception as error:
             failures.append({"company": source["company"], "error": str(error)[:180]})
@@ -177,6 +306,7 @@ def main():
 
     unique = {item["id"]: item for item in signals}
     new_signals = [item for key, item in unique.items() if key not in previous]
+    upsert_verified_jobs(jobs_doc["jobs"], signals, now)
     errors = validate_jobs(jobs_doc["jobs"])
     if errors:
         raise SystemExit("\n".join(errors))
@@ -213,9 +343,11 @@ def main():
     previous_company_doc = read_json(DATA / "company_status.json") if (DATA / "company_status.json").exists() else {"companies": []}
     previous_company = {item["company"]: item for item in previous_company_doc.get("companies", [])}
     early_batches = {"人才计划", "提前批", "专项计划"}
-    company_names = list(dict.fromkeys(profile.get("watchCompanies", []) + [
-        str(job["company"]).replace(" Seed", "") for job in jobs_doc["jobs"]
-    ]))
+    company_names = list(dict.fromkeys(
+        profile.get("watchCompanies", [])
+        + [source["company"] for source in sources]
+        + [str(job["company"]).replace(" Seed", "") for job in jobs_doc["jobs"]]
+    ))
     company_rows = []
     company_events = []
     for company in company_names:

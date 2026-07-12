@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "graduationYear": 2027,
   "majors": [
     "计算机科学与技术",
@@ -25,7 +25,71 @@
         "分布式训练",
         "性能优化"
       ],
-      "weight": 10
+      "weight": 10,
+      "description": "大模型训练/推理系统、算子、Serving、强化学习系统与资源调度",
+      "subdomains": [
+        {
+          "id": "inference-serving",
+          "label": "推理引擎与 Serving",
+          "keywords": [
+            "推理引擎",
+            "Serving",
+            "vLLM",
+            "SGLang",
+            "KV Cache",
+            "PagedAttention"
+          ]
+        },
+        {
+          "id": "training-system",
+          "label": "分布式训练系统",
+          "keywords": [
+            "训练系统",
+            "分布式训练",
+            "通信库",
+            "NCCL",
+            "训练框架",
+            "飞桨"
+          ]
+        },
+        {
+          "id": "kernel-optimization",
+          "label": "算子与性能优化",
+          "keywords": [
+            "CUDA",
+            "算子",
+            "Kernel",
+            "Triton",
+            "混合精度",
+            "量化",
+            "性能优化"
+          ]
+        },
+        {
+          "id": "rl-infra",
+          "label": "强化学习 Infra",
+          "keywords": [
+            "强化学习",
+            "RL",
+            "异步训练",
+            "Ray",
+            "Mooncake",
+            "后训练"
+          ]
+        },
+        {
+          "id": "platform-scheduling",
+          "label": "平台与资源调度",
+          "keywords": [
+            "K8s",
+            "Kubernetes",
+            "资源调度",
+            "可观测性",
+            "容错",
+            "弹性"
+          ]
+        }
+      ]
     },
     {
       "id": "architecture",
@@ -42,7 +106,55 @@
         "性能建模",
         "存储系统"
       ],
-      "weight": 10
+      "weight": 10,
+      "description": "CPU/GPU/NPU 微架构、加速器、互连、存储与性能建模",
+      "subdomains": [
+        {
+          "id": "microarchitecture",
+          "label": "CPU/GPU/NPU 微架构",
+          "keywords": [
+            "微架构",
+            "CPU",
+            "GPU",
+            "NPU",
+            "流水线",
+            "指令集"
+          ]
+        },
+        {
+          "id": "accelerator",
+          "label": "AI 加速器架构",
+          "keywords": [
+            "加速器",
+            "AI芯片",
+            "ASIC",
+            "FPGA",
+            "张量计算"
+          ]
+        },
+        {
+          "id": "memory-interconnect",
+          "label": "存储与互连",
+          "keywords": [
+            "存储系统",
+            "NoC",
+            "互连",
+            "PCIe",
+            "RDMA",
+            "Cache"
+          ]
+        },
+        {
+          "id": "performance-modeling",
+          "label": "性能建模与优化",
+          "keywords": [
+            "性能建模",
+            "性能分析",
+            "Benchmark",
+            "Profiling"
+          ]
+        }
+      ]
     },
     {
       "id": "chip-design",
@@ -58,7 +170,48 @@
         "Verilog",
         "SystemVerilog"
       ],
-      "weight": 9
+      "weight": 9,
+      "description": "数字 IC、RTL、SoC、低功耗、FPGA 与芯片前端设计",
+      "subdomains": [
+        {
+          "id": "rtl-design",
+          "label": "RTL / 数字前端",
+          "keywords": [
+            "RTL",
+            "Verilog",
+            "SystemVerilog",
+            "逻辑设计"
+          ]
+        },
+        {
+          "id": "soc-design",
+          "label": "SoC 与子系统设计",
+          "keywords": [
+            "SoC",
+            "总线",
+            "IP",
+            "子系统"
+          ]
+        },
+        {
+          "id": "fpga-design",
+          "label": "FPGA 设计",
+          "keywords": [
+            "FPGA",
+            "Vivado",
+            "HLS"
+          ]
+        },
+        {
+          "id": "low-power",
+          "label": "低功耗设计",
+          "keywords": [
+            "低功耗",
+            "UPF",
+            "功耗分析"
+          ]
+        }
+      ]
     },
     {
       "id": "compiler",
@@ -72,7 +225,50 @@
         "Kernel",
         "Triton"
       ],
-      "weight": 8
+      "weight": 8,
+      "description": "LLVM/MLIR、深度学习编译器、异构运行时与 Kernel 优化",
+      "subdomains": [
+        {
+          "id": "compiler-stack",
+          "label": "LLVM / MLIR 编译栈",
+          "keywords": [
+            "LLVM",
+            "MLIR",
+            "编译器",
+            "编译优化"
+          ]
+        },
+        {
+          "id": "dl-compiler",
+          "label": "深度学习编译器",
+          "keywords": [
+            "TVM",
+            "TensorRT",
+            "XLA",
+            "图编译"
+          ]
+        },
+        {
+          "id": "heterogeneous-runtime",
+          "label": "异构运行时",
+          "keywords": [
+            "异构计算",
+            "运行时",
+            "Runtime",
+            "设备调度"
+          ]
+        },
+        {
+          "id": "kernel-codegen",
+          "label": "Kernel 与代码生成",
+          "keywords": [
+            "Kernel",
+            "Triton",
+            "代码生成",
+            "算子融合"
+          ]
+        }
+      ]
     },
     {
       "id": "verification",
@@ -87,7 +283,51 @@
         "物理设计",
         "后端"
       ],
-      "weight": 7
+      "weight": 7,
+      "description": "功能/形式验证、DFT、综合、时序收敛与物理实现",
+      "subdomains": [
+        {
+          "id": "functional-verification",
+          "label": "功能验证 / UVM",
+          "keywords": [
+            "UVM",
+            "功能验证",
+            "SystemVerilog",
+            "验证平台"
+          ]
+        },
+        {
+          "id": "formal-dft",
+          "label": "形式验证 / DFT",
+          "keywords": [
+            "形式验证",
+            "DFT",
+            "Scan",
+            "ATPG"
+          ]
+        },
+        {
+          "id": "timing-synthesis",
+          "label": "综合与时序",
+          "keywords": [
+            "综合",
+            "时序",
+            "STA",
+            "时序收敛"
+          ]
+        },
+        {
+          "id": "physical-design",
+          "label": "物理设计",
+          "keywords": [
+            "物理设计",
+            "后端",
+            "P&R",
+            "布局布线",
+            "GDS"
+          ]
+        }
+      ]
     }
   ],
   "preferredCities": [

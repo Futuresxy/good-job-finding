@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-12T02:54:11.298704+00:00",
+  "generatedAt": "2026-07-12T20:00:00+08:00",
   "companies": [
     {
       "company": "华为",
@@ -56,15 +56,15 @@
     {
       "company": "百度",
       "early": {
-        "status": "持续监测",
-        "open": false
+        "status": "已开启",
+        "open": true
       },
       "formal": {
         "status": "已开启",
         "open": true
       },
-      "matchingJobs": 6,
-      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
+      "matchingJobs": 11,
+      "lastAttempt": "2026-07-12T20:00:00+08:00"
     },
     {
       "company": "英伟达",

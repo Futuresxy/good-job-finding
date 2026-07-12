@@ -1,7 +1,15 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-12T11:01:55.125Z",
-  "sources": [],
+  "updatedAt": "2026-07-12T11:04:40.822Z",
+  "sources": [
+    {
+      "company": "寒武纪",
+      "careersUrl": "https://app.mokahr.com/campus-recruitment/cambricon/44201#/",
+      "priority": 10,
+      "enabled": true,
+      "parser": "official-page-monitor"
+    }
+  ],
   "removedCompanies": [
     "高通",
     "海思"

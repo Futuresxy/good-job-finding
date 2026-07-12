@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-12T12:44:00.691Z",
+  "updatedAt": "2026-07-12T12:45:50.934Z",
   "sources": [
     {
       "company": "寒武纪",
@@ -75,6 +75,13 @@
     {
       "company": "momenta",
       "careersUrl": "https://momenta.jobs.feishu.cn/campus",
+      "priority": 10,
+      "enabled": true,
+      "parser": "official-page-monitor"
+    },
+    {
+      "company": "中兴微电子",
+      "careersUrl": "https://app.mokahr.com/campus-recruitment/sanechips/102705#/jobs",
       "priority": 10,
       "enabled": true,
       "parser": "official-page-monitor"

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="2027 秋招招聘动态雷达：按专业方向匹配岗位、分析简历并追踪重点公司。">\n  <meta name="theme-color" content="#15201d">
   <title>Good Job Finding | 2027 秋招雷达</title>
-  <link rel="stylesheet" href="./styles.css?v=20260712-2">
+  <link rel="stylesheet" href="./styles.css?v=20260712-3">
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.min.mjs" type="module"></script>
 </head>
@@ -51,7 +51,7 @@
         </label>
 
         <fieldset>
-          <legend>专业方向</legend>
+          <legend>专业方向与细分领域</legend>
           <div id="directionFilters" class="check-list"></div>
         </fieldset>
 
@@ -135,9 +135,9 @@
       <form id="addCompanyForm" class="source-add-form">
         <label><span>公司名称</span><input id="companyInput" type="text" placeholder="例如：阶跃星辰" required></label>
         <label><span>官方招聘网址</span><input id="sourceInput" type="url" placeholder="https://..." required></label>
-        <button type="submit" class="command-button"><i data-lucide="plus"></i><span>添加公司</span></button>
+        <button type="submit" class="command-button"><i data-lucide="plus"></i><span>添加并写入仓库</span></button>
       </form>
-      <div class="source-help"><i data-lucide="info"></i><span>修改先保存在当前浏览器，便于立即 review；点击“同步每日监测”并在 GitHub 确认提交后，自动任务会永久使用新网址。</span></div>
+      <div class="source-help"><i data-lucide="info"></i><span>修改可先保存在当前浏览器；首次连接仓库后，点击“写入仓库”即可直接更新个人招聘源配置，不再创建 Issue。</span></div>
       <div class="source-review-list" id="companyList"></div>
     </section>
 
@@ -183,6 +183,6 @@
   </dialog>
 
   <footer><span>Good Job Finding · 数据结论以公司官方招聘页面为准</span><a href="https://github.com/Futuresxy/good-job-finding" target="_blank" rel="noreferrer">查看源码</a></footer>
-  <script src="./app.js?v=20260712-2"></script>
+  <script src="./app.js?v=20260712-3"></script>
 </body>
 </html>

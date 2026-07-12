@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-12T20:00:00+08:00",
+  "generatedAt": "2026-07-12T21:00:00+08:00",
   "companies": [
     {
       "company": "华为",
@@ -203,11 +203,11 @@
         "open": false
       },
       "formal": {
-        "status": "持续监测",
-        "open": false
+        "status": "已开启",
+        "open": true
       },
       "matchingJobs": 0,
-      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
+      "lastAttempt": "2026-07-12T21:00:00+08:00"
     },
     {
       "company": "阶跃星辰",
@@ -229,11 +229,11 @@
         "open": false
       },
       "formal": {
-        "status": "持续监测",
-        "open": false
+        "status": "已开启",
+        "open": true
       },
       "matchingJobs": 0,
-      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
+      "lastAttempt": "2026-07-12T21:00:00+08:00"
     },
     {
       "company": "Minimax",
@@ -242,11 +242,11 @@
         "open": false
       },
       "formal": {
-        "status": "持续监测",
-        "open": false
+        "status": "已开启",
+        "open": true
       },
       "matchingJobs": 0,
-      "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
+      "lastAttempt": "2026-07-12T21:00:00+08:00"
     },
     {
       "company": "大疆",
@@ -260,6 +260,19 @@
       },
       "matchingJobs": 1,
       "lastAttempt": "2026-07-12T02:54:11.298704+00:00"
+    },
+    {
+      "company": "拼多多",
+      "early": {
+        "status": "持续监测",
+        "open": false
+      },
+      "formal": {
+        "status": "已开启",
+        "open": true
+      },
+      "matchingJobs": 0,
+      "lastAttempt": "2026-07-12T21:00:00+08:00"
     }
   ]
 }

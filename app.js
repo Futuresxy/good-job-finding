@@ -1,12 +1,17 @@
-const state={jobs:[],profile:null,sources:[],sourceOverrides:JSON.parse(localStorage.getItem("gjf-source-overrides")||"{}"),watch:new Set(JSON.parse(localStorage.getItem("gjf-watch")||"null")||[]),favorites:new Set(JSON.parse(localStorage.getItem("gjf-favorites")||"[]")),resumeText:localStorage.getItem("gjf-resume-text")||"",selectedDirections:new Set(),selectedCompany:null,showFavorites:false,companyPage:1,pageSize:6};
+const state={jobs:[],profile:null,sources:[],customSources:[],sourceOverrides:JSON.parse(localStorage.getItem("gjf-source-overrides")||"{}"),watch:new Set(JSON.parse(localStorage.getItem("gjf-watch")||"null")||[]),favorites:new Set(JSON.parse(localStorage.getItem("gjf-favorites")||"[]")),resumeText:localStorage.getItem("gjf-resume-text")||"",selectedDirections:new Set(),selectedSubdomains:new Set(),selectedCompany:null,showFavorites:false,companyPage:1,pageSize:6};
+let sourceSyncWindow=null;
+const sourceSyncChannel="BroadcastChannel" in window?new BroadcastChannel("gjf-repository-sync"):null;
 const $=(id)=>document.getElementById(id);
 const esc=(v)=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));
 const norm=(v)=>String(v??"").toLowerCase().replace(/\s+/g,"");
+function mergeSources(base,custom){const map=new Map((base||[]).map(item=>[item.company,item]));(custom||[]).forEach(item=>map.set(item.company,{...map.get(item.company),...item}));return [...map.values()]}
 async function init(){
   try{
-    const [jobs,profile,status,sources]=await Promise.all(["data/jobs.json","config/profile.json","data/status.json","config/sources.json"].map(p=>fetch(p+"?v="+Date.now()).then(r=>{if(!r.ok)throw new Error(p);return r.json()})));
-    state.jobs=jobs.jobs||[];state.profile=profile;state.sources=sources.sources||[];
+    const paths=["data/jobs.json","config/profile.json","data/status.json","config/sources.json","config/custom_sources.json"];
+    const [jobs,profile,status,sources,custom]=await Promise.all(paths.map(p=>fetch(p+"?v="+Date.now()).then(r=>{if(!r.ok)throw new Error(p);return r.json()})));
+    state.jobs=jobs.jobs||[];state.profile=profile;state.customSources=custom.sources||[];state.sources=mergeSources(sources.sources,state.customSources);
     if(!state.watch.size) profile.watchCompanies.forEach(x=>state.watch.add(x));
+    state.customSources.forEach(item=>state.watch.add(item.company));
     renderDirections();renderCities();bind();renderCompanies();renderJobs();renderStatus(status,jobs);
     if(state.resumeText) analyzeResume(state.resumeText,"上次分析的简历");
   }catch(error){$("runState").textContent="数据读取失败";$("jobList").innerHTML='<div class="empty-state">暂时无法读取岗位数据，请稍后刷新。</div>'}
@@ -14,17 +19,19 @@ async function init(){
 }
 function bind(){
   ["searchInput","batchFilter","cityFilter","watchOnly","verifiedOnly","sortBy"].forEach(id=>$(id).addEventListener(id==="searchInput"?"input":"change",()=>{state.companyPage=1;renderJobs()}));
-  $("resetFilters").onclick=()=>{["searchInput","batchFilter","cityFilter"].forEach(id=>$(id).value="");$("watchOnly").checked=false;$("verifiedOnly").checked=false;state.selectedDirections.clear();state.selectedCompany=null;state.showFavorites=false;state.companyPage=1;document.querySelectorAll("[data-direction]").forEach(x=>x.checked=false);renderJobs()};$("backCompanies").onclick=()=>{state.selectedCompany=null;state.showFavorites=false;state.companyPage=1;renderJobs();location.hash="radar"};const openFavorites=()=>{state.selectedCompany=null;state.showFavorites=true;renderJobs();location.hash="radar"};$("favoritesNav").onclick=openFavorites;$("favoritesToolbar").onclick=openFavorites;
-  $("addCompanyForm").onsubmit=e=>{e.preventDefault();const name=$("companyInput").value.trim(),url=$("sourceInput").value.trim();if(name&&isValidSourceUrl(url)){state.watch.add(name);state.sourceOverrides[name]=url;saveSourceOverrides();saveWatch();$("companyInput").value="";$("sourceInput").value="";renderCompanies();renderJobs()}};
+  $("resetFilters").onclick=()=>{["searchInput","batchFilter","cityFilter"].forEach(id=>$(id).value="");$("watchOnly").checked=false;$("verifiedOnly").checked=false;state.selectedDirections.clear();state.selectedSubdomains.clear();state.selectedCompany=null;state.showFavorites=false;state.companyPage=1;document.querySelectorAll("[data-direction],[data-subdomain]").forEach(x=>x.checked=false);renderJobs()};$("backCompanies").onclick=()=>{state.selectedCompany=null;state.showFavorites=false;state.companyPage=1;renderJobs();location.hash="radar"};const openFavorites=()=>{state.selectedCompany=null;state.showFavorites=true;renderJobs();location.hash="radar"};$("favoritesNav").onclick=openFavorites;$("favoritesToolbar").onclick=openFavorites;
+  $("addCompanyForm").onsubmit=e=>{e.preventDefault();const name=$("companyInput").value.trim(),url=$("sourceInput").value.trim();if(name&&isValidSourceUrl(url)){state.watch.add(name);state.sourceOverrides[name]=url;saveSourceOverrides();saveWatch();$("companyInput").value="";$("sourceInput").value="";renderCompanies();renderJobs();syncCompanySource(name)}};
   $("resumeFile").onchange=readResume;
   $("closeJob").onclick=()=>$("jobDialog").close();
   $("openClawSetup").onclick=()=>{$("openClawDialog").showModal();window.lucide?.createIcons()};
   $("closeOpenClaw").onclick=()=>$("openClawDialog").close();
 }
 function renderDirections(){
-  $("directionFilters").innerHTML=state.profile.directions.map(d=>'<label class="check-item"><input type="checkbox" data-direction="'+esc(d.id)+'"><span>'+esc(d.label)+'</span></label>').join("");
+  $("directionFilters").innerHTML=state.profile.directions.map(d=>'<div class="direction-group"><label class="check-item direction-main"><input type="checkbox" data-direction="'+esc(d.id)+'"><span><strong>'+esc(d.label)+'</strong><small>'+esc(d.description||"")+'</small></span></label><div class="subdomain-list">'+(d.subdomains||[]).map(s=>'<label><input type="checkbox" data-subdomain="'+esc(s.id)+'"><span>'+esc(s.label)+'</span></label>').join("")+'</div></div>').join("");
   document.querySelectorAll("[data-direction]").forEach(x=>x.onchange=()=>{x.checked?state.selectedDirections.add(x.dataset.direction):state.selectedDirections.delete(x.dataset.direction);state.companyPage=1;renderJobs()});
+  document.querySelectorAll("[data-subdomain]").forEach(x=>x.onchange=()=>{x.checked?state.selectedSubdomains.add(x.dataset.subdomain):state.selectedSubdomains.delete(x.dataset.subdomain);state.companyPage=1;renderJobs()});
 }
+function subdomainFor(id){for(const direction of state.profile.directions){const found=(direction.subdomains||[]).find(item=>item.id===id);if(found)return found}return null}
 function renderCities(){
   const cities=[...new Set([...state.profile.preferredCities,...state.jobs.map(j=>j.city)])].filter(Boolean);
   $("cityFilter").innerHTML='<option value="">全部城市</option>'+cities.map(c=>'<option>'+esc(c)+'</option>').join("");
@@ -46,16 +53,20 @@ function calculateMatch(job){
   const resume=norm(state.resumeText);
   const skillHits=(job.skills||[]).filter(s=>resume&&resume.includes(norm(s))).length;
   score+=Math.min(25,skillHits*6);
+  const jobText=norm([job.title,...(job.skills||[]),...(job.requirements||[])].join(" "));
+  const detailHits=[...state.selectedSubdomains].filter(id=>(subdomainFor(id)?.keywords||[]).some(k=>jobText.includes(norm(k)))).length;
+  score+=Math.min(15,detailHits*8);
   return Math.min(99,score||10);
 }
 function batchKind(job){return job.batch==="正式批"?"formal":["人才计划","提前批","专项计划"].includes(job.batch)?"early":"other"}
 function matchesBatch(job,value){return !value||batchKind(job)===value}
 function filteredJobs(){
   const q=norm($("searchInput").value),batch=$("batchFilter").value,city=$("cityFilter").value;
+  const detailKeywords=[...state.selectedSubdomains].flatMap(id=>subdomainFor(id)?.keywords||[]);
   return state.jobs.filter(j=>{
     if(j.batch==="实习生")return false;
     const hay=norm([j.company,j.title,j.city,...(j.skills||[]),...(j.requirements||[])].join(" "));
-    return(!q||hay.includes(q))&&matchesBatch(j,batch)&&(!city||j.city===city)&&(!$("watchOnly").checked||state.watch.has(companyGroup(j)))&&(!$("verifiedOnly").checked||j.status==="已开启")&&(!state.selectedDirections.size||(j.directionIds||[]).some(id=>state.selectedDirections.has(id)));
+    return(!q||hay.includes(q))&&matchesBatch(j,batch)&&(!city||j.city===city)&&(!$("watchOnly").checked||state.watch.has(companyGroup(j)))&&(!$("verifiedOnly").checked||j.status==="已开启")&&(!state.selectedDirections.size||(j.directionIds||[]).some(id=>state.selectedDirections.has(id)))&&(!detailKeywords.length||detailKeywords.some(keyword=>hay.includes(norm(keyword))));
   }).map(j=>({...j,match:calculateMatch(j)})).sort((a,b)=>$("sortBy").value==="company"?a.company.localeCompare(b.company):$("sortBy").value==="checked"?new Date(b.lastChecked)-new Date(a.lastChecked):b.match-a.match);
 }
 function companyGroup(job){return job.companyGroup||String(job.company).replace(/\s+Seed$/,"")}
@@ -75,8 +86,8 @@ function renderCompanyJobs(all){
   const jobs=all.filter(j=>companyGroup(j)===state.selectedCompany);
   const statusJobs=state.jobs.filter(j=>j.batch!=="实习生"&&companyGroup(j)===state.selectedCompany);
   $("viewEyebrow").textContent="MATCHED JOBS";$("viewTitle").textContent=state.selectedCompany+" · 适配岗位";$("backCompanies").hidden=false;
-  const early=batchState(statusJobs,"early"),formal=batchState(statusJobs,"formal");
-  $("resultsSummary").textContent="提前批（顶尖人才）："+(early?"已开启":"持续监测")+"；正式批："+(formal?"已开启":"持续监测")+"。当前筛选下 "+jobs.length+" 个适配岗位。";
+  const early=batchState(statusJobs,"early"),formal=batchState(statusJobs,"formal"),earlyWindow=batchWindow(statusJobs,"early"),formalWindow=batchWindow(statusJobs,"formal");
+  $("resultsSummary").textContent="提前批："+(early?"已开启（"+earlyWindow.text+"）":"持续监测")+"；正式批："+(formal?"已开启（"+formalWindow.text+"）":"持续监测")+"。当前筛选下 "+jobs.length+" 个适配岗位。";
   $("jobList").className="job-list";
   $("jobList").innerHTML=jobs.length?jobs.map(jobCardHtml).join(""):'<div class="empty-state"><strong>暂未发现符合条件的岗位</strong><p>该公司仍在每日监测；也可以返回公司总览调整方向或批次。</p></div>';
   bindJobCards();
@@ -89,9 +100,12 @@ function renderFavorites(){
   $("jobList").innerHTML=jobs.length?jobs.map(jobCardHtml).join(""):'<div class="empty-state"><strong>还没有收藏岗位</strong><p>进入公司岗位页，点击书签按钮加入重点关注。</p></div>';
   bindJobCards();
 }
+function jobCode(j){return j.jobCode||(String(j.title).match(/J\d+/)||[])[0]||""}
+function jobTarget(j){return j.detailUrl||j.applyUrl||j.searchUrl||j.sourceUrl||""}
+function jobActionLabel(j){return j.detailUrl?"直达岗位":j.searchMode==="keyword"?"官网检索 "+jobCode(j):"立即投递"}
 function jobCardHtml(j){
-  const saved=state.favorites.has(j.id);
-  return '<article class="job-card '+(j.status==="待核验"?"pending":"")+'" data-job="'+esc(j.id)+'" tabindex="0"><div><div class="job-title"><h3>'+esc(j.title)+'</h3><span class="tag '+(j.status==="待核验"?"neutral":"")+'">'+esc(j.status)+'</span><button class="favorite-button '+(saved?"is-saved":"")+'" type="button" data-favorite="'+esc(j.id)+'" title="'+(saved?"取消收藏":"收藏岗位")+'" aria-label="'+(saved?"取消收藏":"收藏岗位")+'"><i data-lucide="bookmark"></i></button></div><p><strong>'+esc(j.company)+'</strong> · '+esc(j.batch)+' · '+esc((j.requirements||[]).slice(0,2).join("；"))+'</p><div class="job-meta"><span><i data-lucide="map-pin"></i>'+esc(j.city)+'</span><span><i data-lucide="calendar-clock"></i>'+(j.deadline?esc(j.deadline)+" 截止":"截止时间待确认")+'</span><span><i data-lucide="refresh-cw"></i>'+new Date(j.lastChecked).toLocaleDateString("zh-CN")+'</span></div></div><div class="job-skills">'+(j.skills||[]).slice(0,5).map(s=>'<span class="tag">'+esc(s)+'</span>').join("")+'</div><div class="match-score"><strong>'+j.match+'%</strong><span>匹配</span></div><div class="job-actions">'+(j.status==="已开启"&&j.applyUrl?'<a href="'+esc(j.applyUrl)+'" target="_blank" rel="noreferrer">立即投递</a>':'<button type="button">查看状态</button>')+'</div></article>'
+  const saved=state.favorites.has(j.id),target=jobTarget(j);
+  return '<article class="job-card '+(j.status==="待核验"?"pending":"")+'" data-job="'+esc(j.id)+'" tabindex="0"><div><div class="job-title"><h3>'+esc(j.title)+'</h3><span class="tag '+(j.status==="待核验"?"neutral":"")+'">'+esc(j.status)+'</span><button class="favorite-button '+(saved?"is-saved":"")+'" type="button" data-favorite="'+esc(j.id)+'" title="'+(saved?"取消收藏":"收藏岗位")+'" aria-label="'+(saved?"取消收藏":"收藏岗位")+'"><i data-lucide="bookmark"></i></button></div><p><strong>'+esc(j.company)+'</strong> · '+esc(j.batch)+' · '+esc((j.requirements||[]).slice(0,2).join("；"))+'</p><div class="job-meta"><span><i data-lucide="map-pin"></i>'+esc(j.city)+'</span><span><i data-lucide="calendar-plus"></i>'+(j.postedAt?esc(j.postedAt)+" 开放":"开放时间待确认")+'</span><span><i data-lucide="calendar-clock"></i>'+(j.deadline?esc(j.deadline)+" 截止":"截止时间待公布")+'</span></div></div><div class="job-skills">'+(j.skills||[]).slice(0,5).map(s=>'<span class="tag">'+esc(s)+'</span>').join("")+'</div><div class="match-score"><strong>'+j.match+'%</strong><span>匹配</span></div><div class="job-actions">'+(j.status==="已开启"&&target?'<a href="'+esc(target)+'" target="_blank" rel="noreferrer" title="'+esc(j.searchMode==="keyword"?"打开官网后使用岗位编号 "+jobCode(j)+" 检索":"打开岗位页面")+'">'+esc(jobActionLabel(j))+'</a>':'<button type="button">查看状态</button>')+'</div></article>'
 }
 function bindJobCards(){
   document.querySelectorAll("[data-job]").forEach(el=>{el.onclick=e=>{if(!e.target.closest("a,button"))openJob(el.dataset.job)};el.onkeydown=e=>{if(e.key==="Enter")openJob(el.dataset.job)}});
@@ -122,15 +136,23 @@ function renderCompanyOverview(matchingJobs){
   $("jobList").className="company-grid";
   $("jobList").innerHTML=pageItems.map(c=>{
     const labels=[...c.directions].map(id=>state.profile.directions.find(d=>d.id===id)?.label).filter(Boolean).slice(0,3);
-    const topStatus=c.formal?"正式批已开启":c.early?"提前批已开启":"持续监测";
-    return '<button class="company-card '+(c.formal||c.early?"is-open":"is-watching")+'" type="button" data-company="'+esc(c.name)+'"><span class="company-card-head"><span><small>'+esc(topStatus)+'</small><strong>'+esc(c.name)+'</strong></span><span class="company-match">'+c.maxMatch+'%</span></span><span class="batch-statuses">'+batchBadge("early",c.early)+batchBadge("formal",c.formal)+'</span><span class="company-directions">'+(labels.length?labels.map(x=>'<span>'+esc(x)+'</span>').join(""):'<span>暂未发现方向匹配岗位</span>')+'</span><span class="company-card-foot"><span>'+c.matches.length+' 个匹配岗位</span><span>查看岗位 <i data-lucide="arrow-right"></i></span></span></button>'
+    const topStatus=c.formal?"正式批已开启":c.early?"提前批已开启":"持续监测",careers=sourceFor(c.name);
+    return '<article class="company-card '+(c.formal||c.early?"is-open":"is-watching")+'"><div class="company-card-head"><span><small>'+esc(topStatus)+'</small><strong>'+esc(c.name)+'</strong></span><span class="company-match">'+c.maxMatch+'%</span></div><div class="batch-statuses">'+batchBadge("early",c.statusJobs)+batchBadge("formal",c.statusJobs)+'</div><div class="company-directions">'+(labels.length?labels.map(x=>'<span>'+esc(x)+'</span>').join(""):'<span>暂未发现方向匹配岗位</span>')+'</div><div class="company-card-foot"><span>'+c.matches.length+' 个匹配岗位</span><span class="company-card-actions">'+(careers?'<a href="'+esc(careers)+'" target="_blank" rel="noreferrer"><i data-lucide="external-link"></i>招聘官网</a>':'<span class="disabled-link">官网待补充</span>')+'<button type="button" data-open-company="'+esc(c.name)+'">查看岗位<i data-lucide="arrow-right"></i></button></span></div></article>'
   }).join("");
-  document.querySelectorAll("[data-company]").forEach(el=>el.onclick=()=>{state.selectedCompany=el.dataset.company;state.showFavorites=false;renderJobs();location.hash="radar"});
+  document.querySelectorAll("[data-open-company]").forEach(el=>el.onclick=()=>{state.selectedCompany=el.dataset.openCompany;state.showFavorites=false;renderJobs();location.hash="radar"});
   renderPagination(totalPages);window.lucide?.createIcons();
 }
-function batchBadge(kind,open){
+function batchWindow(jobs,kind){
+  const opened=jobs.filter(j=>batchKind(j)===kind&&isOpen(j));
+  const starts=opened.map(j=>j.recruitmentStart||j.postedAt).filter(Boolean).sort();
+  const deadlines=opened.map(j=>j.recruitmentDeadline||j.deadline).filter(Boolean).sort();
+  const start=starts[0]||"待确认",deadline=deadlines[0]||"待公布";
+  return {start,deadline,text:"开始 "+start+" · 截止 "+deadline};
+}
+function batchBadge(kind,jobs){
+  const open=batchState(jobs,kind),period=batchWindow(jobs,kind);
   const label=kind==="early"?"提前批（顶尖人才）":"正式批";
-  return '<span class="batch-badge '+(open?"is-open":"is-monitoring")+'"><i data-lucide="'+(open?"circle-check":"radar")+'"></i><span>'+label+'</span><small>'+(open?"已开启":"持续监测")+'</small></span>'
+  return '<span class="batch-badge '+(open?"is-open":"is-monitoring")+'"><i data-lucide="'+(open?"circle-check":"radar")+'"></i><span>'+label+'</span><small>'+(open?"已开启":"持续监测")+'</small><em>'+(open?esc(period.text):"每日检查官方入口")+'</em></span>'
 }
 function renderPagination(totalPages){
   const pager=$("companyPagination");pager.hidden=totalPages<=1;
@@ -142,7 +164,7 @@ function renderPagination(totalPages){
 function openJob(id){
   const j=state.jobs.find(x=>x.id===id);if(!j)return;
   $("dialogCompany").textContent=j.company+" · "+j.batch+" · "+j.status;$("dialogTitle").textContent=j.title;
-  $("jobDetail").innerHTML='<div class="detail-grid"><section class="detail-block"><h3>岗位要求</h3><ul>'+j.requirements.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ul></section><section class="detail-block"><h3>笔试面试流程</h3><ol>'+j.process.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ol></section><section class="detail-block"><h3>技能关键词</h3><div class="tag-cloud">'+j.skills.map(x=>'<span>'+esc(x)+'</span>').join("")+'</div></section><section class="detail-block"><h3>时间与证据</h3><p>发布时间：'+esc(j.postedAt||"待确认")+'<br>截止时间：'+esc(j.deadline||"待确认")+'<br>最近检查：'+new Date(j.lastChecked).toLocaleString("zh-CN")+'<br>可信度：'+Math.round((j.confidence||0)*100)+'%</p></section></div><section class="detail-block"><h3>核验依据</h3><p>'+esc(j.evidence||"以官方招聘页实时信息为准")+'</p><p><strong>本次变化：</strong>'+esc(j.change||"首次记录")+'</p></section><div class="detail-actions">'+(j.status==="已开启"&&j.applyUrl?'<a href="'+esc(j.applyUrl)+'" target="_blank" rel="noreferrer">立即投递</a>':'')+'<a class="source-link" href="'+esc(j.announcementUrl||j.sourceUrl)+'" target="_blank" rel="noreferrer">查看官方依据</a></div>';
+  $("jobDetail").innerHTML='<div class="detail-grid"><section class="detail-block"><h3>岗位要求</h3><ul>'+j.requirements.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ul></section><section class="detail-block"><h3>笔试面试流程</h3><ol>'+j.process.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ol></section><section class="detail-block"><h3>技能关键词</h3><div class="tag-cloud">'+j.skills.map(x=>'<span>'+esc(x)+'</span>').join("")+'</div></section><section class="detail-block"><h3>时间与证据</h3><p>发布时间：'+esc(j.postedAt||"待确认")+'<br>截止时间：'+esc(j.deadline||"待确认")+'<br>最近检查：'+new Date(j.lastChecked).toLocaleString("zh-CN")+'<br>可信度：'+Math.round((j.confidence||0)*100)+'%</p></section></div><section class="detail-block"><h3>核验依据</h3><p>'+esc(j.evidence||"以官方招聘页实时信息为准")+'</p><p><strong>本次变化：</strong>'+esc(j.change||"首次记录")+'</p></section><div class="detail-actions">'+(j.status==="已开启"&&jobTarget(j)?'<a href="'+esc(jobTarget(j))+'" target="_blank" rel="noreferrer">'+esc(jobActionLabel(j))+'</a>':'')+'<a class="source-link" href="'+esc(j.announcementUrl||j.sourceUrl)+'" target="_blank" rel="noreferrer">查看官方依据</a></div>';
   $("jobDialog").showModal();
 }
 function isValidSourceUrl(value){try{const url=new URL(value);return ["http:","https:"].includes(url.protocol)}catch{return false}}
@@ -152,8 +174,8 @@ function saveSourceOverrides(){localStorage.setItem("gjf-source-overrides",JSON.
 function renderCompanies(){
   const names=[...new Set([...(state.profile.watchCompanies||[]),...state.watch,...state.sources.map(item=>item.company)])].sort((a,b)=>a.localeCompare(b));
   $("companyList").innerHTML=names.map(company=>{
-    const defaultUrl=defaultSourceFor(company),current=sourceFor(company),custom=Boolean(state.sourceOverrides[company]);
-    return '<article class="source-row"><div class="source-company"><span class="source-state '+(current?"is-ready":"is-missing")+'"></span><span><strong>'+esc(company)+'</strong><small>'+(custom?"本地修改来源":defaultUrl?"仓库默认来源":"缺少招聘网址")+'</small></span></div><label class="source-url"><span>招聘网址</span><input type="url" data-source-url="'+esc(company)+'" value="'+esc(current)+'" placeholder="https://..."></label><div class="source-actions"><button type="button" data-save-source="'+esc(company)+'" title="保存修改" aria-label="保存 '+esc(company)+' 招聘网址"><i data-lucide="save"></i></button>'+(current?'<a href="'+esc(current)+'" target="_blank" rel="noreferrer" title="打开招聘网站" aria-label="打开 '+esc(company)+' 招聘网站"><i data-lucide="external-link"></i></a>':'')+'<button class="sync-source" type="button" data-sync-source="'+esc(company)+'"><i data-lucide="cloud-upload"></i><span>同步每日监测</span></button></div></article>'
+    const defaultUrl=defaultSourceFor(company),current=sourceFor(company),custom=Boolean(state.sourceOverrides[company]),inRepo=state.customSources.some(item=>item.company===company);
+    return '<article class="source-row"><div class="source-company"><span class="source-state '+(current?"is-ready":"is-missing")+'"></span><span><strong>'+esc(company)+'</strong><small>'+(inRepo?"个人仓库配置":custom?"本地修改待写入":defaultUrl?"仓库默认来源":"缺少招聘网址")+'</small></span></div><label class="source-url"><span>招聘网址</span><input type="url" data-source-url="'+esc(company)+'" value="'+esc(current)+'" placeholder="https://..."></label><div class="source-actions"><button type="button" data-save-source="'+esc(company)+'" title="保存到当前浏览器" aria-label="保存 '+esc(company)+' 招聘网址"><i data-lucide="save"></i></button>'+(current?'<a href="'+esc(current)+'" target="_blank" rel="noreferrer" title="打开招聘网站" aria-label="打开 '+esc(company)+' 招聘网站"><i data-lucide="external-link"></i></a>':'')+'<button class="sync-source" type="button" data-sync-source="'+esc(company)+'"><i data-lucide="cloud-upload"></i><span>写入仓库</span></button></div></article>'
   }).join("");
   document.querySelectorAll("[data-save-source]").forEach(button=>button.onclick=()=>saveCompanySource(button.dataset.saveSource));
   document.querySelectorAll("[data-sync-source]").forEach(button=>button.onclick=()=>syncCompanySource(button.dataset.syncSource));
@@ -168,9 +190,9 @@ function syncCompanySource(company){
   const input=document.querySelector('[data-source-url="'+CSS.escape(company)+'"]'),url=input?.value.trim()||sourceFor(company);
   if(!isValidSourceUrl(url)){input?.setCustomValidity("请先填写有效招聘网址");input?.reportValidity();return}
   state.sourceOverrides[company]=url;state.watch.add(company);saveSourceOverrides();saveWatch();
-  const title="[招聘源] "+company;
-  const body=["company="+company,"url="+url,"action=upsert","","由 Good Job Finding 招聘源设置页面提交。"].join("\n");
-  window.open("https://github.com/Futuresxy/good-job-finding/issues/new?title="+encodeURIComponent(title)+"&body="+encodeURIComponent(body),"_blank","noopener");
+  const task={type:"sync-source",company,url};
+  if(sourceSyncWindow&&!sourceSyncWindow.closed){sourceSyncChannel?.postMessage(task);sourceSyncWindow.focus()}
+  else{sourceSyncWindow=window.open("github-sync.html?company="+encodeURIComponent(company)+"&url="+encodeURIComponent(url),"gjfRepositorySync","width=620,height=760")}
   renderCompanies();
 }
 function saveWatch(){localStorage.setItem("gjf-watch",JSON.stringify([...state.watch]))}

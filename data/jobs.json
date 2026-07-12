@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-12T02:54:11.298704+00:00",
+  "generatedAt": "2026-07-12T20:00:00+08:00",
   "mode": "live",
   "disclaimer": "本页已于 2026-07-12 完成一次人工辅助现采集。已开启结论优先依据公司官方招聘页；具体岗位状态可能随时变化，投递前请再次打开官方入口确认。",
   "collection": {
     "checkedCompanies": 12,
     "officialSources": 11,
     "externalEvidenceSources": 1,
-    "verifiedOpenings": 16,
+    "verifiedOpenings": 21,
     "notOpenedOrUnconfirmed": 1,
     "lastAutomatedCheck": "2026-07-12T02:54:11.298704+00:00",
     "reachableEvidencePages": 14,
@@ -666,7 +666,13 @@
         "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
         "reachable": true,
         "note": "官方页面可访问"
-      }
+      },
+      "jobCode": "J100732",
+      "searchKeyword": "J100732",
+      "searchMode": "keyword",
+      "detailUrl": null,
+      "recruitmentDeadline": null,
+      "recruitmentStart": "2026-07-12"
     },
     {
       "company": "百度",
@@ -714,7 +720,13 @@
         "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
         "reachable": true,
         "note": "官方页面可访问"
-      }
+      },
+      "jobCode": "J100730",
+      "searchKeyword": "J100730",
+      "searchMode": "keyword",
+      "detailUrl": null,
+      "recruitmentDeadline": null,
+      "recruitmentStart": "2026-07-12"
     },
     {
       "company": "百度",
@@ -764,7 +776,13 @@
         "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
         "reachable": true,
         "note": "官方页面可访问"
-      }
+      },
+      "jobCode": "J101258",
+      "searchKeyword": "J101258",
+      "searchMode": "keyword",
+      "detailUrl": null,
+      "recruitmentDeadline": null,
+      "recruitmentStart": "2026-07-12"
     },
     {
       "company": "百度",
@@ -814,11 +832,17 @@
         "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
         "reachable": true,
         "note": "官方页面可访问"
-      }
+      },
+      "jobCode": "J101230",
+      "searchKeyword": "J101230",
+      "searchMode": "keyword",
+      "detailUrl": null,
+      "recruitmentDeadline": null,
+      "recruitmentStart": "2026-07-12"
     },
     {
       "company": "百度",
-      "batch": "正式批",
+      "batch": "人才计划",
       "status": "已开启",
       "graduateYear": 2027,
       "deadline": null,
@@ -866,11 +890,17 @@
         "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
         "reachable": true,
         "note": "官方页面可访问"
-      }
+      },
+      "jobCode": "J99964",
+      "searchKeyword": "J99964",
+      "searchMode": "keyword",
+      "detailUrl": null,
+      "recruitmentDeadline": null,
+      "recruitmentStart": "2026-06-22"
     },
     {
       "company": "百度",
-      "batch": "正式批",
+      "batch": "人才计划",
       "status": "已开启",
       "graduateYear": 2027,
       "deadline": null,
@@ -916,7 +946,13 @@
         "lastAttempt": "2026-07-12T02:54:11.298704+00:00",
         "reachable": true,
         "note": "官方页面可访问"
-      }
+      },
+      "jobCode": "J99967",
+      "searchKeyword": "J99967",
+      "searchMode": "keyword",
+      "detailUrl": null,
+      "recruitmentDeadline": null,
+      "recruitmentStart": "2026-05-12"
     },
     {
       "id": "stepstar-top-talent-2027",
@@ -965,6 +1001,253 @@
         "note": "本次未确认，保留上次状态",
         "error": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
       }
+    },
+    {
+      "company": "百度",
+      "graduateYear": 2027,
+      "status": "已开启",
+      "deadline": null,
+      "recruitmentDeadline": null,
+      "process": [
+        "官网使用岗位编号检索",
+        "简历筛选",
+        "笔试/测评（以岗位通知为准）",
+        "技术面试",
+        "综合面试",
+        "Offer"
+      ],
+      "announcementUrl": "https://talent.baidu.com/jobs/campus",
+      "detailUrl": null,
+      "searchMode": "keyword",
+      "sourceType": "百度官方2027届校园招聘列表",
+      "lastChecked": "2026-07-12T20:00:00+08:00",
+      "confidence": 0.99,
+      "change": "新增：根据百度官方岗位列表按方向筛选",
+      "evidence": "百度官方2027届校园招聘列表展示该岗位；点击后可在官方列表按岗位编号检索。",
+      "id": "baidu-aidu-llm-algorithm-j99938",
+      "title": "2027AIDU-大模型算法工程师（J99938）",
+      "jobCode": "J99938",
+      "searchKeyword": "J99938",
+      "batch": "人才计划",
+      "city": "北京/深圳",
+      "postedAt": "2026-06-22",
+      "recruitmentStart": "2026-05-12",
+      "directionIds": [
+        "ai-infra",
+        "architecture"
+      ],
+      "requirements": [
+        "负责LLM预训练、SFT、RLHF、对齐优化与推理增强等核心算法研发",
+        "设计并优化大规模分布式训练与推理框架，提升训练稳定性和推理效率",
+        "研究MoE稀疏化、Latent Attention及算法与工程协同优化"
+      ],
+      "skills": [
+        "预训练",
+        "SFT",
+        "RLHF",
+        "MoE",
+        "分布式训练",
+        "推理优化"
+      ],
+      "sourceUrl": "https://talent.baidu.com/jobs/list?projectType=3&recruitType=GRADUATE",
+      "applyUrl": "https://talent.baidu.com/jobs/list?projectType=3&recruitType=GRADUATE"
+    },
+    {
+      "company": "百度",
+      "graduateYear": 2027,
+      "status": "已开启",
+      "deadline": null,
+      "recruitmentDeadline": null,
+      "process": [
+        "官网使用岗位编号检索",
+        "简历筛选",
+        "笔试/测评（以岗位通知为准）",
+        "技术面试",
+        "综合面试",
+        "Offer"
+      ],
+      "announcementUrl": "https://talent.baidu.com/jobs/campus",
+      "detailUrl": null,
+      "searchMode": "keyword",
+      "sourceType": "百度官方2027届校园招聘列表",
+      "lastChecked": "2026-07-12T20:00:00+08:00",
+      "confidence": 0.99,
+      "change": "新增：根据百度官方岗位列表按方向筛选",
+      "evidence": "百度官方2027届校园招聘列表展示该岗位；点击后可在官方列表按岗位编号检索。",
+      "id": "baidu-aidu-multimodal-j99956",
+      "title": "2027AIDU-多模态算法工程师（J99956）",
+      "jobCode": "J99956",
+      "searchKeyword": "J99956",
+      "batch": "人才计划",
+      "city": "北京/上海",
+      "postedAt": "2026-06-26",
+      "recruitmentStart": "2026-05-12",
+      "directionIds": [
+        "ai-infra",
+        "architecture"
+      ],
+      "requirements": [
+        "负责图文、视频、语音和3D等多模态大模型算法研发",
+        "参与多模态数据Pipeline和评测体系建设",
+        "优化模型训练与推理效率并完成模型部署"
+      ],
+      "skills": [
+        "多模态大模型",
+        "数据Pipeline",
+        "模型压缩",
+        "训练优化",
+        "推理部署"
+      ],
+      "sourceUrl": "https://talent.baidu.com/jobs/list?projectType=3&recruitType=GRADUATE",
+      "applyUrl": "https://talent.baidu.com/jobs/list?projectType=3&recruitType=GRADUATE"
+    },
+    {
+      "company": "百度",
+      "graduateYear": 2027,
+      "status": "已开启",
+      "deadline": null,
+      "recruitmentDeadline": null,
+      "process": [
+        "官网使用岗位编号检索",
+        "简历筛选",
+        "笔试/测评（以岗位通知为准）",
+        "技术面试",
+        "综合面试",
+        "Offer"
+      ],
+      "announcementUrl": "https://talent.baidu.com/jobs/campus",
+      "detailUrl": null,
+      "searchMode": "keyword",
+      "sourceType": "百度官方2027届校园招聘列表",
+      "lastChecked": "2026-07-12T20:00:00+08:00",
+      "confidence": 0.99,
+      "change": "新增：根据百度官方岗位列表按方向筛选",
+      "evidence": "百度官方2027届校园招聘列表展示该岗位；点击后可在官方列表按岗位编号检索。",
+      "id": "baidu-aidu-foundation-architect-j99976",
+      "title": "2027AIDU-基础模型架构师（J99976）",
+      "jobCode": "J99976",
+      "searchKeyword": "J99976",
+      "batch": "人才计划",
+      "city": "北京",
+      "postedAt": "2026-05-12",
+      "recruitmentStart": "2026-05-12",
+      "directionIds": [
+        "architecture",
+        "ai-infra"
+      ],
+      "requirements": [
+        "构建自动驾驶统一模型底座及多模态主干结构",
+        "负责模型蒸馏、轻量化与大规模预训练",
+        "设计多阶段预训练和后训练流程及数据使用策略"
+      ],
+      "skills": [
+        "基础模型架构",
+        "多模态",
+        "模型蒸馏",
+        "预训练",
+        "后训练"
+      ],
+      "sourceUrl": "https://talent.baidu.com/jobs/list?projectType=3&recruitType=GRADUATE",
+      "applyUrl": "https://talent.baidu.com/jobs/list?projectType=3&recruitType=GRADUATE"
+    },
+    {
+      "company": "百度",
+      "graduateYear": 2027,
+      "status": "已开启",
+      "deadline": null,
+      "recruitmentDeadline": null,
+      "process": [
+        "官网使用岗位编号检索",
+        "简历筛选",
+        "笔试/测评（以岗位通知为准）",
+        "技术面试",
+        "综合面试",
+        "Offer"
+      ],
+      "announcementUrl": "https://talent.baidu.com/jobs/campus",
+      "detailUrl": null,
+      "searchMode": "keyword",
+      "sourceType": "百度官方2027届校园招聘列表",
+      "lastChecked": "2026-07-12T20:00:00+08:00",
+      "confidence": 0.99,
+      "change": "新增：根据百度官方岗位列表按方向筛选",
+      "evidence": "百度官方2027届校园招聘列表展示该岗位；点击后可在官方列表按岗位编号检索。",
+      "id": "baidu-aidu-e2e-architect-j99978",
+      "title": "2027AIDU-端到端系统架构师（J99978）",
+      "jobCode": "J99978",
+      "searchKeyword": "J99978",
+      "batch": "人才计划",
+      "city": "北京",
+      "postedAt": "2026-05-12",
+      "recruitmentStart": "2026-05-12",
+      "directionIds": [
+        "architecture",
+        "ai-infra"
+      ],
+      "requirements": [
+        "构建高扩展性的端到端系统并设计训练端到端模型",
+        "应用生成模型、模仿学习和强化学习提升规划及推理能力",
+        "研究预训练、后训练阶段的数据生成和使用策略"
+      ],
+      "skills": [
+        "端到端系统",
+        "系统架构",
+        "强化学习",
+        "生成模型",
+        "预训练"
+      ],
+      "sourceUrl": "https://talent.baidu.com/jobs/list?projectType=3&recruitType=GRADUATE",
+      "applyUrl": "https://talent.baidu.com/jobs/list?projectType=3&recruitType=GRADUATE"
+    },
+    {
+      "company": "百度",
+      "graduateYear": 2027,
+      "status": "已开启",
+      "deadline": null,
+      "recruitmentDeadline": null,
+      "process": [
+        "官网使用岗位编号检索",
+        "简历筛选",
+        "笔试/测评（以岗位通知为准）",
+        "技术面试",
+        "综合面试",
+        "Offer"
+      ],
+      "announcementUrl": "https://talent.baidu.com/jobs/campus",
+      "detailUrl": null,
+      "searchMode": "keyword",
+      "sourceType": "百度官方2027届校园招聘列表",
+      "lastChecked": "2026-07-12T20:00:00+08:00",
+      "confidence": 0.99,
+      "change": "新增：根据百度官方岗位列表按方向筛选",
+      "evidence": "百度官方2027届校园招聘列表展示该岗位；点击后可在官方列表按岗位编号检索。",
+      "id": "baidu-cloud-virtualization-j100818",
+      "title": "上海-云计算虚拟化研发工程师（J100818）",
+      "jobCode": "J100818",
+      "searchKeyword": "J100818",
+      "batch": "正式批",
+      "city": "上海",
+      "postedAt": "2026-07-08",
+      "recruitmentStart": "2026-07-12",
+      "directionIds": [
+        "architecture",
+        "ai-infra"
+      ],
+      "requirements": [
+        "研发和优化计算、网络、存储虚拟化等云计算核心基础设施",
+        "深入Linux内核、KVM、QEMU与容器技术并提升性能和稳定性",
+        "为AI训练与推理提供弹性底层计算资源，关注GPU虚拟化和DPU卸载"
+      ],
+      "skills": [
+        "Linux内核",
+        "KVM",
+        "QEMU",
+        "Kubernetes",
+        "GPU虚拟化",
+        "DPU"
+      ],
+      "sourceUrl": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "applyUrl": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE"
     }
   ]
 }

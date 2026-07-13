@@ -1,49 +1,6 @@
 {
-  "generatedAt": "2026-07-13T02:55:22.572899+00:00",
-  "events": [
-    {
-      "type": "new-signal",
-      "id": "baidu-auto-100744",
-      "adapter": "baidu-campus",
-      "company": "百度",
-      "title": "ame\":\"了解百度\",\"value\":\"https:\\u002F\\u002Fhome.baidu.com\\u002F\",\"order\":3,\"isNewPage\":true}]},\"detailData\":{\"postInfo\":{\"education\":\"\",\"name\":\"北京-前端开发工程师(J100744)",
-      "jobCode": "J100744",
-      "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
-      "detailUrl": null,
-      "status": "已开启",
-      "directionIds": [
-        "ai-infra",
-        "architecture",
-        "chip-design",
-        "compiler",
-        "verification"
-      ],
-      "directionTerms": [
-        "AI Infra",
-        "推理",
-        "vLLM",
-        "KV Cache",
-        "CUDA",
-        "分布式训练",
-        "性能优化",
-        "推理引擎",
-        "SGLang",
-        "通信库",
-        "NCCL",
-        "训练框架"
-      ],
-      "requirements": [
-        "window.__USE_SSR__=true; window.__INITIAL_DATA__ ={\"layoutData\":{\"headerMenuList\":[{\"name\":\"首页\",\"value\":\"\\u002F\",\"order\":0,\"isNewPage\":false},{\"name\":\"职位\",\"value\":\"\\u002Flist\",\"order\":1,\"isNewPage\":false},{\"name\":\"招聘动态\",\"value\":\"\\u002Ftrend\",\"order\":2,\"isNewPa",
-        "-list\",\"order\":1,\"isNewPage\":false},{\"name\":\"校园招聘\",\"value\":\"\\u002Fcampus\",\"order\":2,\"isNewPage\":false},{\"n\",\"orgName\":\"\",\"postId\":\"bd823572",
-        "-22e6ef4110b9\",\"jobId\":\"6582c649",
-        "-26dbe2872ffa\",\"postType\":\"技术\",\"publishDate\":\"2026"
-      ],
-      "city": "北京",
-      "postedAt": "2026-07-08",
-      "discoveredAt": "2026-07-13T02:56:02.892238+00:00",
-      "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
-    }
-  ],
+  "generatedAt": "2026-07-13T14:37:17.810887+00:00",
+  "events": [],
   "delivery": {
     "slack": "not-configured",
     "openclawWechat": "scan-connected-on-openclaw-device"

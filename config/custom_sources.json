@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-12T12:45:50.934Z",
+  "updatedAt": "2026-07-13T08:04:37.202Z",
   "sources": [
     {
       "company": "寒武纪",
@@ -82,6 +82,13 @@
     {
       "company": "中兴微电子",
       "careersUrl": "https://app.mokahr.com/campus-recruitment/sanechips/102705#/jobs",
+      "priority": 10,
+      "enabled": true,
+      "parser": "official-page-monitor"
+    },
+    {
+      "company": "百度昆仑芯",
+      "careersUrl": "https://kunlunxin1.zhiye.com/custom/campus?c1=2&c2=&hideAll=true",
       "priority": 10,
       "enabled": true,
       "parser": "official-page-monitor"

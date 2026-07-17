@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-13T08:04:37.202Z",
+  "updatedAt": "2026-07-17T01:15:51.360Z",
   "sources": [
     {
       "company": "寒武纪",
@@ -81,7 +81,7 @@
     },
     {
       "company": "中兴微电子",
-      "careersUrl": "https://app.mokahr.com/campus-recruitment/sanechips/102705#/jobs",
+      "careersUrl": "https://app.mokahr.com/campus-recruitment/sanechips/102705#/jobs?project=100120264",
       "priority": 10,
       "enabled": true,
       "parser": "official-page-monitor"

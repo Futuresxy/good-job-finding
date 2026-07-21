@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T02:47:57.261121+00:00",
+  "generatedAt": "2026-07-21T13:53:45.451767+00:00",
   "signals": [
     {
       "id": "9b40a5337011c949",
@@ -12,7 +12,7 @@
       ],
       "directionTerms": [],
       "status": "待核验",
-      "discoveredAt": "2026-07-21T02:48:01.163507+00:00",
+      "discoveredAt": "2026-07-21T13:53:49.763643+00:00",
       "note": "页面级信号，尚未定位到具体岗位链接。"
     },
     {
@@ -32,7 +32,7 @@
       ],
       "batch": "人才计划",
       "sourceUrl": "https://seed.bytedance.com/zh/seedearlycareer",
-      "discoveredAt": "2026-07-21T02:48:05.469095+00:00",
+      "discoveredAt": "2026-07-21T13:53:55.375608+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -51,7 +51,7 @@
       ],
       "batch": "人才计划",
       "sourceUrl": "https://seed.bytedance.com/zh/seedearlycareer",
-      "discoveredAt": "2026-07-21T02:48:05.469535+00:00",
+      "discoveredAt": "2026-07-21T13:53:55.376189+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -70,7 +70,7 @@
       ],
       "batch": "人才计划",
       "sourceUrl": "https://seed.bytedance.com/zh/seedearlycareer",
-      "discoveredAt": "2026-07-21T02:48:05.469626+00:00",
+      "discoveredAt": "2026-07-21T13:53:55.376306+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -83,7 +83,7 @@
       ],
       "directionTerms": [],
       "status": "待核验",
-      "discoveredAt": "2026-07-21T02:48:12.026538+00:00",
+      "discoveredAt": "2026-07-21T13:54:02.204509+00:00",
       "note": "页面级信号，尚未定位到具体岗位链接。"
     },
     {
@@ -96,7 +96,7 @@
       ],
       "directionTerms": [],
       "status": "待核验",
-      "discoveredAt": "2026-07-21T02:48:29.189751+00:00",
+      "discoveredAt": "2026-07-21T13:54:23.982420+00:00",
       "note": "页面级信号，尚未定位到具体岗位链接。"
     },
     {
@@ -137,7 +137,7 @@
       ],
       "city": "北京",
       "postedAt": "2026-07-01",
-      "discoveredAt": "2026-07-21T02:48:36.268116+00:00",
+      "discoveredAt": "2026-07-21T13:54:32.008372+00:00",
       "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
     },
     {
@@ -170,7 +170,7 @@
       ],
       "city": "上海",
       "postedAt": "2026-07-20",
-      "discoveredAt": "2026-07-21T02:48:36.236865+00:00",
+      "discoveredAt": "2026-07-21T13:54:31.966831+00:00",
       "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
     },
     {
@@ -201,7 +201,7 @@
       ],
       "city": "北京",
       "postedAt": "2026-07-10",
-      "discoveredAt": "2026-07-21T02:48:36.237721+00:00",
+      "discoveredAt": "2026-07-21T13:54:31.968008+00:00",
       "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
     },
     {
@@ -231,7 +231,7 @@
       ],
       "city": "北京",
       "postedAt": "2026-07-08",
-      "discoveredAt": "2026-07-21T02:48:36.238786+00:00",
+      "discoveredAt": "2026-07-21T13:54:31.969434+00:00",
       "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
     },
     {
@@ -269,7 +269,7 @@
       ],
       "city": "北京",
       "postedAt": "2026-07-08",
-      "discoveredAt": "2026-07-21T02:48:36.239561+00:00",
+      "discoveredAt": "2026-07-21T13:54:31.970446+00:00",
       "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
     },
     {
@@ -307,7 +307,7 @@
       ],
       "city": "深圳",
       "postedAt": "2026-07-08",
-      "discoveredAt": "2026-07-21T02:48:36.240393+00:00",
+      "discoveredAt": "2026-07-21T13:54:31.971549+00:00",
       "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
     },
     {
@@ -334,7 +334,7 @@
       ],
       "city": "上海",
       "postedAt": "2026-07-08",
-      "discoveredAt": "2026-07-21T02:48:36.241241+00:00",
+      "discoveredAt": "2026-07-21T13:54:31.972720+00:00",
       "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
     },
     {
@@ -361,7 +361,7 @@
       ],
       "city": "深圳",
       "postedAt": "2026-07-08",
-      "discoveredAt": "2026-07-21T02:48:36.241862+00:00",
+      "discoveredAt": "2026-07-21T13:54:31.973536+00:00",
       "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
     },
     {
@@ -388,7 +388,7 @@
       ],
       "city": "以岗位页为准",
       "postedAt": "2026-07-08",
-      "discoveredAt": "2026-07-21T02:48:36.242358+00:00",
+      "discoveredAt": "2026-07-21T13:54:31.974222+00:00",
       "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
     },
     {
@@ -407,7 +407,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.473437+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.322745+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -426,7 +426,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.473523+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.322854+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -445,7 +445,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.473705+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.323091+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -464,7 +464,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.473821+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.323239+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -483,7 +483,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.474461+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.324030+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -502,7 +502,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.474137+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.323609+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -521,7 +521,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.474551+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.324142+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -540,7 +540,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.474669+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.324293+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -559,7 +559,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.474838+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.324498+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -578,7 +578,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.475070+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.324806+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -597,7 +597,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.475192+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.324961+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -618,7 +618,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.475384+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.325206+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -637,7 +637,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.475546+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.325416+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -656,7 +656,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.475788+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.325738+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -675,7 +675,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.475897+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.325868+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -694,7 +694,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.475996+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.325999+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -713,7 +713,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.476079+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.326153+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -732,7 +732,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.476164+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.326269+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -751,7 +751,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.476364+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.326528+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -770,7 +770,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.476531+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.326789+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -789,7 +789,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.476614+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.326898+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -808,7 +808,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.476772+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.327102+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -827,7 +827,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.476865+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.327213+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -846,7 +846,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.477009+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.327394+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -865,7 +865,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.477226+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.327669+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -884,7 +884,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.477380+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.327875+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -903,7 +903,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.477503+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.328028+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -922,7 +922,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.477694+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.328269+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -941,7 +941,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.477893+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.328509+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -960,7 +960,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.478951+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.329894+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -979,7 +979,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.479766+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.330971+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -998,7 +998,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.479335+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.330397+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -1017,7 +1017,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.479475+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.330578+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -1036,7 +1036,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.479634+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.330799+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -1055,7 +1055,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.479915+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.331157+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -1074,7 +1074,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.480067+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.331354+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -1093,7 +1093,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-07-21T02:48:38.480177+00:00",
+      "discoveredAt": "2026-07-21T13:54:34.331498+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -1112,7 +1112,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://careers.arm.com/en/graduates",
-      "discoveredAt": "2026-07-21T02:48:48.206003+00:00",
+      "discoveredAt": "2026-07-21T13:54:43.945066+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -1131,7 +1131,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://careers.arm.com/en/graduates",
-      "discoveredAt": "2026-07-21T02:48:48.206638+00:00",
+      "discoveredAt": "2026-07-21T13:54:43.945895+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -1150,7 +1150,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://careers.arm.com/en/graduates",
-      "discoveredAt": "2026-07-21T02:48:48.206868+00:00",
+      "discoveredAt": "2026-07-21T13:54:43.946183+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -1169,7 +1169,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://careers.arm.com/en/graduates",
-      "discoveredAt": "2026-07-21T02:48:48.206932+00:00",
+      "discoveredAt": "2026-07-21T13:54:43.946263+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -1188,7 +1188,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://careers.arm.com/en/graduates",
-      "discoveredAt": "2026-07-21T02:48:48.207127+00:00",
+      "discoveredAt": "2026-07-21T13:54:43.946514+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
@@ -1207,7 +1207,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://careers.arm.com/en/graduates",
-      "discoveredAt": "2026-07-21T02:48:48.207205+00:00",
+      "discoveredAt": "2026-07-21T13:54:43.946614+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     }
   ],

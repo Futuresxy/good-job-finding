@@ -1,6 +1,41 @@
 {
-  "generatedAt": "2026-07-20T14:08:55.665226+00:00",
-  "events": [],
+  "generatedAt": "2026-07-21T02:47:57.261121+00:00",
+  "events": [
+    {
+      "type": "new-signal",
+      "id": "baidu-auto-103173",
+      "adapter": "baidu-campus",
+      "company": "百度",
+      "title": "上海-百度移动生态事业群P-STAR产培生计划(J103173)",
+      "jobCode": "J103173",
+      "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "detailUrl": null,
+      "status": "已开启",
+      "directionIds": [
+        "ai-infra",
+        "architecture",
+        "compiler",
+        "verification"
+      ],
+      "directionTerms": [
+        "推理",
+        "强化学习",
+        "Benchmark",
+        "代码生成",
+        "STA"
+      ],
+      "requirements": [
+        "上海市 校招 产品 若干 2026",
+        "-star计划旨在寻找最具潜力的产品/运营校招生，我们将提供核心应用战场，让产品新星在无限探索的实践中发挥创造力",
+        "-我们将为产培生制定多元的成长路径，提供专业的培养体系，助力快速成长，一起在AI时代谱写新章",
+        "-加入我们，意味着您将加入顶尖产品/运营团队，在百度各业务中管干部的亲自指导下，接受顶级的校招生培养。在这里，你将引领AI时代，用你的想法去塑造未来 项目亮点："
+      ],
+      "city": "上海",
+      "postedAt": "2026-07-20",
+      "discoveredAt": "2026-07-21T02:48:36.236865+00:00",
+      "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
+    }
+  ],
   "delivery": {
     "slack": "not-configured",
     "openclawWechat": "scan-connected-on-openclaw-device"

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T13:58:33.092545+00:00",
+  "generatedAt": "2026-07-23T02:51:29.162757+00:00",
   "mode": "live",
   "disclaimer": "本页已于 2026-07-12 完成一次人工辅助现采集。已开启结论优先依据公司官方招聘页；具体岗位状态可能随时变化，投递前请再次打开官方入口确认。",
   "collection": {
@@ -8,7 +8,7 @@
     "externalEvidenceSources": 1,
     "verifiedOpenings": 25,
     "notOpenedOrUnconfirmed": 1,
-    "lastAutomatedCheck": "2026-07-22T13:58:33.092545+00:00",
+    "lastAutomatedCheck": "2026-07-23T02:51:29.162757+00:00",
     "reachableEvidencePages": 17,
     "unconfirmedEvidencePages": 2
   },
@@ -52,12 +52,12 @@
       "announcementUrl": "https://jobs.bytedance.com/campus/page-6272Gc",
       "applyUrl": "https://jobs.bytedance.com/campus/",
       "sourceType": "官方校园招聘项目页",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.96,
       "change": "首次现采集：确认面向2027届及以后，项目已开放",
       "evidence": "官方项目页明确说明面向2027届及以后，并要求在校招官网勾选“正式”查看在招岗位。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -100,12 +100,12 @@
       "announcementUrl": "https://seed.bytedance.com/zh/blog/bytedance-seed-2027-foundation-model-campus-recruitment-is-now-open-internships-included",
       "applyUrl": "https://seed.bytedance.com/zh/seedearlycareer",
       "sourceType": "官方团队招聘项目页",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.98,
       "change": "首次现采集：官方明确2027届大模型人才校招已开启",
       "evidence": "Seed 官方页面列出2027届应届生与实习生范围，并包含机器学习系统和新硬件体系结构下的编译优化。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -144,12 +144,12 @@
       "announcementUrl": "https://jobs.bytedance.com/campus/page-6272Gc",
       "applyUrl": "https://jobs.bytedance.com/campus/position/7532444773435083026/detail",
       "sourceType": "官方具体岗位页",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.82,
       "change": "首次现采集：发现官方具体岗位页",
       "evidence": "字节校园招聘官方域名存在该岗位详情页；投递前需在页面再次确认岗位仍接受申请。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -189,12 +189,12 @@
       "announcementUrl": "https://jobs.bytedance.com/campus/page-6272Gc",
       "applyUrl": "https://jobs.bytedance.com/campus/position/7508668603978647816/detail",
       "sourceType": "官方具体岗位页",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.82,
       "change": "首次现采集：发现官方具体岗位页",
       "evidence": "官方岗位标题明确为机器学习系统研发工程师，属于当前重点方向。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -234,12 +234,12 @@
       "announcementUrl": "https://seed.bytedance.com/zh/seedearlycareer",
       "applyUrl": "https://jobs.bytedance.com/campus/position/7621894037364836613/detail",
       "sourceType": "官方具体岗位页",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.86,
       "change": "首次现采集：发现Seed大模型人才校招具体岗位",
       "evidence": "官方岗位页标题为豆包AI搜索架构工程师，项目页确认2027届招聘已开启。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -279,12 +279,12 @@
       "announcementUrl": "https://jobs.bytedance.com/campus/page-6272Gc",
       "applyUrl": "https://jobs.bytedance.com/campus/position/7470483398726977810/detail",
       "sourceType": "官方具体岗位页",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.78,
       "change": "首次现采集：发现芯片研发实习岗位",
       "evidence": "官方校园招聘域名存在芯片研发实习岗位页。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -325,12 +325,12 @@
       "announcementUrl": "https://career.huawei.com/cn/campus-recruitment",
       "applyUrl": "https://career.huawei.com/cn/campus-recruitment",
       "sourceType": "官方校园招聘页",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.97,
       "change": "首次现采集：2027届顶尖AI专项正在进行",
       "evidence": "华为官方校招页在最新活动中列出2027届顶尖AI人才招聘专项行动，日期为2026年5月19日。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -373,12 +373,12 @@
       "announcementUrl": "https://career.huawei.com/reccampportal/",
       "applyUrl": "https://career.huawei.com/cn/campus-recruitment",
       "sourceType": "官方校园招聘页",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.99,
       "change": "首次现采集：2027届实习招聘已于3月15日启动",
       "evidence": "华为官方页明确列出2027届实习生招聘正式启动及面向人群。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -421,12 +421,12 @@
       "announcementUrl": "https://campus-talent.alibaba.com/campus/trends?activeTab=faq",
       "applyUrl": "https://campus-talent.alibaba.com/",
       "sourceType": "官方校园招聘页",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.99,
       "change": "首次现采集：2027届实习生招聘已开启",
       "evidence": "阿里官方校招页明确显示2027届实习生、毕业范围和硬件与芯片等职类。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -470,12 +470,12 @@
       "announcementUrl": "https://campus-talent.alibaba.com/campus/alistar",
       "applyUrl": "https://campus-talent.alibaba.com/campus/alistar",
       "sourceType": "官方人才计划页",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.97,
       "change": "首次现采集：阿里星2027届应届生批次可投递",
       "evidence": "官方阿里星页面说明2027届应届生批次及投递方式。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -519,12 +519,12 @@
       "announcementUrl": "https://career.nankai.edu.cn/correcruit/content/id/116188.html",
       "applyUrl": "https://ymtc-campus.zhiye.com",
       "sourceType": "官方投递站 + 高校就业网公告",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.95,
       "change": "首次现采集：2027提前批已于6月29日启动，外部公告显示7月29日截止",
       "evidence": "多所高校就业网同步发布招聘简章，投递统一指向长江存储官方校招站。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -568,12 +568,12 @@
       "announcementUrl": "https://careers.dji.com/zh-CN/campus",
       "applyUrl": "https://careers.dji.com/zh-CN/campus",
       "sourceType": "官方校园招聘页",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.99,
       "change": "首次现采集：2027正式校招已于6月25日开启",
       "evidence": "大疆官方校园招聘页明确给出2027届对象、开启日期与招满即止。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -610,12 +610,12 @@
       "announcementUrl": "https://careers.tencent.com/campusrecruit.html",
       "applyUrl": null,
       "sourceType": "官方校园招聘页",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.94,
       "change": "首次现采集：未发现2027正式秋招已开启的官方公告",
       "evidence": "腾讯中文官方校招页当前列出的应届生项目仍为2026校园招聘；不将实习生项目误判为2027正式秋招。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -636,7 +636,7 @@
       ],
       "announcementUrl": "https://talent.baidu.com/jobs/campus",
       "sourceType": "百度官方校园招聘网站",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "id": "baidu-ai-infra-shanghai-j100732",
       "title": "上海-AI Infra工程师（J100732）",
       "directionIds": [
@@ -663,7 +663,7 @@
       "change": "新增具体岗位：由百度招聘项目记录拆分",
       "evidence": "百度官方校园招聘职位列表显示上海-AI Infra工程师（J100732），发布日期为2026-07-08。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       },
@@ -690,7 +690,7 @@
       ],
       "announcementUrl": "https://talent.baidu.com/jobs/campus",
       "sourceType": "百度官方校园招聘网站",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "id": "baidu-ai-infra-beijing-j100730",
       "title": "北京-AI Infra工程师（J100730）",
       "directionIds": [
@@ -717,7 +717,7 @@
       "change": "新增具体岗位：由百度招聘项目记录拆分",
       "evidence": "百度官方校园招聘职位列表显示北京-AI Infra工程师（J100730），发布日期为2026-07-08。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       },
@@ -744,7 +744,7 @@
       ],
       "announcementUrl": "https://talent.baidu.com/jobs/campus",
       "sourceType": "百度官方2027届校园招聘列表自动识别",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "id": "baidu-llm-training-infra-j101258",
       "title": "北京-大模型训练Infra研发工程师（基座研发方向）(J101258)",
       "directionIds": [
@@ -779,7 +779,7 @@
       "change": "每日任务按岗位编号自动更新",
       "evidence": "百度官方2027届校园招聘列表展示岗位 J101258；无详情链接时请在官网搜索该编号。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       },
@@ -806,7 +806,7 @@
       ],
       "announcementUrl": "https://talent.baidu.com/jobs/campus",
       "sourceType": "百度官方2027届校园招聘列表自动识别",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "id": "baidu-ai-infra-rl-j101230",
       "title": "深圳-AI Infra 强化学习工程师（基座研发方向）(J101230)",
       "directionIds": [
@@ -841,7 +841,7 @@
       "change": "每日任务按岗位编号自动更新",
       "evidence": "百度官方2027届校园招聘列表展示岗位 J101230；无详情链接时请在官网搜索该编号。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       },
@@ -868,7 +868,7 @@
       ],
       "announcementUrl": "https://talent.baidu.com/jobs/campus",
       "sourceType": "百度官方2027届校园招聘列表自动识别",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "id": "baidu-aidu-heterogeneous-compute-j99964",
       "title": "2027AIDU-AI异构计算研发工程师(J99964)",
       "directionIds": [
@@ -902,7 +902,7 @@
       "change": "每日任务按岗位编号自动更新",
       "evidence": "百度官方2027届校园招聘列表展示岗位 J99964；无详情链接时请在官网搜索该编号。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       },
@@ -929,7 +929,7 @@
       ],
       "announcementUrl": "https://talent.baidu.com/jobs/campus",
       "sourceType": "百度官方校园招聘网站",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "id": "baidu-aidu-llm-infra-j99967",
       "title": "2027AIDU-大模型Infra工程师（J99967）",
       "directionIds": [
@@ -958,7 +958,7 @@
       "change": "新增具体岗位：百度AIDU项目岗位",
       "evidence": "百度官方AIDU校园招聘列表展示岗位J99967，职责包括异构计算加速、算子、通信库、编译系统及分布式系统。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       },
@@ -1011,7 +1011,7 @@
       "change": "新增：StepStar顶尖人才计划已开启",
       "evidence": "官方Moka校招入口已开放；高校就业网同步发布计划，发布时间2026年7月7日、截止时间2026年10月30日。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": false,
         "note": "本次未确认，保留上次状态",
         "error": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
@@ -1035,7 +1035,7 @@
       "detailUrl": null,
       "searchMode": "keyword",
       "sourceType": "百度官方2027届校园招聘列表",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.99,
       "change": "新增：根据百度官方岗位列表按方向筛选",
       "evidence": "百度官方2027届校园招聘列表展示该岗位；点击后可在官方列表按岗位编号检索。",
@@ -1067,7 +1067,7 @@
       "sourceUrl": "https://talent.baidu.com/jobs/list?projectType=3&recruitType=GRADUATE",
       "applyUrl": "https://talent.baidu.com/jobs/list?projectType=3&recruitType=GRADUATE",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -1090,7 +1090,7 @@
       "detailUrl": null,
       "searchMode": "keyword",
       "sourceType": "百度官方2027届校园招聘列表",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.99,
       "change": "新增：根据百度官方岗位列表按方向筛选",
       "evidence": "百度官方2027届校园招聘列表展示该岗位；点击后可在官方列表按岗位编号检索。",
@@ -1121,7 +1121,7 @@
       "sourceUrl": "https://talent.baidu.com/jobs/list?projectType=3&recruitType=GRADUATE",
       "applyUrl": "https://talent.baidu.com/jobs/list?projectType=3&recruitType=GRADUATE",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -1144,7 +1144,7 @@
       "detailUrl": null,
       "searchMode": "keyword",
       "sourceType": "百度官方2027届校园招聘列表",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.99,
       "change": "新增：根据百度官方岗位列表按方向筛选",
       "evidence": "百度官方2027届校园招聘列表展示该岗位；点击后可在官方列表按岗位编号检索。",
@@ -1175,7 +1175,7 @@
       "sourceUrl": "https://talent.baidu.com/jobs/list?projectType=3&recruitType=GRADUATE",
       "applyUrl": "https://talent.baidu.com/jobs/list?projectType=3&recruitType=GRADUATE",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -1198,7 +1198,7 @@
       "detailUrl": null,
       "searchMode": "keyword",
       "sourceType": "百度官方2027届校园招聘列表自动识别",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.94,
       "change": "每日任务按岗位编号自动更新",
       "evidence": "百度官方2027届校园招聘列表展示岗位 J99978；无详情链接时请在官网搜索该编号。",
@@ -1227,7 +1227,7 @@
       "sourceUrl": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
       "applyUrl": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -1250,7 +1250,7 @@
       "detailUrl": null,
       "searchMode": "keyword",
       "sourceType": "百度官方2027届校园招聘列表",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.99,
       "change": "新增：根据百度官方岗位列表按方向筛选",
       "evidence": "百度官方2027届校园招聘列表展示该岗位；点击后可在官方列表按岗位编号检索。",
@@ -1282,7 +1282,7 @@
       "sourceUrl": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
       "applyUrl": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -1315,12 +1315,12 @@
       "announcementUrl": "https://zhaopin.meituan.com/web/position?hiringType=4_1",
       "applyUrl": "https://zhaopin.meituan.com/web/position?hiringType=4_1",
       "sourceType": "官方2027届校园招聘批次入口",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.99,
       "change": "修正：2027届正式批已开放",
       "evidence": "美团官方2027届校园招聘正式批职位入口已开放。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -1358,7 +1358,7 @@
       "change": "修正：2027届正式批已开放",
       "evidence": "拼多多官方校园招聘首页明确展示2027届校园招聘，应届生招聘入口已开放。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": false,
         "note": "本次未确认，保留上次状态",
         "error": "robots.txt disallows access"
@@ -1392,12 +1392,12 @@
       "announcementUrl": "https://cxmt.zhiye.com/campus/jobs",
       "applyUrl": "https://cxmt.zhiye.com/campus/jobs",
       "sourceType": "官方2027届校园招聘批次入口",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.99,
       "change": "修正：2027届正式批已开放",
       "evidence": "长鑫存储官方校园招聘职位入口已开放2027届正式批。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -1430,12 +1430,12 @@
       "announcementUrl": "https://vrfi1sk8a0.jobs.feishu.cn/379481/?keywords=&category=&location=&project=7495675705720965415&type=&job_hot_flag=&current=1&limit=10&functionCategory=&tag=",
       "applyUrl": "https://vrfi1sk8a0.jobs.feishu.cn/379481/?keywords=&category=&location=&project=7495675705720965415&type=&job_hot_flag=&current=1&limit=10&functionCategory=&tag=",
       "sourceType": "官方2027届校园招聘批次入口",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.99,
       "change": "修正：2027届正式批已开放",
       "evidence": "MiniMax官方飞书招聘2027届校园招聘项目入口已开放。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -1468,12 +1468,12 @@
       "announcementUrl": "https://careers.pddglobalhr.com/campus/grad",
       "applyUrl": "https://careers.pddglobalhr.com/campus/grad",
       "sourceType": "官方2027届校园招聘批次入口",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.99,
       "change": "由已核验官方校园招聘入口维护批次状态",
       "evidence": "拼多多官方页面明确展示2027届校园招聘及应届生招聘",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": false,
         "note": "本次未确认，保留上次状态",
         "error": "robots.txt disallows access"
@@ -1507,12 +1507,12 @@
       "announcementUrl": "https://zhaopin.meituan.com/web/position?hiringType=4_1",
       "applyUrl": "https://zhaopin.meituan.com/web/position?hiringType=4_1",
       "sourceType": "官方2027届校园招聘批次入口",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.99,
       "change": "由已核验官方校园招聘入口维护批次状态",
       "evidence": "美团官方2027届校园招聘正式批职位入口",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -1545,12 +1545,12 @@
       "announcementUrl": "https://vrfi1sk8a0.jobs.feishu.cn/379481/?keywords=&category=&location=&project=7495675705720965415&type=&job_hot_flag=&current=1&limit=10&functionCategory=&tag=",
       "applyUrl": "https://vrfi1sk8a0.jobs.feishu.cn/379481/?keywords=&category=&location=&project=7495675705720965415&type=&job_hot_flag=&current=1&limit=10&functionCategory=&tag=",
       "sourceType": "官方2027届校园招聘批次入口",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.99,
       "change": "由已核验官方校园招聘入口维护批次状态",
       "evidence": "MiniMax官方飞书招聘2027届校园招聘项目入口",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -1583,12 +1583,12 @@
       "announcementUrl": "https://cxmt.zhiye.com/campus/jobs",
       "applyUrl": "https://cxmt.zhiye.com/campus/jobs",
       "sourceType": "官方2027届校园招聘批次入口",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.99,
       "change": "由已核验官方校园招聘入口维护批次状态",
       "evidence": "长鑫存储官方校园招聘职位入口",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -1631,12 +1631,12 @@
       "searchMode": "keyword",
       "searchKeyword": "J101320",
       "sourceType": "百度官方2027届校园招聘列表自动识别",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.94,
       "change": "每日任务按岗位编号自动更新",
       "evidence": "百度官方2027届校园招聘列表展示岗位 J101320；无详情链接时请在官网搜索该编号。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -1684,12 +1684,12 @@
       "searchMode": "keyword",
       "searchKeyword": "J102506",
       "sourceType": "百度官方2027届校园招聘列表自动识别",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.94,
       "change": "每日任务按岗位编号自动更新",
       "evidence": "百度官方2027届校园招聘列表展示岗位 J102506；无详情链接时请在官网搜索该编号。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -1736,12 +1736,12 @@
       "searchMode": "keyword",
       "searchKeyword": "J101096",
       "sourceType": "百度官方2027届校园招聘列表自动识别",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.94,
       "change": "每日任务按岗位编号自动更新",
       "evidence": "百度官方2027届校园招聘列表展示岗位 J101096；无详情链接时请在官网搜索该编号。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -1785,12 +1785,12 @@
       "searchMode": "keyword",
       "searchKeyword": "J101149",
       "sourceType": "百度官方2027届校园招聘列表自动识别",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.94,
       "change": "每日任务按岗位编号自动更新",
       "evidence": "百度官方2027届校园招聘列表展示岗位 J101149；无详情链接时请在官网搜索该编号。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -1834,12 +1834,12 @@
       "searchMode": "keyword",
       "searchKeyword": "J101100",
       "sourceType": "百度官方2027届校园招聘列表自动识别",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.94,
       "change": "每日任务按岗位编号自动更新",
       "evidence": "百度官方2027届校园招聘列表展示岗位 J101100；无详情链接时请在官网搜索该编号。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -1883,12 +1883,12 @@
       "searchMode": "keyword",
       "searchKeyword": "J101095",
       "sourceType": "百度官方2027届校园招聘列表自动识别",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.94,
       "change": "每日任务按岗位编号自动更新",
       "evidence": "百度官方2027届校园招聘列表展示岗位 J101095；无详情链接时请在官网搜索该编号。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -1933,12 +1933,12 @@
       "searchMode": "keyword",
       "searchKeyword": "J101091",
       "sourceType": "百度官方2027届校园招聘列表自动识别",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.94,
       "change": "每日任务按岗位编号自动更新",
       "evidence": "百度官方2027届校园招聘列表展示岗位 J101091；无详情链接时请在官网搜索该编号。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -1996,12 +1996,12 @@
       "searchMode": "keyword",
       "searchKeyword": "J100759",
       "sourceType": "百度官方2027届校园招聘列表自动识别",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.94,
       "change": "每日任务按岗位编号自动更新",
       "evidence": "百度官方2027届校园招聘列表展示岗位 J100759；无详情链接时请在官网搜索该编号。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -2059,12 +2059,12 @@
       "searchMode": "keyword",
       "searchKeyword": "J100744",
       "sourceType": "百度官方2027届校园招聘列表自动识别",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.94,
       "change": "每日任务按岗位编号自动更新",
       "evidence": "百度官方2027届校园招聘列表展示岗位 J100744；无详情链接时请在官网搜索该编号。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -2122,12 +2122,12 @@
       "searchMode": "keyword",
       "searchKeyword": "J100699",
       "sourceType": "百度官方2027届校园招聘列表自动识别",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.94,
       "change": "每日任务按岗位编号自动更新",
       "evidence": "百度官方2027届校园招聘列表展示岗位 J100699；无详情链接时请在官网搜索该编号。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -2177,12 +2177,12 @@
       "searchMode": "keyword",
       "searchKeyword": "J103173",
       "sourceType": "百度官方2027届校园招聘列表自动识别",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.94,
       "change": "每日任务按岗位编号自动更新",
       "evidence": "百度官方2027届校园招聘列表展示岗位 J103173；无详情链接时请在官网搜索该编号。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -2240,12 +2240,12 @@
       "searchMode": "keyword",
       "searchKeyword": "J100737",
       "sourceType": "百度官方2027届校园招聘列表自动识别",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.94,
       "change": "每日任务按岗位编号自动更新",
       "evidence": "百度官方2027届校园招聘列表展示岗位 J100737；无详情链接时请在官网搜索该编号。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -2288,12 +2288,12 @@
       "searchMode": "keyword",
       "searchKeyword": "J100665",
       "sourceType": "百度官方2027届校园招聘列表自动识别",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.94,
       "change": "每日任务按岗位编号自动更新",
       "evidence": "百度官方2027届校园招聘列表展示岗位 J100665；无详情链接时请在官网搜索该编号。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -2337,12 +2337,12 @@
       "searchMode": "keyword",
       "searchKeyword": "J100765",
       "sourceType": "百度官方2027届校园招聘列表自动识别",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.94,
       "change": "每日任务按岗位编号自动更新",
       "evidence": "百度官方2027届校园招聘列表展示岗位 J100765；无详情链接时请在官网搜索该编号。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -2386,12 +2386,12 @@
       "searchMode": "keyword",
       "searchKeyword": "J101055",
       "sourceType": "百度官方2027届校园招聘列表自动识别",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.94,
       "change": "每日任务按岗位编号自动更新",
       "evidence": "百度官方2027届校园招聘列表展示岗位 J101055；无详情链接时请在官网搜索该编号。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -2441,12 +2441,12 @@
       "searchMode": "keyword",
       "searchKeyword": "J101017",
       "sourceType": "百度官方2027届校园招聘列表自动识别",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.94,
       "change": "每日任务按岗位编号自动更新",
       "evidence": "百度官方2027届校园招聘列表展示岗位 J101017；无详情链接时请在官网搜索该编号。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -2503,12 +2503,12 @@
       "searchMode": "keyword",
       "searchKeyword": "J100728",
       "sourceType": "百度官方2027届校园招聘列表自动识别",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.94,
       "change": "每日任务按岗位编号自动更新",
       "evidence": "百度官方2027届校园招聘列表展示岗位 J100728；无详情链接时请在官网搜索该编号。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }
@@ -2553,12 +2553,12 @@
       "searchMode": "keyword",
       "searchKeyword": "J99982",
       "sourceType": "百度官方2027届校园招聘列表自动识别",
-      "lastChecked": "2026-07-22T13:58:33.092545+00:00",
+      "lastChecked": "2026-07-23T02:51:29.162757+00:00",
       "confidence": 0.94,
       "change": "每日任务按岗位编号自动更新",
       "evidence": "百度官方2027届校园招聘列表展示岗位 J99982；无详情链接时请在官网搜索该编号。",
       "verification": {
-        "lastAttempt": "2026-07-22T13:58:33.092545+00:00",
+        "lastAttempt": "2026-07-23T02:51:29.162757+00:00",
         "reachable": true,
         "note": "官方页面可访问"
       }

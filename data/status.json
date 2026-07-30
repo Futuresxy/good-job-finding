@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T02:30:09.631930+00:00",
+  "generatedAt": "2026-07-30T14:05:16.789331+00:00",
   "sourcesChecked": 16,
   "verifiedOpenings": 49,
   "pendingReview": 59,
@@ -28,7 +28,7 @@
     },
     {
       "company": "Intel",
-      "error": "<urlopen error [Errno 104] Connection reset by peer>"
+      "error": "robots.txt disallows access"
     },
     {
       "company": "中兴微电子",

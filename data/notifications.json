@@ -1,70 +1,12 @@
 {
-  "generatedAt": "2026-07-31T02:55:05.613021+00:00",
+  "generatedAt": "2026-07-31T14:09:37.703349+00:00",
   "events": [
     {
       "type": "new-signal",
-      "id": "baidu-auto-103963",
-      "adapter": "baidu-campus",
-      "company": "百度",
-      "title": "北京-全栈开发工程师(J103963)",
-      "jobCode": "J103963",
-      "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
-      "detailUrl": null,
-      "status": "已开启",
-      "directionIds": [
-        "ai-infra",
-        "verification"
-      ],
-      "directionTerms": [
-        "性能优化",
-        "综合"
-      ],
-      "requirements": [
-        "北京市 校招 技术 若干 2026",
-        "-负责前端和服务端的业务开发工作，覆盖业务全链路，按业务需求统筹各端开发优先级，打破端侧壁垒，实现业务功能高效落地",
-        "-深度运用AI Coding工具，开发并维护基于MCP、CLI、Skills等的各类工具，参与Al研发基础设施与Agent工作流建设，对接公司内部系统与模型，打造一体化AI研发体验",
-        "-立足全栈发展趋势，推动并沉淀Vibe Coding、SpecCoding等新型Al研发范式在团队内的落地与最佳实践，参与业务全流程开发，推动业务从需求到上线的闭环落地"
-      ],
-      "city": "北京",
-      "postedAt": "2026-07-30",
-      "discoveredAt": "2026-07-31T02:55:44.229892+00:00",
-      "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
-    },
-    {
-      "type": "new-signal",
-      "id": "baidu-auto-100814",
-      "adapter": "baidu-campus",
-      "company": "百度",
-      "title": "上海-搜索架构工程师(J100814)",
-      "jobCode": "J100814",
-      "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
-      "detailUrl": null,
-      "status": "已开启",
-      "directionIds": [
-        "ai-infra",
-        "verification"
-      ],
-      "directionTerms": [
-        "性能优化",
-        "综合"
-      ],
-      "requirements": [
-        "上海市 校招 技术 若干 2026",
-        "-负责搜索引擎架构的在线和离线架构研发工作，包括网页搜索/视频搜索/图片搜索/视觉检索/电商搜索/搜索推荐/资讯热议等",
-        "-负责高并发架构机制、稳定性工程、检索延时优化、数据流系统研发，保证搜索系统的可用性和高效性",
-        "-负责服务治理与重构、云原生架构改造、搜索性能优化，保证搜索系统的可扩展性与可持续发展"
-      ],
-      "city": "上海",
-      "postedAt": "2026-07-30",
-      "discoveredAt": "2026-07-31T02:55:44.230939+00:00",
-      "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
-    },
-    {
-      "type": "new-signal",
-      "id": "cdc3427b1ee2dfc9",
+      "id": "449dc9df71a051b7",
       "company": "Arm",
       "title": "Graduate CPU Physical Implementation Engineer",
-      "url": "https://careers.arm.com/en/job/sophia-antipolis/graduate-cpu-physical-implementation-engineer/47397/94035957216",
+      "url": "https://careers.arm.com/en/job/sophia-antipolis/graduate-cpu-physical-implementation-engineer/33099/94035947072",
       "openingTerms": [],
       "directionTerms": [
         "CPU"
@@ -76,7 +18,7 @@
       ],
       "batch": "正式批",
       "sourceUrl": "https://careers.arm.com/en/graduates",
-      "discoveredAt": "2026-07-31T02:55:55.055682+00:00",
+      "discoveredAt": "2026-07-31T14:10:31.001958+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     }
   ],

@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-08-02T02:53:20.709675+00:00",
-  "events": [],
+  "generatedAt": "2026-08-02T13:23:47.596571+00:00",
+  "events": [
+    {
+      "type": "new-signal",
+      "id": "cdc3427b1ee2dfc9",
+      "company": "Arm",
+      "title": "Graduate CPU Physical Implementation Engineer",
+      "url": "https://careers.arm.com/en/job/sophia-antipolis/graduate-cpu-physical-implementation-engineer/47397/94035957216",
+      "openingTerms": [],
+      "directionTerms": [
+        "CPU"
+      ],
+      "adapter": "generic-signal",
+      "status": "待核验",
+      "directionIds": [
+        "architecture"
+      ],
+      "batch": "正式批",
+      "sourceUrl": "https://careers.arm.com/en/graduates",
+      "discoveredAt": "2026-08-02T13:24:46.095788+00:00",
+      "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
+    }
+  ],
   "delivery": {
     "slack": "not-configured",
     "openclawWechat": "scan-connected-on-openclaw-device"

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-17T01:15:51.360Z",
+  "updatedAt": "2026-08-03T16:36:28.859Z",
   "sources": [
     {
       "company": "寒武纪",
@@ -89,6 +89,27 @@
     {
       "company": "百度昆仑芯",
       "careersUrl": "https://kunlunxin1.zhiye.com/custom/campus?c1=2&c2=&hideAll=true",
+      "priority": 10,
+      "enabled": true,
+      "parser": "official-page-monitor"
+    },
+    {
+      "company": "乐鑫",
+      "careersUrl": "https://www.espressif.com/zh-hans/join-us/job-search?field_job_classification_tid%5B0%5D=2575&field_job_classification_tid%5B1%5D=2577&field_job_classification_tid%5B2%5D=2573",
+      "priority": 10,
+      "enabled": true,
+      "parser": "official-page-monitor"
+    },
+    {
+      "company": "海光信息",
+      "careersUrl": "https://app.mokahr.com/campus-recruitment/hygon/169939#/",
+      "priority": 10,
+      "enabled": true,
+      "parser": "official-page-monitor"
+    },
+    {
+      "company": "摩尔线程",
+      "careersUrl": "https://mthreads.zhiye.com/campus/jobs",
       "priority": 10,
       "enabled": true,
       "parser": "official-page-monitor"

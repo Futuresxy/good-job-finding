@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-03T14:41:27.440144+00:00",
-  "sourcesChecked": 16,
-  "verifiedOpenings": 51,
-  "pendingReview": 60,
-  "focusCompanies": 23,
+  "generatedAt": "2026-08-04T02:39:01.008781+00:00",
+  "sourcesChecked": 18,
+  "verifiedOpenings": 53,
+  "pendingReview": 61,
+  "focusCompanies": 26,
   "evidencePagesChecked": 19,
   "failures": [
     {
@@ -32,6 +32,10 @@
     },
     {
       "company": "中兴微电子",
+      "error": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+    },
+    {
+      "company": "海光信息",
       "error": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
     }
   ],

@@ -1,6 +1,49 @@
 {
-  "generatedAt": "2026-08-22T12:40:12.355869+00:00",
-  "events": [],
+  "generatedAt": "2026-08-23T01:23:36.051141+00:00",
+  "events": [
+    {
+      "type": "new-signal",
+      "id": "baidu-auto-101196",
+      "adapter": "baidu-campus",
+      "company": "百度",
+      "title": "\\n加入百度，与身边的伙伴一起，继续大步向前！\",\"detailPage\":true}]}]},\"detailData\":{\"postInfo\":{\"education\":\"\",\"name\":\"北京-销售管理运营分析(J101196)",
+      "jobCode": "J101196",
+      "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "detailUrl": null,
+      "status": "已开启",
+      "directionIds": [
+        "ai-infra",
+        "architecture",
+        "chip-design",
+        "compiler",
+        "verification"
+      ],
+      "directionTerms": [
+        "推理",
+        "vLLM",
+        "算子",
+        "分布式训练",
+        "性能优化",
+        "SGLang",
+        "量化",
+        "强化学习",
+        "RL",
+        "后训练",
+        "体系结构",
+        "CPU"
+      ],
+      "requirements": [
+        "window.__USE_SSR__=true; window.__INITIAL_DATA__ ={\"layoutData\":{\"headerMenuList\":[{\"name\":\"首页\",\"value\":\"\\u002F\",\"order\":0,\"isNewPage\":false},{\"name\":\"职位\",\"value\":\"\\u002Flist\",\"order\":1,\"isNewPage\":false},{\"name\":\"招聘动态\",\"value\":\"\\u002Ftrend\",\"order\":2,\"isNewPa",
+        "-list\",\"order\":1,\"isNewPage\":false},{\"name\":\"校园招聘\",\"value\":\"\\u002Fcampus\",\"order\":2,\"isNewPage\":false},{\"name\":\"了解百度\",\"value\":\"https:\\u002F\\u002Fhome.baidu.com\\u002F\",\"order\":3,\"isNewPage\":true}]},\"indexData\":{\"searchConfig\":{\"title\":\"百度校园招聘\",\"subtitle\":\"改变世界？",
+        "-fe.cdn.bcebos.com\\u002Fnew",
+        "-talent\\u002Fcampus.mp4\",\"name\":\"首页视频"
+      ],
+      "city": "北京",
+      "postedAt": "2026-07-08",
+      "discoveredAt": "2026-08-23T01:24:14.783425+00:00",
+      "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
+    }
+  ],
   "delivery": {
     "slack": "not-configured",
     "openclawWechat": "scan-connected-on-openclaw-device"

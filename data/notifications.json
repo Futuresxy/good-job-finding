@@ -1,6 +1,87 @@
 {
-  "generatedAt": "2026-08-28T10:05:16.434320+00:00",
-  "events": [],
+  "generatedAt": "2026-08-28T21:47:03.875485+00:00",
+  "events": [
+    {
+      "type": "new-signal",
+      "id": "baidu-auto-100720",
+      "adapter": "baidu-campus",
+      "company": "百度",
+      "title": "北京-底层软硬件研发工程师(J100720)",
+      "jobCode": "J100720",
+      "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "detailUrl": null,
+      "status": "已开启",
+      "directionIds": [
+        "ai-infra",
+        "architecture",
+        "verification"
+      ],
+      "directionTerms": [
+        "AI Infra",
+        "KV Cache",
+        "算子",
+        "性能优化",
+        "容错",
+        "微架构",
+        "CPU",
+        "GPU",
+        "Cache",
+        "STA"
+      ],
+      "requirements": [
+        "北京市 校招 技术 5人 2026",
+        "-智能网卡：自研数据中心架构级DPU芯片/板卡，实现网络、存储和虚拟化的卸载，更好地支持云计算，AI加速，边缘计算等未来主流场景",
+        "-虚拟化技术：负责Linux内核、虚拟化方面的研发工作，包括网络虚拟化、存储虚拟化以及轻量级Hypervisor方案的设计和开发",
+        "-存储技术：负责新型存储方案（SSD、内存、HBF、G"
+      ],
+      "city": "北京",
+      "postedAt": "2026-08-28",
+      "discoveredAt": "2026-08-28T21:47:42.590138+00:00",
+      "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
+    },
+    {
+      "type": "new-signal",
+      "id": "baidu-auto-100763",
+      "adapter": "baidu-campus",
+      "company": "百度",
+      "title": "ame\":\"了解百度\",\"value\":\"https:\\u002F\\u002Fhome.baidu.com\\u002F\",\"order\":3,\"isNewPage\":true}]},\"detailData\":{\"postInfo\":{\"education\":\"\",\"name\":\"北京-产品体验设计师(J100763)",
+      "jobCode": "J100763",
+      "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "detailUrl": null,
+      "status": "已开启",
+      "directionIds": [
+        "ai-infra",
+        "architecture",
+        "chip-design",
+        "compiler",
+        "verification"
+      ],
+      "directionTerms": [
+        "AI Infra",
+        "推理",
+        "KV Cache",
+        "算子",
+        "性能优化",
+        "量化",
+        "强化学习",
+        "RL",
+        "后训练",
+        "容错",
+        "体系结构",
+        "微架构"
+      ],
+      "requirements": [
+        "window.__USE_SSR__=true; window.__INITIAL_DATA__ ={\"layoutData\":{\"headerMenuList\":[{\"name\":\"首页\",\"value\":\"\\u002F\",\"order\":0,\"isNewPage\":false},{\"name\":\"职位\",\"value\":\"\\u002Flist\",\"order\":1,\"isNewPage\":false},{\"name\":\"招聘动态\",\"value\":\"\\u002Ftrend\",\"order\":2,\"isNewPa",
+        "-list\",\"order\":1,\"isNewPage\":false},{\"name\":\"校园招聘\",\"value\":\"\\u002Fcampus\",\"order\":2,\"isNewPage\":false},{\"n\",\"orgName\":\"\",\"postId\":\"fbf35cc4",
+        "-9fca982e5269\",\"jobId\":\"1b862cb5",
+        "-99f6f90818b9\",\"postType\":\"产品\",\"publishDate\":\"2026"
+      ],
+      "city": "北京",
+      "postedAt": "2026-07-08",
+      "discoveredAt": "2026-08-28T21:47:42.620762+00:00",
+      "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
+    }
+  ],
   "delivery": {
     "slack": "not-configured",
     "openclawWechat": "scan-connected-on-openclaw-device"

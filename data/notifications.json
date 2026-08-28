@@ -1,49 +1,6 @@
 {
-  "generatedAt": "2026-08-27T21:54:35.442738+00:00",
-  "events": [
-    {
-      "type": "new-signal",
-      "id": "baidu-auto-99956",
-      "adapter": "baidu-campus",
-      "company": "百度",
-      "title": "解百度\",\"value\":\"https:\\u002F\\u002Fhome.baidu.com\\u002F\",\"order\":3,\"isNewPage\":true}]},\"detailData\":{\"postInfo\":{\"education\":\"\",\"name\":\"2027AIDU-多模态算法工程师(J99956)",
-      "jobCode": "J99956",
-      "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
-      "detailUrl": null,
-      "status": "已开启",
-      "directionIds": [
-        "ai-infra",
-        "architecture",
-        "chip-design",
-        "compiler",
-        "verification"
-      ],
-      "directionTerms": [
-        "推理",
-        "量化",
-        "强化学习",
-        "RL",
-        "后训练",
-        "NPU",
-        "RDMA",
-        "Benchmark",
-        "SoC",
-        "IP",
-        "代码生成",
-        "综合"
-      ],
-      "requirements": [
-        "window.__USE_SSR__=true; window.__INITIAL_DATA__ ={\"layoutData\":{\"headerMenuList\":[{\"name\":\"首页\",\"value\":\"\\u002F\",\"order\":0,\"isNewPage\":false},{\"name\":\"职位\",\"value\":\"\\u002Flist\",\"order\":1,\"isNewPage\":false},{\"name\":\"招聘动态\",\"value\":\"\\u002Ftrend\",\"order\":2,\"isNewPa",
-        "-list\",\"order\":1,\"isNewPage\":false},{\"name\":\"校园招聘\",\"value\":\"\\u002Fcampus\",\"order\":2,\"isNewPage\":false},{\"name\":\"了\",\"orgName\":\"\",\"postId\":\"d29404bd",
-        "-e67d304abc97\",\"jobId\":\"b92ca708",
-        "-fe66d02e7495\",\"postType\":\"技术\",\"publishDate\":\"2026"
-      ],
-      "city": "北京",
-      "postedAt": "2026-05-12",
-      "discoveredAt": "2026-08-27T21:55:16.570030+00:00",
-      "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
-    }
-  ],
+  "generatedAt": "2026-08-28T10:05:16.434320+00:00",
+  "events": [],
   "delivery": {
     "slack": "not-configured",
     "openclawWechat": "scan-connected-on-openclaw-device"

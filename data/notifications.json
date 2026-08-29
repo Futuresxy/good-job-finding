@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-29T06:04:08.632773+00:00",
+  "generatedAt": "2026-08-29T16:20:54.758882+00:00",
   "events": [
     {
       "type": "new-signal",
-      "id": "baidu-auto-100779",
+      "id": "baidu-auto-100763",
       "adapter": "baidu-campus",
       "company": "百度",
-      "title": "\"value\":\"https:\\u002F\\u002Fhome.baidu.com\\u002F\",\"order\":3,\"isNewPage\":true}]},\"detailData\":{\"postInfo\":{\"education\":\"\",\"name\":\"上海-Agent Harness 研发工程师(J100779)",
-      "jobCode": "J100779",
+      "title": "ame\":\"了解百度\",\"value\":\"https:\\u002F\\u002Fhome.baidu.com\\u002F\",\"order\":3,\"isNewPage\":true}]},\"detailData\":{\"postInfo\":{\"education\":\"\",\"name\":\"北京-产品体验设计师(J100763)",
+      "jobCode": "J100763",
       "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
       "detailUrl": null,
       "status": "已开启",
@@ -34,13 +34,13 @@
       ],
       "requirements": [
         "window.__USE_SSR__=true; window.__INITIAL_DATA__ ={\"layoutData\":{\"headerMenuList\":[{\"name\":\"首页\",\"value\":\"\\u002F\",\"order\":0,\"isNewPage\":false},{\"name\":\"职位\",\"value\":\"\\u002Flist\",\"order\":1,\"isNewPage\":false},{\"name\":\"招聘动态\",\"value\":\"\\u002Ftrend\",\"order\":2,\"isNewPa",
-        "-list\",\"order\":1,\"isNewPage\":false},{\"name\":\"校园招聘\",\"value\":\"\\u002Fcampus\",\"order\":2,\"isNewPage\":false},{\"name\":\"了解百度\",\",\"orgName\":\"\",\"postId\":\"74d83772",
-        "-69eb45696b62\",\"jobId\":\"700dac2e",
-        "-f5a228c16b3d\",\"postType\":\"技术\",\"publishDate\":\"2026"
+        "-list\",\"order\":1,\"isNewPage\":false},{\"name\":\"校园招聘\",\"value\":\"\\u002Fcampus\",\"order\":2,\"isNewPage\":false},{\"n\",\"orgName\":\"\",\"postId\":\"fbf35cc4",
+        "-9fca982e5269\",\"jobId\":\"1b862cb5",
+        "-99f6f90818b9\",\"postType\":\"产品\",\"publishDate\":\"2026"
       ],
-      "city": "上海",
+      "city": "北京",
       "postedAt": "2026-07-08",
-      "discoveredAt": "2026-08-29T06:04:46.324412+00:00",
+      "discoveredAt": "2026-08-29T16:21:34.034288+00:00",
       "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
     }
   ],

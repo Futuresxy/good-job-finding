@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-02T03:23:24.546803+00:00",
+  "generatedAt": "2026-09-02T16:08:06.488664+00:00",
   "events": [
     {
       "type": "new-signal",
-      "id": "baidu-auto-99982",
+      "id": "baidu-auto-100757",
       "adapter": "baidu-campus",
       "company": "百度",
-      "title": "了解百度\",\"value\":\"https:\\u002F\\u002Fhome.baidu.com\\u002F\",\"order\":3,\"isNewPage\":true}]},\"detailData\":{\"postInfo\":{\"education\":\"\",\"name\":\"2027AIDU-世界模型架构师(J99982)",
-      "jobCode": "J99982",
+      "title": "ame\":\"了解百度\",\"value\":\"https:\\u002F\\u002Fhome.baidu.com\\u002F\",\"order\":3,\"isNewPage\":true}]},\"detailData\":{\"postInfo\":{\"education\":\"\",\"name\":\"深圳-数据开发工程师(J100757)",
+      "jobCode": "J100757",
       "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
       "detailUrl": null,
       "status": "已开启",
@@ -23,24 +23,24 @@
         "推理",
         "KV Cache",
         "算子",
-        "分布式训练",
         "性能优化",
         "量化",
         "强化学习",
         "RL",
         "后训练",
         "容错",
-        "体系结构"
+        "体系结构",
+        "微架构"
       ],
       "requirements": [
         "window.__USE_SSR__=true; window.__INITIAL_DATA__ ={\"layoutData\":{\"headerMenuList\":[{\"name\":\"首页\",\"value\":\"\\u002F\",\"order\":0,\"isNewPage\":false},{\"name\":\"职位\",\"value\":\"\\u002Flist\",\"order\":1,\"isNewPage\":false},{\"name\":\"招聘动态\",\"value\":\"\\u002Ftrend\",\"order\":2,\"isNewPa",
-        "-list\",\"order\":1,\"isNewPage\":false},{\"name\":\"校园招聘\",\"value\":\"\\u002Fcampus\",\"order\":2,\"isNewPage\":false},{\"name\":\"\",\"orgName\":\"\",\"postId\":\"a4cfdb64",
-        "-54460e8e8cb2\",\"jobId\":\"360bab80",
-        "-f127268085b0\",\"postType\":\"技术\",\"publishDate\":\"2026"
+        "-list\",\"order\":1,\"isNewPage\":false},{\"name\":\"校园招聘\",\"value\":\"\\u002Fcampus\",\"order\":2,\"isNewPage\":false},{\"n\",\"orgName\":\"\",\"postId\":\"4635bd24",
+        "-88d760f1b752\",\"jobId\":\"48786387",
+        "-3174ff11fc46\",\"postType\":\"技术\",\"publishDate\":\"2026"
       ],
-      "city": "北京",
-      "postedAt": "2026-05-12",
-      "discoveredAt": "2026-09-02T03:24:01.653488+00:00",
+      "city": "深圳",
+      "postedAt": "2026-07-08",
+      "discoveredAt": "2026-09-02T16:08:48.343494+00:00",
       "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
     }
   ],

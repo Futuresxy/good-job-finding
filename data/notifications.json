@@ -1,13 +1,85 @@
 {
-  "generatedAt": "2026-09-10T15:58:28.427881+00:00",
+  "generatedAt": "2026-09-11T03:30:55.268744+00:00",
   "events": [
     {
       "type": "new-signal",
-      "id": "baidu-auto-100790",
+      "id": "baidu-auto-104899",
       "adapter": "baidu-campus",
       "company": "百度",
-      "title": "\":\"了解百度\",\"value\":\"https:\\u002F\\u002Fhome.baidu.com\\u002F\",\"order\":3,\"isNewPage\":true}]},\"detailData\":{\"postInfo\":{\"education\":\"\",\"name\":\"深圳-云和大模型大客户销售(J100790)",
-      "jobCode": "J100790",
+      "title": "北京-AI网络工程师(J104899)",
+      "jobCode": "J104899",
+      "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "detailUrl": null,
+      "status": "已开启",
+      "directionIds": [
+        "ai-infra",
+        "architecture",
+        "chip-design"
+      ],
+      "directionTerms": [
+        "推理",
+        "分布式训练",
+        "RDMA",
+        "IP"
+      ],
+      "requirements": [
+        "北京市 校招 技术 若干 2026",
+        "-智算网络架构设计与研发：负责面向AI大模型训练/推理场景的超大规模智算集群网络架构设计，优化分布式训练下的通信效率，打造超高吞吐、超低时延的HPN（高性能网络）集群",
+        "-AI原生的网络管理平台：研发行业领先的云基础设施网络管理平台，将大模型（LLM）能力深度集成至SDN控制器与运维体系中，构建“网络大脑”，实现CLI+GUI+LUI的三位一体，完成传统网管向AI原生的协同界面重塑",
+        "-全球化基础设施与智能运维：负责覆盖全球的光通信+IP网络的规划与建设；构建新一代AIOps智能运维平台，利用机器学习和大模型分析实现网络故障的预测、自愈及根因定位，让网络“自动驾驶”"
+      ],
+      "city": "北京",
+      "postedAt": "2026-09-10",
+      "discoveredAt": "2026-09-11T03:31:33.906755+00:00",
+      "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
+    },
+    {
+      "type": "new-signal",
+      "id": "baidu-auto-104904",
+      "adapter": "baidu-campus",
+      "company": "百度",
+      "title": "深圳-AI网络工程师(J104904)",
+      "jobCode": "J104904",
+      "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "detailUrl": null,
+      "status": "已开启",
+      "directionIds": [
+        "ai-infra",
+        "architecture",
+        "chip-design"
+      ],
+      "directionTerms": [
+        "AI Infra",
+        "推理",
+        "KV Cache",
+        "算子",
+        "分布式训练",
+        "性能优化",
+        "容错",
+        "微架构",
+        "CPU",
+        "GPU",
+        "RDMA",
+        "Cache"
+      ],
+      "requirements": [
+        "深圳市 校招 技术 若干 2026",
+        "-智算网络架构设计与研发：负责面向AI大模型训练/推理场景的超大规模智算集群网络架构设计，优化分布式训练下的通信效率，打造超高吞吐、超低时延的HPN（高性能网络）集群",
+        "-AI原生的网络管理平台：研发行业领先的云基础设施网络管理平台，将大模型（LLM）能力深度集成至SDN控制器与运维体系中，构建“网络大脑”，实现CLI+GUI+LUI的三位一体，完成传统网管向AI原生的协同界面重塑",
+        "-全球化基础设施与智能运维：负责覆盖全球的光通信+IP网络的规划与建设；构建新一代AIOps智能运维平台，利用机器学习和大模型分析实现网络故障的预测、自愈及根因定位，让网络“自动驾驶”"
+      ],
+      "city": "深圳",
+      "postedAt": "2026-09-10",
+      "discoveredAt": "2026-09-11T03:31:33.908184+00:00",
+      "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
+    },
+    {
+      "type": "new-signal",
+      "id": "baidu-auto-100704",
+      "adapter": "baidu-campus",
+      "company": "百度",
+      "title": "name\":\"了解百度\",\"value\":\"https:\\u002F\\u002Fhome.baidu.com\\u002F\",\"order\":3,\"isNewPage\":true}]},\"detailData\":{\"postInfo\":{\"education\":\"\",\"name\":\"北京-整合营销策略(J100704)",
+      "jobCode": "J100704",
       "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
       "detailUrl": null,
       "status": "已开启",
@@ -23,24 +95,24 @@
         "推理",
         "KV Cache",
         "算子",
+        "分布式训练",
         "性能优化",
         "量化",
         "强化学习",
         "RL",
         "后训练",
         "容错",
-        "体系结构",
-        "微架构"
+        "体系结构"
       ],
       "requirements": [
         "window.__USE_SSR__=true; window.__INITIAL_DATA__ ={\"layoutData\":{\"headerMenuList\":[{\"name\":\"首页\",\"value\":\"\\u002F\",\"order\":0,\"isNewPage\":false},{\"name\":\"职位\",\"value\":\"\\u002Flist\",\"order\":1,\"isNewPage\":false},{\"name\":\"招聘动态\",\"value\":\"\\u002Ftrend\",\"order\":2,\"isNewPa",
-        "-list\",\"order\":1,\"isNewPage\":false},{\"name\":\"校园招聘\",\"value\":\"\\u002Fcampus\",\"order\":2,\"isNewPage\":false},{\"name\",\"orgName\":\"\",\"postId\":\"7a640456",
-        "-829e2188a190\",\"jobId\":\"5c2984f2",
-        "-7d9aa39891b8\",\"postType\":\"政企\",\"publishDate\":\"2026"
+        "-list\",\"order\":1,\"isNewPage\":false},{\"name\":\"校园招聘\",\"value\":\"\\u002Fcampus\",\"order\":2,\"isNewPage\":false},{\"\",\"orgName\":\"\",\"postId\":\"307e48c3",
+        "-96d942eade3d\",\"jobId\":\"115d89d1",
+        "-6b8d5246074c\",\"postType\":\"销售\",\"publishDate\":\"2026"
       ],
-      "city": "深圳",
+      "city": "北京",
       "postedAt": "2026-07-08",
-      "discoveredAt": "2026-09-10T15:59:06.896990+00:00",
+      "discoveredAt": "2026-09-11T03:31:33.937687+00:00",
       "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
     }
   ],

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-11T16:01:58.970532+00:00",
+  "generatedAt": "2026-09-12T03:36:07.983329+00:00",
   "events": [
     {
       "type": "new-signal",
-      "id": "baidu-auto-100769",
+      "id": "baidu-auto-100739",
       "adapter": "baidu-campus",
       "company": "百度",
-      "title": "解百度\",\"value\":\"https:\\u002F\\u002Fhome.baidu.com\\u002F\",\"order\":3,\"isNewPage\":true}]},\"detailData\":{\"postInfo\":{\"education\":\"\",\"name\":\"北京-云和大模型售前解决方案工程师(J100769)",
-      "jobCode": "J100769",
+      "title": "{\"name\":\"了解百度\",\"value\":\"https:\\u002F\\u002Fhome.baidu.com\\u002F\",\"order\":3,\"isNewPage\":true}]},\"detailData\":{\"postInfo\":{\"education\":\"\",\"name\":\"北京-市场营销(J100739)",
+      "jobCode": "J100739",
       "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
       "detailUrl": null,
       "status": "已开启",
@@ -34,13 +34,13 @@
       ],
       "requirements": [
         "window.__USE_SSR__=true; window.__INITIAL_DATA__ ={\"layoutData\":{\"headerMenuList\":[{\"name\":\"首页\",\"value\":\"\\u002F\",\"order\":0,\"isNewPage\":false},{\"name\":\"职位\",\"value\":\"\\u002Flist\",\"order\":1,\"isNewPage\":false},{\"name\":\"招聘动态\",\"value\":\"\\u002Ftrend\",\"order\":2,\"isNewPa",
-        "-list\",\"order\":1,\"isNewPage\":false},{\"name\":\"校园招聘\",\"value\":\"\\u002Fcampus\",\"order\":2,\"isNewPage\":false},{\"name\":\"了\",\"orgName\":\"\",\"postId\":\"2f4467af",
-        "-1fa09fa72e33\",\"jobId\":\"9a737174",
-        "-290032010520\",\"postType\":\"政企\",\"publishDate\":\"2026"
+        "-list\",\"order\":1,\"isNewPage\":false},{\"name\":\"校园招聘\",\"value\":\"\\u002Fcampus\",\"order\":2,\"isNewPage\":false},\",\"orgName\":\"\",\"postId\":\"961fd57f",
+        "-ee6cad6d0bb5\",\"jobId\":\"c1dc6a6b",
+        "-9c7b01c97afe\",\"postType\":\"综合\",\"publishDate\":\"2026"
       ],
       "city": "北京",
       "postedAt": "2026-07-08",
-      "discoveredAt": "2026-09-11T16:02:38.119517+00:00",
+      "discoveredAt": "2026-09-12T03:36:46.492047+00:00",
       "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
     }
   ],

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-13T03:42:40.693376+00:00",
+  "generatedAt": "2026-09-13T15:45:46.444066+00:00",
   "events": [
     {
       "type": "new-signal",
-      "id": "baidu-auto-100688",
+      "id": "baidu-auto-103964",
       "adapter": "baidu-campus",
       "company": "百度",
-      "title": "{\"name\":\"了解百度\",\"value\":\"https:\\u002F\\u002Fhome.baidu.com\\u002F\",\"order\":3,\"isNewPage\":true}]},\"detailData\":{\"postInfo\":{\"education\":\"\",\"name\":\"北京-战略分析(J100688)",
-      "jobCode": "J100688",
+      "title": "ame\":\"了解百度\",\"value\":\"https:\\u002F\\u002Fhome.baidu.com\\u002F\",\"order\":3,\"isNewPage\":true}]},\"detailData\":{\"postInfo\":{\"education\":\"\",\"name\":\"深圳-全栈开发工程师(J103964)",
+      "jobCode": "J103964",
       "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
       "detailUrl": null,
       "status": "已开启",
@@ -34,13 +34,13 @@
       ],
       "requirements": [
         "window.__USE_SSR__=true; window.__INITIAL_DATA__ ={\"layoutData\":{\"headerMenuList\":[{\"name\":\"首页\",\"value\":\"\\u002F\",\"order\":0,\"isNewPage\":false},{\"name\":\"职位\",\"value\":\"\\u002Flist\",\"order\":1,\"isNewPage\":false},{\"name\":\"招聘动态\",\"value\":\"\\u002Ftrend\",\"order\":2,\"isNewPa",
-        "-list\",\"order\":1,\"isNewPage\":false},{\"name\":\"校园招聘\",\"value\":\"\\u002Fcampus\",\"order\":2,\"isNewPage\":false},\",\"orgName\":\"\",\"postId\":\"ab2c6525",
-        "-91bd7e06b024\",\"jobId\":\"5b764d79",
-        "-b279c07dd93c\",\"postType\":\"综合\",\"publishDate\":\"2026"
+        "-list\",\"order\":1,\"isNewPage\":false},{\"name\":\"校园招聘\",\"value\":\"\\u002Fcampus\",\"order\":2,\"isNewPage\":false},{\"n\",\"orgName\":\"\",\"postId\":\"27b383fe",
+        "-be09c1f386e2\",\"jobId\":\"5ea78d8e",
+        "-94861224f066\",\"postType\":\"技术\",\"publishDate\":\"2026"
       ],
-      "city": "北京",
-      "postedAt": "2026-07-08",
-      "discoveredAt": "2026-09-13T03:43:19.596216+00:00",
+      "city": "深圳",
+      "postedAt": "2026-08-03",
+      "discoveredAt": "2026-09-13T15:46:25.939163+00:00",
       "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
     }
   ],

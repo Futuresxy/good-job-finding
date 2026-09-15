@@ -1,11 +1,15 @@
 {
-  "generatedAt": "2026-09-14T17:51:47.095967+00:00",
-  "sourcesChecked": 18,
+  "generatedAt": "2026-09-15T03:51:10.940674+00:00",
+  "sourcesChecked": 14,
   "verifiedOpenings": 76,
   "pendingReview": 61,
   "focusCompanies": 26,
   "evidencePagesChecked": 19,
   "failures": [
+    {
+      "company": "长江存储",
+      "error": "robots.txt disallows access"
+    },
     {
       "company": "拼多多",
       "error": "robots.txt disallows access"
@@ -17,6 +21,10 @@
     {
       "company": "阶跃星辰",
       "error": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+    },
+    {
+      "company": "长鑫存储",
+      "error": "robots.txt disallows access"
     },
     {
       "company": "智谱华章",
@@ -35,8 +43,16 @@
       "error": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
     },
     {
+      "company": "百度昆仑芯",
+      "error": "robots.txt disallows access"
+    },
+    {
       "company": "海光信息",
       "error": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+    },
+    {
+      "company": "摩尔线程",
+      "error": "robots.txt disallows access"
     }
   ],
   "lastRun": "每日重点公司提前批与正式批监测完成"

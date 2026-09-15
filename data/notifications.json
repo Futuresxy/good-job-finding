@@ -1,27 +1,6 @@
 {
-  "generatedAt": "2026-09-14T17:51:47.095967+00:00",
-  "events": [
-    {
-      "type": "new-signal",
-      "id": "613d5f6daedd1d0a",
-      "company": "Arm",
-      "title": "GPU Modelling Graduate Engineer",
-      "url": "https://careers.arm.com/en/job/trondheim/gpu-modelling-graduate-engineer/33099/100604944272",
-      "openingTerms": [],
-      "directionTerms": [
-        "GPU"
-      ],
-      "adapter": "generic-signal",
-      "status": "待核验",
-      "directionIds": [
-        "architecture"
-      ],
-      "batch": "正式批",
-      "sourceUrl": "https://careers.arm.com/en/graduates",
-      "discoveredAt": "2026-09-14T17:52:37.071453+00:00",
-      "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
-    }
-  ],
+  "generatedAt": "2026-09-15T03:51:10.940674+00:00",
+  "events": [],
   "delivery": {
     "slack": "not-configured",
     "openclawWechat": "scan-connected-on-openclaw-device"

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-18T03:40:41.025489+00:00",
+  "generatedAt": "2026-09-18T15:59:05.412951+00:00",
   "events": [
     {
       "type": "new-signal",
-      "id": "baidu-auto-100697",
+      "id": "baidu-auto-101190",
       "adapter": "baidu-campus",
       "company": "百度",
-      "title": "\"name\":\"了解百度\",\"value\":\"https:\\u002F\\u002Fhome.baidu.com\\u002F\",\"order\":3,\"isNewPage\":true}]},\"detailData\":{\"postInfo\":{\"education\":\"\",\"name\":\"北京-数据分析师(J100697)",
-      "jobCode": "J100697",
+      "title": "ame\":\"了解百度\",\"value\":\"https:\\u002F\\u002Fhome.baidu.com\\u002F\",\"order\":3,\"isNewPage\":true}]},\"detailData\":{\"postInfo\":{\"education\":\"\",\"name\":\"上海-大客户销售经理(J101190)",
+      "jobCode": "J101190",
       "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
       "detailUrl": null,
       "status": "已开启",
@@ -34,13 +34,13 @@
       ],
       "requirements": [
         "window.__USE_SSR__=true; window.__INITIAL_DATA__ ={\"layoutData\":{\"headerMenuList\":[{\"name\":\"首页\",\"value\":\"\\u002F\",\"order\":0,\"isNewPage\":false},{\"name\":\"职位\",\"value\":\"\\u002Flist\",\"order\":1,\"isNewPage\":false},{\"name\":\"招聘动态\",\"value\":\"\\u002Ftrend\",\"order\":2,\"isNewPa",
-        "-list\",\"order\":1,\"isNewPage\":false},{\"name\":\"校园招聘\",\"value\":\"\\u002Fcampus\",\"order\":2,\"isNewPage\":false},{\",\"orgName\":\"\",\"postId\":\"b9915b1e",
-        "-0078543edb41\",\"jobId\":\"af86841e",
-        "-6b15400142b1\",\"postType\":\"产品\",\"publishDate\":\"2026"
+        "-list\",\"order\":1,\"isNewPage\":false},{\"name\":\"校园招聘\",\"value\":\"\\u002Fcampus\",\"order\":2,\"isNewPage\":false},{\"n\",\"orgName\":\"\",\"postId\":\"6a6addeb",
+        "-396fcb4c52b9\",\"jobId\":\"3cc31406",
+        "-ba217d269dcb\",\"postType\":\"销售\",\"publishDate\":\"2026"
       ],
-      "city": "北京",
+      "city": "上海",
       "postedAt": "2026-07-08",
-      "discoveredAt": "2026-09-18T03:41:16.735502+00:00",
+      "discoveredAt": "2026-09-18T15:59:50.605934+00:00",
       "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
     }
   ],

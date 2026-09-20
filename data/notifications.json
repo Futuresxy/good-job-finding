@@ -1,6 +1,83 @@
 {
-  "generatedAt": "2026-09-20T03:53:20.077295+00:00",
-  "events": [],
+  "generatedAt": "2026-09-20T15:37:34.615910+00:00",
+  "events": [
+    {
+      "type": "new-signal",
+      "id": "baidu-auto-105970",
+      "adapter": "baidu-campus",
+      "company": "百度",
+      "title": "北京-人力资源专员(J105970)",
+      "jobCode": "J105970",
+      "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "detailUrl": null,
+      "status": "已开启",
+      "directionIds": [
+        "ai-infra",
+        "architecture",
+        "chip-design",
+        "verification"
+      ],
+      "directionTerms": [
+        "推理",
+        "分布式训练",
+        "RDMA",
+        "IP",
+        "综合"
+      ],
+      "requirements": [
+        "北京市 校招 综合 若干 2026",
+        "-参与HR核心模块轮岗，包括招聘、HRBP及COE相关工作，系统了解HR各模块的工作机制与协作方式",
+        "-在导师指导下参与真实业务和HR项目，逐步独立承担招聘、员工沟通、组织与人才、培训及文化等相关工作",
+        "-结合轮岗阶段开展专项课题研究，围绕实际业务问题提出解决方案并推动验证"
+      ],
+      "city": "北京",
+      "postedAt": "2026-09-20",
+      "discoveredAt": "2026-09-20T15:38:10.711304+00:00",
+      "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
+    },
+    {
+      "type": "new-signal",
+      "id": "baidu-auto-101057",
+      "adapter": "baidu-campus",
+      "company": "百度",
+      "title": "e\":\"了解百度\",\"value\":\"https:\\u002F\\u002Fhome.baidu.com\\u002F\",\"order\":3,\"isNewPage\":true}]},\"detailData\":{\"postInfo\":{\"education\":\"\",\"name\":\"上海-AI测试开发工程师(J101057)",
+      "jobCode": "J101057",
+      "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "detailUrl": null,
+      "status": "已开启",
+      "directionIds": [
+        "ai-infra",
+        "architecture",
+        "chip-design",
+        "compiler",
+        "verification"
+      ],
+      "directionTerms": [
+        "推理",
+        "分布式训练",
+        "量化",
+        "强化学习",
+        "RL",
+        "后训练",
+        "NPU",
+        "RDMA",
+        "Benchmark",
+        "SoC",
+        "IP",
+        "XLA"
+      ],
+      "requirements": [
+        "window.__USE_SSR__=true; window.__INITIAL_DATA__ ={\"layoutData\":{\"headerMenuList\":[{\"name\":\"首页\",\"value\":\"\\u002F\",\"order\":0,\"isNewPage\":false},{\"name\":\"职位\",\"value\":\"\\u002Flist\",\"order\":1,\"isNewPage\":false},{\"name\":\"招聘动态\",\"value\":\"\\u002Ftrend\",\"order\":2,\"isNewPa",
+        "-list\",\"order\":1,\"isNewPage\":false},{\"name\":\"校园招聘\",\"value\":\"\\u002Fcampus\",\"order\":2,\"isNewPage\":false},{\"nam\",\"orgName\":\"\",\"postId\":\"fea4ea6b",
+        "-b9dc6fa116a6\",\"jobId\":\"825780b2",
+        "-693aba6e2c2a\",\"postType\":\"技术\",\"publishDate\":\"2026"
+      ],
+      "city": "上海",
+      "postedAt": "2026-07-08",
+      "discoveredAt": "2026-09-20T15:38:10.742521+00:00",
+      "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
+    }
+  ],
   "delivery": {
     "slack": "not-configured",
     "openclawWechat": "scan-connected-on-openclaw-device"

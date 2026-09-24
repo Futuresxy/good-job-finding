@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-09-24T03:37:40.132553+00:00",
-  "events": [],
+  "generatedAt": "2026-09-24T16:40:29.796477+00:00",
+  "events": [
+    {
+      "type": "new-signal",
+      "id": "53be060d2d567be5",
+      "company": "Arm",
+      "title": "Graduate Engineer, SoC PnP Architect",
+      "url": "https://careers.arm.com/en/job/bengaluru/graduate-engineer-soc-pnp-architect/33099/101070672112",
+      "openingTerms": [],
+      "directionTerms": [
+        "SoC"
+      ],
+      "adapter": "generic-signal",
+      "status": "待核验",
+      "directionIds": [
+        "chip-design"
+      ],
+      "batch": "正式批",
+      "sourceUrl": "https://careers.arm.com/en/graduates",
+      "discoveredAt": "2026-09-24T16:41:24.309157+00:00",
+      "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
+    }
+  ],
   "delivery": {
     "slack": "not-configured",
     "openclawWechat": "scan-connected-on-openclaw-device"

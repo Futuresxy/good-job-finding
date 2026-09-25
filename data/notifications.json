@@ -1,25 +1,78 @@
 {
-  "generatedAt": "2026-09-24T16:40:29.796477+00:00",
+  "generatedAt": "2026-09-25T03:54:17.258896+00:00",
   "events": [
     {
       "type": "new-signal",
-      "id": "53be060d2d567be5",
-      "company": "Arm",
-      "title": "Graduate Engineer, SoC PnP Architect",
-      "url": "https://careers.arm.com/en/job/bengaluru/graduate-engineer-soc-pnp-architect/33099/101070672112",
-      "openingTerms": [],
-      "directionTerms": [
-        "SoC"
-      ],
-      "adapter": "generic-signal",
-      "status": "待核验",
+      "id": "baidu-auto-99967",
+      "adapter": "baidu-campus",
+      "company": "百度",
+      "title": "2027AIDU-大模型Infra工程师(J99967)",
+      "jobCode": "J99967",
+      "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "detailUrl": null,
+      "status": "已开启",
       "directionIds": [
-        "chip-design"
+        "ai-infra",
+        "architecture",
+        "chip-design",
+        "compiler",
+        "verification"
       ],
-      "batch": "正式批",
-      "sourceUrl": "https://careers.arm.com/en/graduates",
-      "discoveredAt": "2026-09-24T16:41:24.309157+00:00",
-      "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
+      "directionTerms": [
+        "推理",
+        "算子",
+        "通信库",
+        "量化",
+        "CPU",
+        "GPU",
+        "ASIC",
+        "FPGA",
+        "IP",
+        "异构计算",
+        "综合"
+      ],
+      "requirements": [
+        "北京市 AIDU项目 技术 若干 2026",
+        "1. 构建AI异构计算加速引擎，负责底层算子、通信库、编译系统开发与优化；",
+        "2. 面向CPU/GPU/FPGA/ASIC等架构进行性能调优；",
+        "3. 设计自适应分布式系统，优化大模型训练与推理效率；"
+      ],
+      "city": "北京",
+      "postedAt": "2026-09-24",
+      "discoveredAt": "2026-09-25T03:54:55.358439+00:00",
+      "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
+    },
+    {
+      "type": "new-signal",
+      "id": "baidu-auto-99956",
+      "adapter": "baidu-campus",
+      "company": "百度",
+      "title": "2027AIDU-多模态算法工程师(J99956)",
+      "jobCode": "J99956",
+      "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "detailUrl": null,
+      "status": "已开启",
+      "directionIds": [
+        "ai-infra",
+        "chip-design",
+        "verification"
+      ],
+      "directionTerms": [
+        "推理",
+        "量化",
+        "IP",
+        "综合"
+      ],
+      "requirements": [
+        "北京市,上海市 AIDU项目 技术 若干 2026",
+        "1. 负责多模态大模型的算法研发与迭代，覆盖图文、视频、语音、3D等多模态融合理解与生成；",
+        "2. 研究跨模态对齐、对比学习、扩散模型、视频生成、图像编辑、3D生成、风格迁移等前沿技术；",
+        "3. 参与多模态数据pipeline建设、评测体系设计与业务落地，推动模型在搜索、推荐、AIGC、健康、自动驾驶、网盘文库、视频理解、解题等核心场景中的应用；"
+      ],
+      "city": "北京",
+      "postedAt": "2026-09-24",
+      "discoveredAt": "2026-09-25T03:54:55.358948+00:00",
+      "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
     }
   ],
   "delivery": {

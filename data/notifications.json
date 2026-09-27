@@ -1,6 +1,49 @@
 {
-  "generatedAt": "2026-09-27T04:11:06.892779+00:00",
-  "events": [],
+  "generatedAt": "2026-09-27T16:34:16.516415+00:00",
+  "events": [
+    {
+      "type": "new-signal",
+      "id": "baidu-auto-100678",
+      "adapter": "baidu-campus",
+      "company": "百度",
+      "title": "name\":\"了解百度\",\"value\":\"https:\\u002F\\u002Fhome.baidu.com\\u002F\",\"order\":3,\"isNewPage\":true}]},\"detailData\":{\"postInfo\":{\"education\":\"\",\"name\":\"上海-整合营销策略(J100678)",
+      "jobCode": "J100678",
+      "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "detailUrl": null,
+      "status": "已开启",
+      "directionIds": [
+        "ai-infra",
+        "architecture",
+        "chip-design",
+        "compiler",
+        "verification"
+      ],
+      "directionTerms": [
+        "推理",
+        "CUDA",
+        "算子",
+        "通信库",
+        "NCCL",
+        "量化",
+        "强化学习",
+        "RL",
+        "后训练",
+        "体系结构",
+        "CPU",
+        "GPU"
+      ],
+      "requirements": [
+        "window.__USE_SSR__=true; window.__INITIAL_DATA__ ={\"layoutData\":{\"headerMenuList\":[{\"name\":\"首页\",\"value\":\"\\u002F\",\"order\":0,\"isNewPage\":false},{\"name\":\"职位\",\"value\":\"\\u002Flist\",\"order\":1,\"isNewPage\":false},{\"name\":\"招聘动态\",\"value\":\"\\u002Ftrend\",\"order\":2,\"isNewPa",
+        "-list\",\"order\":1,\"isNewPage\":false},{\"name\":\"校园招聘\",\"value\":\"\\u002Fcampus\",\"order\":2,\"isNewPage\":false},{\"\",\"orgName\":\"\",\"postId\":\"cf735c1e",
+        "-89771184a8fb\",\"jobId\":\"095489a8",
+        "-1338c5a8bbb4\",\"postType\":\"销售\",\"publishDate\":\"2026"
+      ],
+      "city": "上海",
+      "postedAt": "2026-07-08",
+      "discoveredAt": "2026-09-27T16:35:37.882672+00:00",
+      "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
+    }
+  ],
   "delivery": {
     "slack": "not-configured",
     "openclawWechat": "scan-connected-on-openclaw-device"

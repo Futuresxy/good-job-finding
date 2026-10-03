@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-10-02T17:35:14.085696+00:00",
+  "generatedAt": "2026-10-03T04:15:20.166401+00:00",
   "events": [
     {
       "type": "new-signal",
-      "id": "baidu-auto-100771",
+      "id": "baidu-auto-99978",
       "adapter": "baidu-campus",
       "company": "百度",
-      "title": "\":\"了解百度\",\"value\":\"https:\\u002F\\u002Fhome.baidu.com\\u002F\",\"order\":3,\"isNewPage\":true}]},\"detailData\":{\"postInfo\":{\"education\":\"\",\"name\":\"北京-计算机视觉算法工程师(J100771)",
-      "jobCode": "J100771",
+      "title": "解百度\",\"value\":\"https:\\u002F\\u002Fhome.baidu.com\\u002F\",\"order\":3,\"isNewPage\":true}]},\"detailData\":{\"postInfo\":{\"education\":\"\",\"name\":\"2027AIDU-端到端系统架构师(J99978)",
+      "jobCode": "J99978",
       "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
       "detailUrl": null,
       "status": "已开启",
@@ -34,13 +34,13 @@
       ],
       "requirements": [
         "window.__USE_SSR__=true; window.__INITIAL_DATA__ ={\"layoutData\":{\"headerMenuList\":[{\"name\":\"首页\",\"value\":\"\\u002F\",\"order\":0,\"isNewPage\":false},{\"name\":\"职位\",\"value\":\"\\u002Flist\",\"order\":1,\"isNewPage\":false},{\"name\":\"招聘动态\",\"value\":\"\\u002Ftrend\",\"order\":2,\"isNewPa",
-        "-list\",\"order\":1,\"isNewPage\":false},{\"name\":\"校园招聘\",\"value\":\"\\u002Fcampus\",\"order\":2,\"isNewPage\":false},{\"name\",\"orgName\":\"\",\"postId\":\"88197b70",
-        "-128d35fb503a\",\"jobId\":\"179596b2",
-        "-43d8b8285f72\",\"postType\":\"技术\",\"publishDate\":\"2026"
+        "-list\",\"order\":1,\"isNewPage\":false},{\"name\":\"校园招聘\",\"value\":\"\\u002Fcampus\",\"order\":2,\"isNewPage\":false},{\"name\":\"了\",\"orgName\":\"\",\"postId\":\"cd7d5159",
+        "-1a97ccdcea35\",\"jobId\":\"a7d410a8",
+        "-c12fb2197988\",\"postType\":\"技术\",\"publishDate\":\"2026"
       ],
       "city": "北京",
-      "postedAt": "2026-07-08",
-      "discoveredAt": "2026-10-02T17:35:57.558777+00:00",
+      "postedAt": "2026-05-12",
+      "discoveredAt": "2026-10-03T04:16:00.218868+00:00",
       "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
     }
   ],

@@ -1,27 +1,6 @@
 {
-  "generatedAt": "2026-10-13T18:59:25.816101+00:00",
-  "events": [
-    {
-      "type": "new-signal",
-      "id": "0764e4dc306eef03",
-      "company": "Arm",
-      "title": "Graduate Engineer, System IP Engineering - Systems",
-      "url": "https://careers.arm.com/en/job/budapest/graduate-engineer-system-ip-engineering-systems/33099/101898095600",
-      "openingTerms": [],
-      "directionTerms": [
-        "IP"
-      ],
-      "adapter": "generic-signal",
-      "status": "待核验",
-      "directionIds": [
-        "chip-design"
-      ],
-      "batch": "正式批",
-      "sourceUrl": "https://careers.arm.com/en/graduates",
-      "discoveredAt": "2026-10-13T19:00:19.591495+00:00",
-      "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
-    }
-  ],
+  "generatedAt": "2026-10-14T03:55:46.636124+00:00",
+  "events": [],
   "delivery": {
     "slack": "not-configured",
     "openclawWechat": "scan-connected-on-openclaw-device"

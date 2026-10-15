@@ -1,6 +1,46 @@
 {
-  "generatedAt": "2026-10-15T03:37:54.957350+00:00",
-  "events": [],
+  "generatedAt": "2026-10-15T16:28:49.896046+00:00",
+  "events": [
+    {
+      "type": "new-signal",
+      "id": "baidu-auto-100833",
+      "adapter": "baidu-campus",
+      "company": "百度",
+      "title": "北京-人力资源-HRSSC方向(J100833)",
+      "jobCode": "J100833",
+      "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "detailUrl": null,
+      "status": "已开启",
+      "directionIds": [
+        "ai-infra",
+        "architecture",
+        "chip-design",
+        "compiler",
+        "verification"
+      ],
+      "directionTerms": [
+        "推理",
+        "算子",
+        "通信库",
+        "CPU",
+        "GPU",
+        "ASIC",
+        "FPGA",
+        "异构计算",
+        "综合"
+      ],
+      "requirements": [
+        "北京市 校招 综合 若干 2026",
+        "-参与人力资源运营共享平台的服务体系搭建和项目管理工作，并持续改进",
+        "-负责入、离、调、转等人事手续的办理",
+        "-协助公司员工开展落户、居住证申请业务、外籍人员管理及政府人才项目对接等工作"
+      ],
+      "city": "北京",
+      "postedAt": "2026-10-15",
+      "discoveredAt": "2026-10-15T16:29:27.063428+00:00",
+      "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
+    }
+  ],
   "delivery": {
     "slack": "not-configured",
     "openclawWechat": "scan-connected-on-openclaw-device"

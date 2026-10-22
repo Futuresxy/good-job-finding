@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-22T03:41:54.113581+00:00",
-  "sourcesChecked": 19,
+  "generatedAt": "2026-10-22T16:46:53.295301+00:00",
+  "sourcesChecked": 18,
   "verifiedOpenings": 92,
-  "pendingReview": 59,
+  "pendingReview": 60,
   "focusCompanies": 26,
   "evidencePagesChecked": 19,
   "failures": [
@@ -25,6 +25,10 @@
     {
       "company": "moonshot",
       "error": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+    },
+    {
+      "company": "Intel",
+      "error": "robots.txt disallows access"
     },
     {
       "company": "中兴微电子",

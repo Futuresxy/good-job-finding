@@ -1,25 +1,47 @@
 {
-  "generatedAt": "2026-10-23T03:46:20.290789+00:00",
+  "generatedAt": "2026-10-23T16:38:05.865207+00:00",
   "events": [
     {
       "type": "new-signal",
-      "id": "85f17486b5449d23",
-      "company": "英伟达",
-      "title": "HPC and AI Boost accuracy with GPU-accelerating HPC and AI",
-      "url": "https://www.nvidia.com/en-us/high-performance-computing/ai-for-science/",
-      "openingTerms": [],
+      "id": "baidu-auto-100725",
+      "adapter": "baidu-campus",
+      "company": "百度",
+      "title": "{\"name\":\"了解百度\",\"value\":\"https:\\u002F\\u002Fhome.baidu.com\\u002F\",\"order\":3,\"isNewPage\":true}]},\"detailData\":{\"postInfo\":{\"education\":\"\",\"name\":\"北京-经营分析(J100725)",
+      "jobCode": "J100725",
+      "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "detailUrl": null,
+      "status": "已开启",
+      "directionIds": [
+        "ai-infra",
+        "architecture",
+        "chip-design",
+        "compiler",
+        "verification"
+      ],
       "directionTerms": [
+        "推理",
+        "CUDA",
+        "算子",
+        "通信库",
+        "NCCL",
+        "量化",
+        "强化学习",
+        "RL",
+        "后训练",
+        "体系结构",
+        "CPU",
         "GPU"
       ],
-      "adapter": "generic-signal",
-      "status": "待核验",
-      "directionIds": [
-        "architecture"
+      "requirements": [
+        "window.__USE_SSR__=true; window.__INITIAL_DATA__ ={\"layoutData\":{\"headerMenuList\":[{\"name\":\"首页\",\"value\":\"\\u002F\",\"order\":0,\"isNewPage\":false},{\"name\":\"职位\",\"value\":\"\\u002Flist\",\"order\":1,\"isNewPage\":false},{\"name\":\"招聘动态\",\"value\":\"\\u002Ftrend\",\"order\":2,\"isNewPa",
+        "-list\",\"order\":1,\"isNewPage\":false},{\"name\":\"校园招聘\",\"value\":\"\\u002Fcampus\",\"order\":2,\"isNewPage\":false},\",\"orgName\":\"\",\"postId\":\"c5291eee",
+        "-6c88f190eb35\",\"jobId\":\"bcde01c3",
+        "-7abafb95b642\",\"postType\":\"综合\",\"publishDate\":\"2026"
       ],
-      "batch": "正式批",
-      "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "discoveredAt": "2026-10-23T03:47:02.803234+00:00",
-      "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
+      "city": "北京",
+      "postedAt": "2026-07-08",
+      "discoveredAt": "2026-10-23T16:38:47.402930+00:00",
+      "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
     }
   ],
   "delivery": {

@@ -1,6 +1,76 @@
 {
-  "generatedAt": "2026-11-10T06:21:31.033735+00:00",
-  "events": [],
+  "generatedAt": "2026-11-10T19:25:38.043470+00:00",
+  "events": [
+    {
+      "type": "new-signal",
+      "id": "baidu-auto-101100",
+      "adapter": "baidu-campus",
+      "company": "百度",
+      "title": "深圳-智能体算法工程师(J101100)",
+      "jobCode": "J101100",
+      "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "detailUrl": null,
+      "status": "已开启",
+      "directionIds": [
+        "ai-infra",
+        "compiler",
+        "verification"
+      ],
+      "directionTerms": [
+        "推理",
+        "量化",
+        "强化学习",
+        "RL",
+        "后训练",
+        "代码生成",
+        "综合"
+      ],
+      "requirements": [
+        "深圳市 校招 技术 5人 2026",
+        "-负责大模型智能体（Agent）系统全链路设计与开发，搭建具备自主规划、复杂推理、动态决策能力的智能体架构，推动智能体在实际业务场景的规模化落地",
+        "-主导智能体核心算法研发与迭代优化，深耕意图理解、多步任务规划、工具调用、长短期记忆管理、多智能体协同等核心模块，持续提升任务完成准确率与系统鲁棒性",
+        "-搭建多维度智能体评估体系，建立效果、效率、资源成本一体化量化指标，驱动产品与算法持续迭代与自进化"
+      ],
+      "city": "深圳",
+      "postedAt": "2026-11-10",
+      "discoveredAt": "2026-11-10T19:26:15.857423+00:00",
+      "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
+    },
+    {
+      "type": "new-signal",
+      "id": "baidu-auto-100681",
+      "adapter": "baidu-campus",
+      "company": "百度",
+      "title": "深圳-大模型算法工程师(J100681)",
+      "jobCode": "J100681",
+      "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "detailUrl": null,
+      "status": "已开启",
+      "directionIds": [
+        "ai-infra",
+        "compiler",
+        "verification"
+      ],
+      "directionTerms": [
+        "推理",
+        "强化学习",
+        "RL",
+        "后训练",
+        "代码生成",
+        "综合"
+      ],
+      "requirements": [
+        "深圳市 校招 技术 15人 2026",
+        "-从事大语言模型（LLM）的预训练、后训练（SFT/RLHF）及应用落地算法研究",
+        "-探索大模型在推理、代码生成、多轮对话、知识问答等核心能力的提升方法",
+        "-结合强化学习、检索增强（RAG）、思维链（CoT）等前沿技术，推动模型能力边界突破"
+      ],
+      "city": "深圳",
+      "postedAt": "2026-11-10",
+      "discoveredAt": "2026-11-10T19:26:15.858072+00:00",
+      "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
+    }
+  ],
   "delivery": {
     "slack": "not-configured",
     "openclawWechat": "scan-connected-on-openclaw-device"

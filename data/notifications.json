@@ -1,49 +1,6 @@
 {
-  "generatedAt": "2026-11-11T05:06:12.141869+00:00",
-  "events": [
-    {
-      "type": "new-signal",
-      "id": "baidu-auto-101237",
-      "adapter": "baidu-campus",
-      "company": "百度",
-      "title": "e\":\"了解百度\",\"value\":\"https:\\u002F\\u002Fhome.baidu.com\\u002F\",\"order\":3,\"isNewPage\":true}]},\"detailData\":{\"postInfo\":{\"education\":\"\",\"name\":\"深圳-AI异构计算工程师(J101237)",
-      "jobCode": "J101237",
-      "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
-      "detailUrl": null,
-      "status": "已开启",
-      "directionIds": [
-        "ai-infra",
-        "architecture",
-        "chip-design",
-        "compiler",
-        "verification"
-      ],
-      "directionTerms": [
-        "推理",
-        "vLLM",
-        "CUDA",
-        "算子",
-        "分布式训练",
-        "推理引擎",
-        "SGLang",
-        "训练框架",
-        "混合精度",
-        "量化",
-        "强化学习",
-        "RL"
-      ],
-      "requirements": [
-        "window.__USE_SSR__=true; window.__INITIAL_DATA__ ={\"layoutData\":{\"headerMenuList\":[{\"name\":\"首页\",\"value\":\"\\u002F\",\"order\":0,\"isNewPage\":false},{\"name\":\"职位\",\"value\":\"\\u002Flist\",\"order\":1,\"isNewPage\":false},{\"name\":\"招聘动态\",\"value\":\"\\u002Ftrend\",\"order\":2,\"isNewPa",
-        "-list\",\"order\":1,\"isNewPage\":false},{\"name\":\"校园招聘\",\"value\":\"\\u002Fcampus\",\"order\":2,\"isNewPage\":false},{\"nam\",\"orgName\":\"\",\"postId\":\"171712de",
-        "-2406da533ec4\",\"jobId\":\"ee39b7d6",
-        "-e68db41c711d\",\"postType\":\"技术\",\"publishDate\":\"2026"
-      ],
-      "city": "深圳",
-      "postedAt": "2026-07-08",
-      "discoveredAt": "2026-11-11T05:06:48.559183+00:00",
-      "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
-    }
-  ],
+  "generatedAt": "2026-11-11T19:20:08.537130+00:00",
+  "events": [],
   "delivery": {
     "slack": "not-configured",
     "openclawWechat": "scan-connected-on-openclaw-device"

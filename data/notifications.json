@@ -1,6 +1,35 @@
 {
-  "generatedAt": "2026-11-12T06:10:41.719268+00:00",
-  "events": [],
+  "generatedAt": "2026-11-12T19:38:52.227853+00:00",
+  "events": [
+    {
+      "type": "new-signal",
+      "id": "baidu-auto-100718",
+      "adapter": "baidu-campus",
+      "company": "百度",
+      "title": "上海-分布式计算研发工程师(J100718)",
+      "jobCode": "J100718",
+      "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "detailUrl": null,
+      "status": "已开启",
+      "directionIds": [
+        "ai-infra"
+      ],
+      "directionTerms": [
+        "推理",
+        "量化"
+      ],
+      "requirements": [
+        "上海市 校招 技术 若干 2026",
+        "-负责百度核心产品功能和架构开发",
+        "-超大规模分布式应用系统和平台（包括计算及存储）的核心技术研究与开发",
+        "-和团队一起攻克高性能、高并发、高可用性等各种不同技术场景下的技术挑战"
+      ],
+      "city": "上海",
+      "postedAt": "2026-11-13",
+      "discoveredAt": "2026-11-12T19:39:30.388364+00:00",
+      "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
+    }
+  ],
   "delivery": {
     "slack": "not-configured",
     "openclawWechat": "scan-connected-on-openclaw-device"

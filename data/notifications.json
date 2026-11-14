@@ -1,34 +1,6 @@
 {
-  "generatedAt": "2026-11-13T19:19:15.806074+00:00",
-  "events": [
-    {
-      "type": "new-signal",
-      "id": "baidu-auto-100831",
-      "adapter": "baidu-campus",
-      "company": "百度",
-      "title": "北京-人力资源-薪酬方向(J100831)",
-      "jobCode": "J100831",
-      "url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
-      "detailUrl": null,
-      "status": "已开启",
-      "directionIds": [
-        "verification"
-      ],
-      "directionTerms": [
-        "综合"
-      ],
-      "requirements": [
-        "北京市 校招 综合 若干 2026",
-        "-负责集团股权激励计划的日程落地运营",
-        "-基于部门业务需求，对内外部股权激励数据进行调研与分析",
-        "-实时关注外部市场薪酬福利政策、实践等的变化，并进行对标研究"
-      ],
-      "city": "北京",
-      "postedAt": "2026-11-13",
-      "discoveredAt": "2026-11-13T19:19:58.116988+00:00",
-      "note": "百度2027届官方校园招聘列表中识别到的细分方向匹配岗位。"
-    }
-  ],
+  "generatedAt": "2026-11-14T05:23:12.180910+00:00",
+  "events": [],
   "delivery": {
     "slack": "not-configured",
     "openclawWechat": "scan-connected-on-openclaw-device"

@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-11-26T07:15:44.212773+00:00",
-  "events": [],
+  "generatedAt": "2026-11-26T21:02:29.671387+00:00",
+  "events": [
+    {
+      "type": "new-signal",
+      "id": "a2d6dbfa2a0b40dd",
+      "company": "Arm",
+      "title": "Graduate GPU Software Applications Engineer",
+      "url": "https://careers.arm.com/en/job/seoul/graduate-gpu-software-applications-engineer/33099/102148485456",
+      "openingTerms": [],
+      "directionTerms": [
+        "GPU"
+      ],
+      "adapter": "generic-signal",
+      "status": "待核验",
+      "directionIds": [
+        "architecture"
+      ],
+      "batch": "正式批",
+      "sourceUrl": "https://careers.arm.com/en/graduates",
+      "discoveredAt": "2026-11-26T21:03:17.842570+00:00",
+      "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
+    }
+  ],
   "delivery": {
     "slack": "not-configured",
     "openclawWechat": "scan-connected-on-openclaw-device"

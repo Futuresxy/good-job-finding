@@ -1,52 +1,12 @@
 {
-  "generatedAt": "2026-11-27T20:47:23.115400+00:00",
+  "generatedAt": "2026-11-28T06:44:47.225385+00:00",
   "events": [
     {
       "type": "new-signal",
-      "id": "8151de97ffdeb89f",
-      "company": "乐鑫",
-      "title": "Skip to main content",
-      "url": "https://www.espressif.com/products/hardware/esp-wrover-kit/overview?field_job_classification_tid%5B2%5D=2577&field_job_classification_tid%5B5%5D=2579&field_job_classification_tid%5B6%5D=2571&page=2&title=#main-content",
-      "openingTerms": [],
-      "directionTerms": [
-        "IP"
-      ],
-      "adapter": "generic-signal",
-      "status": "待核验",
-      "directionIds": [
-        "chip-design"
-      ],
-      "batch": "正式批",
-      "sourceUrl": "https://www.espressif.com/products/hardware/esp-wrover-kit/overview?field_job_classification_tid%5B2%5D=2577&field_job_classification_tid%5B5%5D=2579&field_job_classification_tid%5B6%5D=2571&page=2&title=",
-      "discoveredAt": "2026-11-27T20:49:13.871442+00:00",
-      "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
-    },
-    {
-      "type": "new-signal",
-      "id": "b5ef6bd56625f65e",
-      "company": "乐鑫",
-      "title": "SoCs",
-      "url": "https://www.espressif.com/en/products/socs",
-      "openingTerms": [],
-      "directionTerms": [
-        "SoC"
-      ],
-      "adapter": "generic-signal",
-      "status": "待核验",
-      "directionIds": [
-        "chip-design"
-      ],
-      "batch": "正式批",
-      "sourceUrl": "https://www.espressif.com/products/hardware/esp-wrover-kit/overview?field_job_classification_tid%5B2%5D=2577&field_job_classification_tid%5B5%5D=2579&field_job_classification_tid%5B6%5D=2571&page=2&title=",
-      "discoveredAt": "2026-11-27T20:49:13.873752+00:00",
-      "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
-    },
-    {
-      "type": "new-signal",
-      "id": "87f63466cf041227",
+      "id": "838ce305b2aa7b04",
       "company": "乐鑫",
       "title": "M5Stack",
-      "url": "https://m5stack.com/",
+      "url": "https://m5stack.com/zh-cn/",
       "openingTerms": [],
       "directionTerms": [
         "STA"
@@ -56,177 +16,17 @@
       "directionIds": [
         "verification"
       ],
-      "batch": "正式批",
-      "sourceUrl": "https://www.espressif.com/products/hardware/esp-wrover-kit/overview?field_job_classification_tid%5B2%5D=2577&field_job_classification_tid%5B5%5D=2579&field_job_classification_tid%5B6%5D=2571&page=2&title=",
-      "discoveredAt": "2026-11-27T20:49:13.873047+00:00",
+      "batch": "人才计划",
+      "sourceUrl": "https://www.espressif.com/zh-hans/join-us/job-search?field_job_classification_tid%5B0%5D=2575&field_job_classification_tid%5B1%5D=2577&field_job_classification_tid%5B2%5D=2573",
+      "discoveredAt": "2026-11-28T06:46:38.347097+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     },
     {
       "type": "new-signal",
-      "id": "688d132370e070ab",
-      "company": "乐鑫",
-      "title": "Equipment",
-      "url": "https://www.espressif.com/en/products/equipment/production-testing-equipment/overview",
-      "openingTerms": [],
-      "directionTerms": [
-        "IP"
-      ],
-      "adapter": "generic-signal",
-      "status": "待核验",
-      "directionIds": [
-        "chip-design"
-      ],
-      "batch": "正式批",
-      "sourceUrl": "https://www.espressif.com/products/hardware/esp-wrover-kit/overview?field_job_classification_tid%5B2%5D=2577&field_job_classification_tid%5B5%5D=2579&field_job_classification_tid%5B6%5D=2571&page=2&title=",
-      "discoveredAt": "2026-11-27T20:49:13.871650+00:00",
-      "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
-    },
-    {
-      "type": "new-signal",
-      "id": "b82f247745767c00",
-      "company": "乐鑫",
-      "title": "Get Started",
-      "url": "https://github.com/espressif/esp-insights#getting-started",
-      "openingTerms": [],
-      "directionTerms": [
-        "STA"
-      ],
-      "adapter": "generic-signal",
-      "status": "待核验",
-      "directionIds": [
-        "verification"
-      ],
-      "batch": "正式批",
-      "sourceUrl": "https://www.espressif.com/products/hardware/esp-wrover-kit/overview?field_job_classification_tid%5B2%5D=2577&field_job_classification_tid%5B5%5D=2579&field_job_classification_tid%5B6%5D=2571&page=2&title=",
-      "discoveredAt": "2026-11-27T20:49:13.872146+00:00",
-      "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
-    },
-    {
-      "type": "new-signal",
-      "id": "10723df80f15c569",
-      "company": "乐鑫",
-      "title": "Get Started",
-      "url": "https://rainmaker.espressif.com/docs/intro/",
-      "openingTerms": [],
-      "directionTerms": [
-        "STA"
-      ],
-      "adapter": "generic-signal",
-      "status": "待核验",
-      "directionIds": [
-        "verification"
-      ],
-      "batch": "正式批",
-      "sourceUrl": "https://www.espressif.com/products/hardware/esp-wrover-kit/overview?field_job_classification_tid%5B2%5D=2577&field_job_classification_tid%5B5%5D=2579&field_job_classification_tid%5B6%5D=2571&page=2&title=",
-      "discoveredAt": "2026-11-27T20:49:13.872241+00:00",
-      "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
-    },
-    {
-      "type": "new-signal",
-      "id": "11571a636ee1de4d",
-      "company": "乐鑫",
-      "title": "SoCs",
-      "url": "https://www.espressif.com/en/support/download/documents/chips",
-      "openingTerms": [],
-      "directionTerms": [
-        "SoC"
-      ],
-      "adapter": "generic-signal",
-      "status": "待核验",
-      "directionIds": [
-        "chip-design"
-      ],
-      "batch": "正式批",
-      "sourceUrl": "https://www.espressif.com/products/hardware/esp-wrover-kit/overview?field_job_classification_tid%5B2%5D=2577&field_job_classification_tid%5B5%5D=2579&field_job_classification_tid%5B6%5D=2571&page=2&title=",
-      "discoveredAt": "2026-11-27T20:49:13.872635+00:00",
-      "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
-    },
-    {
-      "type": "new-signal",
-      "id": "a1acd8f5101b7e8e",
-      "company": "乐鑫",
-      "title": "Equipment",
-      "url": "https://www.espressif.com/en/support/download/documents/production-testing-equipment",
-      "openingTerms": [],
-      "directionTerms": [
-        "IP"
-      ],
-      "adapter": "generic-signal",
-      "status": "待核验",
-      "directionIds": [
-        "chip-design"
-      ],
-      "batch": "正式批",
-      "sourceUrl": "https://www.espressif.com/products/hardware/esp-wrover-kit/overview?field_job_classification_tid%5B2%5D=2577&field_job_classification_tid%5B5%5D=2579&field_job_classification_tid%5B6%5D=2571&page=2&title=",
-      "discoveredAt": "2026-11-27T20:49:13.872705+00:00",
-      "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
-    },
-    {
-      "type": "new-signal",
-      "id": "f82c5d2e5e299fb1",
-      "company": "乐鑫",
-      "title": "On-Site Assistance",
-      "url": "https://www.espressif.com/en/support/services",
-      "openingTerms": [],
-      "directionTerms": [
-        "STA"
-      ],
-      "adapter": "generic-signal",
-      "status": "待核验",
-      "directionIds": [
-        "verification"
-      ],
-      "batch": "正式批",
-      "sourceUrl": "https://www.espressif.com/products/hardware/esp-wrover-kit/overview?field_job_classification_tid%5B2%5D=2577&field_job_classification_tid%5B5%5D=2579&field_job_classification_tid%5B6%5D=2571&page=2&title=",
-      "discoveredAt": "2026-11-27T20:49:13.872805+00:00",
-      "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
-    },
-    {
-      "type": "new-signal",
-      "id": "9811db8c3135d2e5",
-      "company": "乐鑫",
-      "title": "Sponsorship Request",
-      "url": "https://www.espressif.com/en/contact-us/sponsorship-request",
-      "openingTerms": [],
-      "directionTerms": [
-        "IP"
-      ],
-      "adapter": "generic-signal",
-      "status": "待核验",
-      "directionIds": [
-        "chip-design"
-      ],
-      "batch": "正式批",
-      "sourceUrl": "https://www.espressif.com/products/hardware/esp-wrover-kit/overview?field_job_classification_tid%5B2%5D=2577&field_job_classification_tid%5B5%5D=2579&field_job_classification_tid%5B6%5D=2571&page=2&title=",
-      "discoveredAt": "2026-11-27T20:49:13.873354+00:00",
-      "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
-    },
-    {
-      "type": "new-signal",
-      "id": "171c9b9be8858f70",
-      "company": "乐鑫",
-      "title": "ESP32-P4 Chip Upgrade: Performance and Multimedia...",
-      "url": "https://www.espressif.com/en/news/ESP32_P4_v3.x_Upgrade",
-      "openingTerms": [],
-      "directionTerms": [
-        "IP"
-      ],
-      "adapter": "generic-signal",
-      "status": "待核验",
-      "directionIds": [
-        "chip-design"
-      ],
-      "batch": "正式批",
-      "sourceUrl": "https://www.espressif.com/products/hardware/esp-wrover-kit/overview?field_job_classification_tid%5B2%5D=2577&field_job_classification_tid%5B5%5D=2579&field_job_classification_tid%5B6%5D=2571&page=2&title=",
-      "discoveredAt": "2026-11-27T20:49:13.873592+00:00",
-      "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
-    },
-    {
-      "type": "new-signal",
-      "id": "82cdd1c49407d02b",
+      "id": "7105b2397cecb0e3",
       "company": "乐鑫",
       "title": "M5Stack",
-      "url": "https://www.m5stack.com",
+      "url": "https://www.m5stack.com/zh-cn/",
       "openingTerms": [],
       "directionTerms": [
         "STA"
@@ -236,9 +36,9 @@
       "directionIds": [
         "verification"
       ],
-      "batch": "正式批",
-      "sourceUrl": "https://www.espressif.com/products/hardware/esp-wrover-kit/overview?field_job_classification_tid%5B2%5D=2577&field_job_classification_tid%5B5%5D=2579&field_job_classification_tid%5B6%5D=2571&page=2&title=",
-      "discoveredAt": "2026-11-27T20:49:13.873941+00:00",
+      "batch": "人才计划",
+      "sourceUrl": "https://www.espressif.com/zh-hans/join-us/job-search?field_job_classification_tid%5B0%5D=2575&field_job_classification_tid%5B1%5D=2577&field_job_classification_tid%5B2%5D=2573",
+      "discoveredAt": "2026-11-28T06:46:38.347722+00:00",
       "note": "通用监测器发现的官方页面线索，仍需核验届别与岗位状态。"
     }
   ],
